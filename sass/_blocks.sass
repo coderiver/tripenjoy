@@ -1,0 +1,174 @@
+//------------------------------------------------------------------------------
+//
+//    #icons
+//
+//------------------------------------------------------------------------------
+
+// use svg files (font "icon-font")
+.ico
+  display: inline-block
+  vertical-align: middle
+  line-height: inherit
+  &:before
+    +icon-font
+    speak: none
+    display: inline-block
+    text-decoration: inherit
+    width: 1em
+    text-align: center
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal
+    text-transform: none
+    /* fix buttons height, for twitter bootstrap */
+    // line-height: 1em
+  &_phone
+    &:before
+      content: '\e806'
+  &_location
+    font-size: 24px
+    &:before
+      content: '\e805'
+  &_load
+    font-size: 20px
+    &:before
+      content: '\e80b'
+  &_calendar
+    font-size: 22px
+    &:before
+      content: '\e802'
+  &_star
+    font-size: 20px
+    &:before
+      content: '\e80d'
+  &_person
+    font-size: 20px
+    &:before
+      content: '\e80c'
+  &_compass
+    &:before
+      content: '\e809'
+  &_umbrela
+    &:before
+      content: '\e80a'
+  &_car-rental
+    &:before
+      content: '\e803'
+  &_car-transfer
+    &:before
+      content: '\e804'
+  &_prev
+    &:before
+      content: '\e800'
+  &_next
+    &:before
+      content: '\e801'
+  &_mail
+    font-size: 19px
+    &:before
+      content: '\e80e'
+
+// use png files (sprite)
+.icon
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  &_user
+    +s(user)
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    #blocks
+//
+//------------------------------------------------------------------------------
+
+.input
+  display: block
+  position: relative
+  input
+    display: block
+    width: 100%
+    box-sizing: border-box
+    padding: 10px 10px 10px 40px
+    background: #FFF
+    box-shadow: none
+    outline: none
+    +roboto
+    font-size: 15px
+    line-height: 20px
+    color: #081527
+    +placeholder
+      color: #081527
+    &:focus + .ico
+      opacity: 1
+  & > .ico
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 40px
+    text-align: center
+    line-height: 40px
+    color: $orange
+    opacity: 0.7
+  &__right
+    position: absolute
+    top: 0
+    right: 7px
+    bottom: 0
+    line-height: 40px
+    color: $orange
+    span
+      display: inline-block
+      text-transform: uppercase
+    .ico
+      margin-left: 5px
+  &__arrow
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 20px
+    line-height: 40px
+    &:before
+      content: ""
+      display: inline-block
+      vertical-align: middle
+      width: 0
+      height: 0
+      border: 1px solid transparent
+      border-width: 6px 6px 0 6px
+      border-top-color: $orange
+  &_ico-right
+    input
+      padding-left: 10px
+      padding-right: 40px
+    .ico
+      left: auto
+      right: 0
+      width: 35px
+      text-align: left
+  &_drop
+    input
+      padding-right: 20px
+
+
+.btn
+  display: inline-block
+  min-width: 200px
+  height: 40px
+  line-height: 40px
+  font-size: 18px
+  +roboto-b
+  color: #FFF
+  text-align: center
+  background: $orange
+  +text-overflow
+  text-transform: uppercase
+  text-decoration: none
+  +tr
+  &:hover
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)

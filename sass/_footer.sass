@@ -1,0 +1,98 @@
+.footer
+  margin-top: 66px
+  background: $blue
+  padding: 50px 0
+
+.footer__main
+  margin-bottom: 65px
+  +clr
+
+.footer__list
+  float: left
+  width: percentage(200/1000)
+  margin-left: percentage(50/1000)
+  margin-top: 7px
+  &:first-child
+    margin-left: 0
+  font-size: 14px
+  line-height: 1.2
+  li
+    margin-top: 18px
+    &:first-child
+      margin-bottom: 25px
+      margin-top: 0
+      color: #FFF
+      text-transform: uppercase
+      +roboto-b
+  a
+    color: $text
+    &:hover
+      text-decoration: none
+
+.footer__payments
+  float: right
+  width: 135px
+  img
+    display: block
+    max-width: 100%
+
+.footer__lang
+  float: right
+  margin-left: percentage(83/1000)
+  +roboto-b
+  text-transform: uppercase
+  font-size: 14px
+  line-height: 34px
+  a
+    display: inline-block
+    margin-left: 10px
+    color: rgba(255,255,255,0.3)
+    text-decoration: none
+    &:first-child
+      margin-left: 0
+    &.is-active
+      color: #fff
+
+.footer__bottom
+  +clr
+
+.footer__copy
+  float: left
+  width: percentage(200/1000)
+  span
+    +roboto-b
+    color: #FFF
+
+.footer__phone
+  float: left
+  width: percentage(200/1000)
+  margin-left: percentage(50/1000)
+  a
+    color: #FFF
+    text-decoration: none
+    font-size: 20px
+
+.footer__subscribe
+  float: left
+  width: percentage(500/1000)
+  margin-left: percentage(50/1000)
+  font-size: 0
+  white-space: nowrap
+  span
+    display: block
+    margin-bottom: 10px
+    +roboto-b
+    font-size: 14px
+    text-transform: uppercase
+    color: #FFF
+    line-height: 1.15
+  .input
+    display: inline-block
+    vertical-align: middle
+    width: percentage(280/500)
+  .btn
+    min-width: percentage(200/500)
+    margin-left: percentage(20/500)
+    vertical-align: middle
+
+

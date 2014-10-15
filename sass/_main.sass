@@ -1,216 +1,151 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.map
+  position: relative
+  height: 582px
+  overflow: hidden
+  background: $blue
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    z-index: 2
+    height: 0
+    width: 100%
+    border-top: 1px dashed #acacac
+  &:before
+    top: 0
+  &:after
+    bottom: 0
+
+
+.promo
+  margin: 55px 0
+  font-size: 0
+  +clr
+  +justify
+
+.promo__item
+  display: inline-block
+  vertical-align: middle
+  box-sizing: border-box
+  font-size: 20px
+  line-height: 1.2
+  +clr
+  .ico
+    float: left
+    margin-right: 20px
+    color: $orange
+    font-size: 44px
+    line-height: 1
+    &:before
+      width: auto
+  span
+    display: block
+    margin-left: 60px
+
+
+.slider
+  margin: 66px 0
+
+.slider__header
+  margin-bottom: 22px
+  +clr
+
+.slider__title
+  float: left
+  font-size: 24px
+  +roboto
+  line-height: 1
+  text-transform: uppercase
+
+.slider__nav
+  float: right
+  line-height: 24px
+  // .ico
+  //   color: $orange
+  //   font-size: 19px
+  //   +tr
+  //   &:hover
+
+.slider__prev,
+.slider__next
+  display: inline-block
+  vertical-align: bottom
+  cursor: pointer
+  margin-left: 40px
+  color: $orange
+  font-size: 19px
+  +tr
+  +user-select(none)
+
+.slider__wrap
+  overflow: hidden
+
+.slider__main
+  margin-right: -12px
+
+.slider__item
+  display: block
+  float: left
+  width: percentage(240/1000)
+  // margin-left: percentage(13/1000)
+  margin-right: 13px
+  box-shadow: 0 1px 1px rgba(9, 12, 18, 0.09)
+  &:first-child
+    margin-left: 0
+
+.slider__item-pic
+  width: 100%
+  height: 185px
+  overflow: hidden
+  img
+    display: block
+    max-width: 100%
+
+.slider__item-bottom
+  display: block
+  width: 100%
+  height: 91px
+  vertical-align: middle
+  box-sizing: border-box
+  padding: 0 20px
+  border: 1px solid #f2f3f3
+  background: #FFF
+  line-height: 91px
+
+.slider__item-text
+  display: inline-block
+  vertical-align: middle
+  .name
+    display: block
+    +roboto-b
+    font-size: 14px
+    text-transform: uppercase
+    color: $text
+    line-height: 1.15
+  .price
+    display: block
+    font-size: 24px
+    color: $blue
+    line-height: 1
+
+
+.info-text
+  position: relative
+  box-sizing: border-box
+  margin: 66px 0
+  padding: 20px
+  font-size: 14px
+  line-height: 1.7
+  border: 2px dashed #b2e2f5
+  dt
+    display: inline
+    font-size: 14px
+    +roboto-b
+    color: $orange
+    text-transform: uppercase
+  dd
+    display: inline
+  .btn
+    position: absolute
+    right: -2px
+    bottom: -20px
