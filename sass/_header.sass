@@ -3,7 +3,7 @@
   z-index: 2
 
 .header__top
-  // height: 60px
+  height: 60px
   line-height: 60px
   font-size: 0
   +clr
@@ -104,6 +104,7 @@
   +hide-text
   +s(logo)
 
+
 .search
   padding: 35px 0
   background: $blue url('../img/search-back.jpg') repeat-x 50% 100%
@@ -126,3 +127,32 @@
   float: left
   width: percentage(160/1000)
   margin-left: percentage(48/1000)
+
+
+.search-result
+  margin-bottom: 23px
+  padding: 20px 0 20px
+  background: $blue url('../img/search-result-back.jpg') repeat-x 50% 100%
+  color: #FFF
+  font-size: 15px
+  line-height: 1.33
+  .ico
+    font-size: inherit
+  .ico_plane
+    margin: 0 7px 0 10px
+  .ico_calendar
+    margin: 0 5px 0 10px
+    position: relative
+    top: -1px
+  a
+    color: #FFF
+    &:hover
+      text-decoration: none
+
+.search-result__from,
+.search-result__to
+  display: inline-block
+
+.search-result__change
+  float: right
+

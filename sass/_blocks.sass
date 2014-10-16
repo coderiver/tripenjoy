@@ -16,11 +16,8 @@
     text-decoration: inherit
     width: 1em
     text-align: center
-    /* For safety - reset parent styles, that can break glyph codes*/
     font-variant: normal
     text-transform: none
-    /* fix buttons height, for twitter bootstrap */
-    // line-height: 1em
   &_phone
     &:before
       content: '\e806'
@@ -66,6 +63,23 @@
     font-size: 19px
     &:before
       content: '\e80e'
+  &_plane
+    &:before
+      content: '\e807'
+      width: auto
+  &_plane2
+    &:before
+      content: '\e812'
+      width: auto
+  &_clock
+    &:before
+      content: '\e80F'
+  &_clock-small
+    &:before
+      content: '\e8010'
+  &_percent
+    &:before
+      content: '\e811'
 
 // use png files (sprite)
 .icon
@@ -96,7 +110,7 @@
     background: #FFF
     box-shadow: none
     outline: none
-    +roboto
+    +roboto-l
     font-size: 15px
     line-height: 20px
     color: #081527

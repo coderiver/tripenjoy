@@ -53,7 +53,7 @@
 .slider__title
   float: left
   font-size: 24px
-  +roboto
+  +roboto-l
   line-height: 1
   text-transform: uppercase
 
@@ -79,15 +79,19 @@
 
 .slider__wrap
   overflow: hidden
+  margin: 0 -1px 0 0
 
 .slider__main
   margin-right: -12px
+  .slick-list
+    padding: 1px 0 2px 1px
 
 .slider__item
   display: block
   float: left
   width: percentage(240/1000)
   // margin-left: percentage(13/1000)
+  // margin: 1px 12px 2px 1px
   margin-right: 13px
   box-shadow: 0 1px 1px rgba(9, 12, 18, 0.09)
   &:first-child
@@ -149,3 +153,168 @@
     position: absolute
     right: -2px
     bottom: -20px
+
+.top-result
+  // margin: 0 -20px -20px 0
+  +clr
+
+.ticket
+  float: left
+  width: percentage(490/1000)
+  max-width: 490px
+  margin-left: percentage(20/1000)
+  margin-bottom: 20px
+  box-sizing: border-box
+  border: 1px solid $border
+  box-shadow: 0 1px 1px rgba(9, 12, 18, 0.09)
+  font-size: 14px
+  +roboto
+  &:first-child
+    margin-left: 0
+  .ico_plane
+    color: $orange
+    font-size: 18px
+  .ico_plane2
+    color: $blue
+    font-size: 18px
+  b, strong
+    +roboto-b
+  .btn
+    vertical-align: middle
+    min-width: 1px
+    padding: 0 25px
+
+.ticket__label
+  display: block
+  font-size: 14px
+  color: #777
+  margin-bottom: 10px
+
+.ticket__time
+  display: block
+  font-size: 20px
+  line-height: 1
+  +roboto-b
+
+.ticket__location
+  display: block
+  margin-top: 5px
+  font-size: 12px
+  line-height: 1.33
+  b, strong
+    display: block
+
+.ticket__price
+  display: inline-block
+  vertical-align: middle
+  +roboto-b
+  font-size: 15px
+  text-transform: uppercase
+  b, strong
+    font-size: 24px
+    text-transform: none
+  + .btn
+    margin-left: 37px
+
+.ticket__head
+  padding: 14px 10px 13px
+  border-bottom: 1px solid $border
+  height: 53px
+  box-sizing: border-box
+  font-size: 24px
+  line-height: 1
+  +roboto-b
+  color: $blue
+  text-transform: uppercase
+  .ico_clock
+    vertical-align: baseline
+    margin-right: 5px
+    font-size: 24px
+    position: relative
+    top: -1px
+  .ico_percent
+    vertical-align: baseline
+    margin-right: 7px
+  &_orange
+    color: $orange
+
+.ticket__row
+  position: relative
+  margin: 20px 0 0 48px
+  // font-size: 0
+  .ico
+    position: absolute
+    top: 0
+    right: 100%
+    margin-right: 10px
+  & + &
+    border-top: 1px solid $border
+    margin-top: 7px
+    padding-top: 12px
+
+.ticket__date
+  display: inline-block
+  vertical-align: bottom
+  width: percentage(230/440)
+  font-size: 15px
+  b, strong
+    text-transform: uppercase
+
+.ticket__flight
+  display: inline-block
+  vertical-align: bottom
+  width: percentage(210/440)
+  font-size: 15px
+  margin-left: -4px
+
+.ticket__duration
+  display: inline-block
+  vertical-align: top
+  width: percentage(110/440)
+  font-size: 14px
+  line-height: 1.15
+  +roboto-b
+  &:before
+    @extend .ico:before
+    margin-right: 4px
+    content: '\e810'
+    font-size: 13px
+    color: #cccccc
+
+.ticket__departure
+  display: inline-block
+  vertical-align: top
+  width: percentage(120/440)
+  margin-left: -4px
+  b, strong
+    display: block
+
+.ticket__arrival
+  display: inline-block
+  vertical-align: top
+  width: percentage(210/440)
+  margin-left: -4px
+
+.ticket__info
+  // padding: 15px 0 15px 48px
+  padding-left: 48px
+  margin-top: 12px
+  background: $lightblue
+  border-bottom: 1px solid $border
+  font-size: 14px
+  // line-height: 1.15
+  line-height: 45px
+  *
+    vertical-align: middle
+  img
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+  em
+    font-style: normal
+    color: #777
+
+.ticket__bottom
+  padding: 9px
+  line-height: 40px
+  text-align: right

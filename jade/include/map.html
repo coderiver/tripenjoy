@@ -1,0 +1,79 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script>
+  var map;
+
+  var MY_MAPTYPE_ID = 'custom_style';
+
+  function initialize() {
+    var featureOpts = [
+          {
+            stylers: [
+              { color: "#ffffff" }
+            ]
+          },{
+            featureType: "water",
+            elementType: "geometry.fill",
+            stylers: [
+              { color: "#31abe1" }
+            ]
+          },{
+            featureType: "water",
+            elementType: "labels.text",
+            stylers: [
+              { visibility: "off" }
+            ]
+          },{
+            featureType: "administrative.country",
+            elementType: "labels.text.fill",
+            stylers: [
+              { color: "#000000" }
+            ]
+          },{
+            featureType: "administrative.locality",
+            elementType: "labels.text.fill",
+            stylers: [
+              { color: "#000000" }
+            ]
+          },{
+            featureType: "administrative.country",
+            elementType: "geometry.stroke",
+            stylers: [
+              { color: "#6f6f6f" },
+              { visibility: "on" },
+              { weight: 0.5 }
+            ]
+          }
+      ];
+
+    var mapOptions = {
+      zoom: 4,
+      center: new google.maps.LatLng(50.4020355, 30.5326905),
+      disableDefaultUI: true,
+      mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+          },
+          mapTypeId: MY_MAPTYPE_ID
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'),
+        mapOptions);
+
+    var styledMapOptions = {
+        name: 'Custom Style'
+    };
+
+    var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+    map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+
+    var image = 'img/baloon.png';
+      var myLatLng = new google.maps.LatLng(54.197253, 45.175309);
+      var myMarker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image
+      });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
