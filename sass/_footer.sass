@@ -26,8 +26,11 @@
       +roboto-b
   a
     color: $text
+    +tr-color
     &:hover
-      text-decoration: none
+      color: #fff
+    // &:visited
+    //   color: #2c457e
 
 .footer__payments
   float: right
@@ -52,6 +55,10 @@
       margin-left: 0
     &.is-active
       color: #fff
+      &:hover
+        color: #fff
+    &:hover
+      color: $orange
 
 .footer__bottom
   +clr

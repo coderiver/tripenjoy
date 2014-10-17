@@ -116,8 +116,10 @@
     color: #081527
     +placeholder
       color: #081527
-    &:focus + .ico
-      opacity: 1
+    &:focus
+      box-shadow: 0 0 0 1px rgba(8, 21, 39, 0.29)
+      + .ico
+        opacity: 1
   & > .ico
     position: absolute
     top: 0
@@ -138,6 +140,7 @@
     span
       display: inline-block
       text-transform: uppercase
+      +roboto
     .ico
       margin-left: 5px
   &__arrow
@@ -185,4 +188,90 @@
   text-decoration: none
   +tr
   &:hover
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)
+    background: #FF8432
+  &:disabled
+    background: #AC9477
+  &_blue
+    background: #E9F9FF
+    color: $orange
+    text-decoration: underline
+    border: 1px solid #cdecf9
+    +roboto-l
+    text-transform: none
+    font-size: 18px
+    &:hover
+      background: #F4FCFF
+
+
+.head
+  margin-top: 50px
+  margin-bottom: 16px
+  padding-bottom: 16px
+  border-bottom: 1px dashed #acacac
+  &:first-child
+    margin-top: 0
+
+
+.title
+  +roboto-l
+  font-size: 24px
+  line-height: 1
+  color: $text
+  text-transform: uppercase
+
+
+.select
+  position: relative
+  padding: 0 15px 0 10px
+  position: relative
+  z-index: 1
+  width: 172px
+  height: 42px
+  box-sizing: border-box
+  border: 1px solid $blue-border
+  line-height: 40px
+  font-size: 15px
+  cursor: pointer
+  +user-select(none)
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    right: 5px
+    margin-top: -3px
+    width: 0
+    height: 0
+    border: 1px solid transparent
+    border-width: 6px 6px 0 6px
+    border-top-color: $orange
+  // &:hover
+  //   outline: 1px solid rgba(8, 21, 39, 0.29)
+  &__value
+    display: block
+    +text-overflow
+  &__drop
+    display: none
+    position: absolute
+    z-index: 10
+    top: 100%
+    left: 0
+    width: 100%
+    overflow: hidden
+    background: #FFF
+    border-top: 1px solid $blue-border
+    color: $text
+    font-size: 15px
+    line-height: 1.33
+    a
+      color: $text
+      text-decoration: none
+      display: block
+      padding: 10px
+      &:hover
+        background: $blue-border
+  // &.is-drop-down
+  //   .select__drop
+  //     height: auto
+
+
+
