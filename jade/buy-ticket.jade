@@ -1,0 +1,279 @@
+extend layout/layout2
+
+block title
+  title Buy Ticket
+
+block content
+  .l-center
+    //begin ticket
+    .ticket.ticket_wide.ticket_buy
+      .ticket__row
+        i.ico.ico_plane
+        .ticket__date
+          | <b>26 сентября</b>, пятница
+      .ticket__row
+        .ticket__duration
+          | 3 ч 55 мин
+          .ticket__duration-extra
+            | Через Кишинев
+            span.ticket__label
+              | 6ч 20м
+        .ticket__departure
+          span.ticket__label
+            | Вылет
+          span.ticket__time
+            | 19:45
+          span.ticket__location
+            | <b>Шереметьево,</b> Москва
+        .ticket__arrival
+          span.ticket__label
+            | Прибытие 26 сентября
+          span.ticket__time
+            | 21:40
+          span.ticket__location
+            | <b>Шарль-де-Голь,</b> Париж
+        .ticket__flight
+          span.ticket__label
+            | Рейс
+          | <b>AF-1745,</b> эконом
+        .ticket__info
+          span.ticket__label
+            | Перевозчик
+          img(src="img/af.png", alt="")
+          | <b>Air France</b>, <span>AIRBUS A321</span>, <em>мест 3+</em>
+      .ticket__row
+        i.ico.ico_plane2
+        .ticket__date
+          | <b>26 сентября</b>, пятница
+      .ticket__row
+        .ticket__duration
+          | 3 ч 55 мин
+          .ticket__duration-extra
+            | Через Кишинев
+            span.ticket__label
+              | 6ч 20м
+        .ticket__departure
+          span.ticket__label
+            | Вылет
+          span.ticket__time
+            | 19:45
+          span.ticket__location
+            | <b>Шереметьево,</b> Москва
+        .ticket__arrival
+          span.ticket__label
+            | Прибытие 26 сентября
+          span.ticket__time
+            | 21:40
+          br
+          span.ticket__location
+            | <b>Шарль-де-Голь,</b> Париж
+        .ticket__flight
+          span.ticket__label
+            | Рейс
+          |<b>AF-1745,</b> эконом
+        .ticket__info
+          span.ticket__label
+            | Перевозчик
+          img(src="img/af.png", alt="")
+          | <b>Air France</b>, <span>AIRBUS A321</span>, <em>мест 3+</em>
+    //end ticket
+
+  .head
+    .l-center
+      h3.title
+        | Данные пассажиров
+      p.head__text
+        | Введите данные пассажирова для бронирования и дальнейшей оплаты.
+
+  .l-center
+    //begin passenger
+    .passenger
+      table.passenger__table
+        tr
+          td(rowspan="2")
+            span.passenger__number
+              | 1
+            span.passenger__type
+              | Взрослый
+          td
+            .passenger__lastname
+              .input.input_simple
+                span.input__label
+                  | Фамилия:
+                input(type="text")
+          td
+            .passenger__firstname
+              .input.input_simple
+                span.input__label
+                  | Имя:
+                input(type="text")
+          td
+            .passenger__surname
+              .input.input_simple
+                span.input__label
+                  | Отчество:
+                input(type="text")
+          td
+            .passenger__date
+              .input.input_simple
+                span.input__label
+                  | Дата рождения:
+                input(type="text", placeholder="ДД")
+                input(type="text", placeholder="ММ")
+                input(type="text", placeholder="ГГГГ")
+          td
+            .passenger__sex
+              a(href="#").ico.ico_male.is-active
+              a(href="#").ico.ico_female
+              a(href="#").ico.ico_kid
+        tr
+          td
+            .passenger__document
+              .input
+                span.input__label
+                  | Документ:
+                label.radio
+                  input(type="radio", name="document", checked)
+                  span заграничный
+                label.radio
+                  input(type="radio", name="document")
+                  span общенациональный
+                label.radio
+                  input(type="radio", name="document")
+                  span свидетельство
+          td
+            .passenger__nationality
+              .input
+                span.input__label
+                  | Гражданство:
+                .select
+                  span.select__value
+                  ul.select__drop
+                    li
+                      a(href="#", data-option="1")
+                        | Гражданство 1
+                    li
+                      a(href="#", data-option="2")
+                        | Гражданство 2
+                    li
+                      a(href="#", data-option="3")
+                        | Гражданство 3
+          td
+            .passenger__passport
+              .input.input_simple
+                span.input__label
+                  | Серия:
+                input(type="text")
+              .input.input_simple
+                span.input__label
+                  | Номер:
+                input(type="text")
+          td
+            .passenger__date
+              .input.input_simple
+                span.input__label
+                  | Дата рождения:
+                input(type="text", placeholder="ДД")
+                input(type="text", placeholder="ММ")
+                input(type="text", placeholder="ГГГГ")
+          td
+            a(href="#").passenger__clear
+              i.ico.ico_clear
+              | Очистить
+    //end passenger
+    //begin passenger
+    .passenger
+      table.passenger__table
+        tr
+          td(rowspan="2")
+            span.passenger__number
+              | 2
+            span.passenger__type
+              | Взрослый
+          td
+            .passenger__lastname
+              .input.input_simple
+                span.input__label
+                  | Фамилия:
+                input(type="text")
+          td
+            .passenger__firstname
+              .input.input_simple
+                span.input__label
+                  | Имя:
+                input(type="text")
+          td
+            .passenger__surname
+              .input.input_simple
+                span.input__label
+                  | Отчество:
+                input(type="text")
+          td
+            .passenger__date
+              .input.input_simple
+                span.input__label
+                  | Дата рождения:
+                input(type="text", placeholder="ДД")
+                input(type="text", placeholder="ММ")
+                input(type="text", placeholder="ГГГГ")
+          td
+            .passenger__sex
+              a(href="#").ico.ico_male.is-active
+              a(href="#").ico.ico_female
+              a(href="#").ico.ico_kid
+        tr
+          td
+            .passenger__document
+              .input
+                span.input__label
+                  | Документ:
+                label.radio
+                  input(type="radio", name="document", checked)
+                  span заграничный
+                label.radio
+                  input(type="radio", name="document")
+                  span общенациональный
+                label.radio
+                  input(type="radio", name="document")
+                  span свидетельство
+          td
+            .passenger__nationality
+              .input
+                span.input__label
+                  | Гражданство:
+                .select
+                  span.select__value
+                  ul.select__drop
+                    li
+                      a(href="#", data-option="1")
+                        | Гражданство 1
+                    li
+                      a(href="#", data-option="2")
+                        | Гражданство 2
+                    li
+                      a(href="#", data-option="3")
+                        | Гражданство 3
+          td
+            .passenger__passport
+              .input.input_simple
+                span.input__label
+                  | Серия:
+                input(type="text")
+              .input.input_simple
+                span.input__label
+                  | Номер:
+                input(type="text")
+          td
+            .passenger__date
+              .input.input_simple
+                span.input__label
+                  | Дата рождения:
+                input(type="text", placeholder="ДД")
+                input(type="text", placeholder="ММ")
+                input(type="text", placeholder="ГГГГ")
+          td
+            a(href="#").passenger__clear
+              i.ico.ico_clear
+              | Очистить
+    //end passenger
+

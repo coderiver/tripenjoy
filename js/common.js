@@ -32,4 +32,8 @@ head.ready(function() {
     value.attr('data-selected-option', optionID).text(optionText);
     $(this).parents('.select__drop').slideUp(100);
   });
+
+  $('.select__drop').on('click', function(event) {
+    event.stopPropagation();
+  });
 });

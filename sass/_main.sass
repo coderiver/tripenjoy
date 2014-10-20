@@ -176,6 +176,9 @@
   // margin: 0 -20px -20px 0
   +clr
 
+.ticket-list
+  position: relative
+
 .ticket
   float: left
   width: percentage(490/1000)
@@ -352,16 +355,16 @@
   margin: 0
   position: relative
   box-shadow: none
-  border-top: none
   border-bottom: 2px solid $orange
   +clr
-  &:first-child
-    border-top: 1px solid $border
-  &:nth-child(2n-1)
-    background: #F4FCFF
-    border-color: #F4FCFF
-    border-bottom: 2px solid $blue
-
+  .ticket-list &
+    border-top: none
+    &:first-child
+      border-top: 1px solid $border
+    &:nth-child(odd)
+      background: #F4FCFF
+      border-color: #F4FCFF
+      border-bottom: 2px solid $blue
 
   .ticket__row
     float: left
@@ -487,6 +490,23 @@
     width: 100%
     margin: 14px 0
 
+  &.ticket_buy
+    .ticket__row
+      width: auto
+      float: none
+      border: none
+    .ticket__duration
+      width: percentage(170/950)
+    .ticket__departure,
+    .ticket__arrival
+      width: percentage(220/950)
+    .ticket__flight
+      width: percentage(180/950)
+      b, strong
+        display: block
+    .ticket__info
+      width: percentage(150/950)
+
 
 .sort
   +justify
@@ -536,3 +556,189 @@
   border: 1px solid $blue-border
   border-radius: 20px 20px
   padding: 2px
+
+
+.popup
+  background: #FFF
+  box-shadow: 0 19px 51px rgba(9, 12, 18, 0.27)
+  position: absolute
+  z-index: 101
+  &_return
+    top: -87px
+    left: 0
+    width: 100%
+    .ticket
+      &:nth-child(n)
+        background: #FFF
+        border: 1px solid $border
+        border-width: 1px 0 0
+
+.popup__header
+  padding: 32px 30px 32px 47px
+  +justify
+  .title
+    display: inline-block
+    vertical-align: middle
+
+.popup__close
+  display: inline-block
+  vertical-align: middle
+  font-size: 14px
+  line-height: 24px
+  text-decoration: underline
+  +tr-color
+  cursor: pointer
+  &:hover
+    color: $orange
+  .ico
+    margin-left: 10px
+    font-size: 26px
+    color: $blue
+
+
+.overlay
+  position: fixed
+  z-index: 100
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(255,255,255,0.56)
+
+
+.tiled-text
+  position: fixed
+  z-index: 101
+  top: 50%
+  left: 50%
+  margin-left: -268px
+  margin-top: -37px
+  font-size: 0
+  white-space: nowrap
+  .tile
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    width: 45px
+    height: 75px
+    background: $orange
+    border-radius: 4px
+    margin-right: 4px
+    font-size: 53px
+    color: #FFF
+    text-align: center
+    +roboto-l
+    line-height: 75px
+    text-transform: uppercase
+    &:last-child
+      margin-right: 0
+    &:before
+      content: ""
+      position: absolute
+      top: 53%
+      left: 0
+      right: 0
+      height: 0
+      border-top: 1px solid rgba(0,0,0,0.1)
+      border-bottom: 1px solid rgba(255,255,255,0.2)
+
+
+.passenger
+  margin: 30px 0
+  & + &
+    padding-top: 35px
+    border-top: 1px solid $border
+  input[type="text"], input[type="number"]
+    +roboto
+
+.passenger__table
+  border-collapse: collapse
+  border-spacing: 0
+  +roboto
+  td
+    padding-top: 25px
+    padding-right: 15px
+    vertical-align: top
+    text-align: left
+  tr:first-child
+    td
+      padding-top: 0
+  .input
+    min-width: 172px
+
+.passenger__number
+  display: inline-block
+  width: 56px
+  height: 56px
+  border: 2px solid $orange
+  border-radius: 50%
+  text-align: center
+  line-height: 56px
+  font-size: 24px
+  color: $orange
+  & + .passenger__type
+    margin-top: 17px
+
+.passenger__type
+  display: block
+  font-size: 14px
+  color: #848484
+
+.passenger__date
+  input[type="text"], input[type="number"]
+    display: inline-block
+    width: percentage(54/192)
+    &:last-child
+      width: percentage(74/192)
+
+.passenger__document
+  .input__label
+    margin-bottom: 15px
+  .radio
+    display: block
+    margin-top: 5px
+
+.passenger__sex
+  min-width: 130px
+  margin-top: 26px
+  text-align: center
+  .ico
+    vertical-align: bottom
+    margin-left: 25px
+    color: #ccc
+    font-size: 38px
+    line-height: 1
+    width: auto
+    text-decoration: none
+    +tr
+    &:before
+      width: auto
+    &:first-child
+      margin-left: 0
+    &:hover, &.is-active
+      color: $orange
+  .ico_kid
+    font-size: 25px
+
+.passenger__passport
+  .input
+    display: inline-block
+    vertical-align: top
+    width: percentage(104/172)
+    min-width: 1px
+    &:first-child
+      width: percentage(64/172)
+
+.passenger__clear
+  display: block
+  margin-top: 35px
+  text-align: center
+  color: $text
+  +tr-color
+  &:hover
+    color: $orange
+  .ico
+    color: $orange
+    font-size: 16px
+    margin-right: 5px
+

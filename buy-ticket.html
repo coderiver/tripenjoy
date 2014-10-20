@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buy Ticket</title>
+    <meta name="viewport" content="width=1040px">
+    <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <!--begin header-->
+    <header class="header">
+      <!--begin header__top-->
+      <div class="header__top">
+        <div class="l-center">
+          <div class="header__top-right"><a href="tel:88007707477" class="header__phone"><i class="ico ico_phone"></i>8 800 770 7477</a><a href="#" class="header__user"><i class="ico ico_user"></i>Личный кабинет</a></div><a href="index.html" class="logo">TripEnjoy</a>
+          <nav class="header__nav">
+            <ul>
+              <li class="is-active"><a href="#">Авиабилеты</a></li>
+              <li><a href="#">Ж/Д билеты</a></li>
+              <li><a href="#">Отели</a></li>
+              <li><a href="#">Туры</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--end header__top-->
+    </header>
+    <!--begin search-result-->
+    <div class="search-result">
+      <div class="l-center">
+        <div class="search-result__from">Москва, Россия</div><i class="ico ico_plane"></i>
+        <div class="search-result__to">Париж, Франция<i class="ico ico_calendar"></i>19.09.2014</div><i class="ico ico_plane"></i>
+        <div class="search-result__to">Париж, Франция<i class="ico ico_calendar"></i>23.09.2014</div><a href="#" class="search-result__change">Изменить условия поиска</a>
+      </div>
+    </div>
+    <!--end search-result-->
+    <!--end header-->
+    <!--begin content-->
+    <div class="l-center">
+      <!--begin ticket-->
+      <div class="ticket ticket_wide ticket_buy">
+        <div class="ticket__row"><i class="ico ico_plane"></i>
+          <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+        </div>
+        <div class="ticket__row">
+          <div class="ticket__duration">3 ч 55 мин
+            <div class="ticket__duration-extra">Через Кишинев<span class="ticket__label">6ч 20м</span></div>
+          </div>
+          <div class="ticket__departure"><span class="ticket__label">Вылет</span><span class="ticket__time">19:45</span><span class="ticket__location"><b>Шереметьево,</b> Москва</span></div>
+          <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location"><b>Шарль-де-Голь,</b> Париж</span></div>
+          <div class="ticket__flight"><span class="ticket__label">Рейс</span><b>AF-1745,</b> эконом</div>
+          <div class="ticket__info"><span class="ticket__label">Перевозчик</span><img src="img/af.png" alt=""><b>Air France</b>, <span>AIRBUS A321</span>, <em>мест 3+</em></div>
+        </div>
+        <div class="ticket__row"><i class="ico ico_plane2"></i>
+          <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+        </div>
+        <div class="ticket__row">
+          <div class="ticket__duration">3 ч 55 мин
+            <div class="ticket__duration-extra">Через Кишинев<span class="ticket__label">6ч 20м</span></div>
+          </div>
+          <div class="ticket__departure"><span class="ticket__label">Вылет</span><span class="ticket__time">19:45</span><span class="ticket__location"><b>Шереметьево,</b> Москва</span></div>
+          <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><br><span class="ticket__location"><b>Шарль-де-Голь,</b> Париж</span></div>
+          <div class="ticket__flight"><span class="ticket__label">Рейс</span><b>AF-1745,</b> эконом</div>
+          <div class="ticket__info"><span class="ticket__label">Перевозчик</span><img src="img/af.png" alt=""><b>Air France</b>, <span>AIRBUS A321</span>, <em>мест 3+</em></div>
+        </div>
+      </div>
+      <!--end ticket-->
+    </div>
+    <div class="head">
+      <div class="l-center">
+        <h3 class="title">Данные пассажиров</h3>
+        <p class="head__text">Введите данные пассажирова для бронирования и дальнейшей оплаты.</p>
+      </div>
+    </div>
+    <div class="l-center">
+      <!--begin passenger-->
+      <div class="passenger">
+        <table class="passenger__table">
+          <tr>
+            <td rowspan="2"><span class="passenger__number">1</span><span class="passenger__type">Взрослый</span></td>
+            <td>
+              <div class="passenger__lastname">
+                <div class="input input_simple"><span class="input__label">Фамилия:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__firstname">
+                <div class="input input_simple"><span class="input__label">Имя:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__surname">
+                <div class="input input_simple"><span class="input__label">Отчество:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__date">
+                <div class="input input_simple"><span class="input__label">Дата рождения:</span>
+                  <input type="text" placeholder="ДД">
+                  <input type="text" placeholder="ММ">
+                  <input type="text" placeholder="ГГГГ">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__sex"><a href="#" class="ico ico_male is-active"></a><a href="#" class="ico ico_female"></a><a href="#" class="ico ico_kid"></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="passenger__document">
+                <div class="input"><span class="input__label">Документ:</span>
+                  <label class="radio">
+                    <input type="radio" name="document" checked><span>заграничный</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="document"><span>общенациональный</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="document"><span>свидетельство</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__nationality">
+                <div class="input"><span class="input__label">Гражданство:</span>
+                  <div class="select"><span class="select__value"></span>
+                    <ul class="select__drop">
+                      <li><a href="#" data-option="1">Гражданство 1</a></li>
+                      <li><a href="#" data-option="2">Гражданство 2</a></li>
+                      <li><a href="#" data-option="3">Гражданство 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__passport">
+                <div class="input input_simple"><span class="input__label">Серия:</span>
+                  <input type="text">
+                </div>
+                <div class="input input_simple"><span class="input__label">Номер:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__date">
+                <div class="input input_simple"><span class="input__label">Дата рождения:</span>
+                  <input type="text" placeholder="ДД">
+                  <input type="text" placeholder="ММ">
+                  <input type="text" placeholder="ГГГГ">
+                </div>
+              </div>
+            </td>
+            <td><a href="#" class="passenger__clear"><i class="ico ico_clear"></i>Очистить</a></td>
+          </tr>
+        </table>
+      </div>
+      <!--end passenger-->
+      <!--begin passenger-->
+      <div class="passenger">
+        <table class="passenger__table">
+          <tr>
+            <td rowspan="2"><span class="passenger__number">2</span><span class="passenger__type">Взрослый</span></td>
+            <td>
+              <div class="passenger__lastname">
+                <div class="input input_simple"><span class="input__label">Фамилия:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__firstname">
+                <div class="input input_simple"><span class="input__label">Имя:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__surname">
+                <div class="input input_simple"><span class="input__label">Отчество:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__date">
+                <div class="input input_simple"><span class="input__label">Дата рождения:</span>
+                  <input type="text" placeholder="ДД">
+                  <input type="text" placeholder="ММ">
+                  <input type="text" placeholder="ГГГГ">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__sex"><a href="#" class="ico ico_male is-active"></a><a href="#" class="ico ico_female"></a><a href="#" class="ico ico_kid"></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="passenger__document">
+                <div class="input"><span class="input__label">Документ:</span>
+                  <label class="radio">
+                    <input type="radio" name="document" checked><span>заграничный</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="document"><span>общенациональный</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="document"><span>свидетельство</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__nationality">
+                <div class="input"><span class="input__label">Гражданство:</span>
+                  <div class="select"><span class="select__value"></span>
+                    <ul class="select__drop">
+                      <li><a href="#" data-option="1">Гражданство 1</a></li>
+                      <li><a href="#" data-option="2">Гражданство 2</a></li>
+                      <li><a href="#" data-option="3">Гражданство 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__passport">
+                <div class="input input_simple"><span class="input__label">Серия:</span>
+                  <input type="text">
+                </div>
+                <div class="input input_simple"><span class="input__label">Номер:</span>
+                  <input type="text">
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="passenger__date">
+                <div class="input input_simple"><span class="input__label">Дата рождения:</span>
+                  <input type="text" placeholder="ДД">
+                  <input type="text" placeholder="ММ">
+                  <input type="text" placeholder="ГГГГ">
+                </div>
+              </div>
+            </td>
+            <td><a href="#" class="passenger__clear"><i class="ico ico_clear"></i>Очистить</a></td>
+          </tr>
+        </table>
+      </div>
+      <!--end passenger-->
+    </div>
+    <!--end content-->
+    <!--begin footer-->
+    <footer class="footer">
+      <!--begin footer__main-->
+      <div class="l-center">
+        <div class="footer__main">
+          <ul class="footer__list">
+            <li>Личный кабинет</li>
+            <li><a href="#">Авиабилеты онлайн</a></li>
+            <li><a href="#">Ж/д билеты онлайн</a></li>
+            <li><a href="#">Билеты на автобус</a></li>
+            <li><a href="#">Бронирование отелей</a></li>
+            <li><a href="#">Страхование онлайн</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li>Справка</li>
+            <li><a href="#">FAQ по авиабилетам</a></li>
+            <li><a href="#">Расписание самолётов</a></li>
+            <li><a href="#">Справочник аэропортов</a></li>
+            <li><a href="#">Рейтинг авиакомпаний</a></li>
+            <li><a href="#">Отдых и путешествия</a></li>
+            <li><a href="#">Техническая справка</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li>TripEnjoy</li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Для агентств</a></li>
+            <li><a href="#">Служба поддержки</a></li>
+            <li><a href="#">Форум</a></li>
+            <li><a href="#">Вакансии</a></li>
+          </ul>
+          <div class="footer__lang"><a href="#" class="is-active">rus</a><a href="#">eng</a></div>
+          <div class="footer__payments"><img src="img/cards.png" alt=""></div>
+        </div>
+      </div>
+      <!--end footer__main-->
+      <!--begin footer__bottom-->
+      <div class="footer__bottom">
+        <div class="l-center">
+          <div class="footer__copy"><span>2008-2014 TripEnjoy</span><br>Онлайн бронирование.</div>
+          <div class="footer__phone"><a href="tel:88007003388">8 800 700 33 88</a><br>Горячая линия:<br>c 9:00 до 21:00 по Москве</div>
+          <div class="footer__subscribe"><span>Подписаться на рассылку спецпредложений</span>
+            <div class="input">
+              <input type="text" placeholder="Ваш e-mail"><i class="ico ico_mail"></i>
+            </div><a href="#" class="btn">Подписаться</a>
+          </div>
+        </div>
+      </div>
+      <!--end footer__bottom-->
+    </footer>
+    <!--end footer-->
+    <!--load scripts-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>
