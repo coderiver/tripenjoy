@@ -154,7 +154,7 @@
 .info-text
   position: relative
   box-sizing: border-box
-  margin: 66px 0
+  margin: 40px 0
   padding: 20px
   font-size: 14px
   line-height: 1.7
@@ -171,9 +171,15 @@
     position: absolute
     right: -2px
     bottom: -20px
+    +gpu
+  .checkbox
+    display: block
+    margin-top: 15px
+    +gpu
+    &:first-child
+      margin-top: 0
 
-.top-result
-  // margin: 0 -20px -20px 0
+.wrap
   +clr
 
 .ticket-list
@@ -517,6 +523,7 @@
   .select
     display: inline-block
     vertical-align: middle
+    min-width: 172px
 
 .sort__list
   font-size: 0
@@ -550,6 +557,68 @@
       background: $blue
       box-shadow: -0.3px 2px 1.5px 0.5px rgba(0, 0, 1, 0.05)
       cursor: default
+
+.head
+  margin-top: 50px
+  margin-bottom: 16px
+  padding-bottom: 16px
+  border-bottom: 1px dashed #acacac
+  &:first-child
+    margin-top: 0
+  .clock
+    display: inline-block
+    vertical-align: middle
+  &__text
+    display: inline-block
+    +roboto
+    font-size: 15px
+    line-height: 1.1
+    color: #757575
+    b, strong
+      +roboto-b
+    .title + &
+      margin-top: 10px
+  &_justify
+    .l-center
+      +justify
+    .title
+      display: inline-block
+      vertical-align: middle
+    .head__text
+      display: inline-block
+      vertical-align: middle
+      font-size: 14px
+      margin: 0
+      line-height: 24px
+      a
+        color: $orange
+        margin-left: 10px
+  &_blue
+    border: none
+    background: $blue
+    padding: 10px 0
+    color: #FFF
+    .title, .head__text
+      color: inherit
+    .title
+      +roboto-b
+  &_small
+    border-bottom: 1px solid #e5e5e5
+    padding-bottom: 10px
+    line-height: 1.15
+    font-size: 14px
+    +justify
+    .title
+      +roboto-b
+      font-size: 14px
+      display: inline-block
+      vertical-align: middle
+    .head__text
+      display: inline-block
+      margin: 0
+      vertical-align: middle
+      font-size: 14px
+      color: #8b8b8b
 
 
 .wrap-round
@@ -670,6 +739,7 @@
   display: inline-block
   width: 56px
   height: 56px
+  margin-top: 10px
   border: 2px solid $orange
   border-radius: 50%
   text-align: center
@@ -688,6 +758,7 @@
   input[type="text"], input[type="number"]
     display: inline-block
     width: percentage(54/192)
+    text-align: center
     &:last-child
       width: percentage(74/192)
 
@@ -702,21 +773,30 @@
   min-width: 130px
   margin-top: 26px
   text-align: center
+
+.passenger__sex-radio-btn
+  display: inline-block
+  margin-left: 25px
+  position: relative
+  &:first-child
+    margin-left: 0
+  input[type="radio"]
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    &:checked + .ico
+      color: $orange
   .ico
     vertical-align: bottom
-    margin-left: 25px
     color: #ccc
     font-size: 38px
     line-height: 1
     width: auto
     text-decoration: none
-    +tr
+    +transition(color 0.1s linear)
     &:before
       width: auto
-    &:first-child
-      margin-left: 0
-    &:hover, &.is-active
-      color: $orange
   .ico_kid
     font-size: 25px
 
@@ -742,3 +822,60 @@
     font-size: 16px
     margin-right: 5px
 
+
+.buyer
+  margin-top: 30px
+  font-size: 0
+  & > div
+    display: inline-block
+    vertical-align: bottom
+    margin-left: 15px
+    &:first-child
+      margin-left: 0
+
+.buyer__name
+  width: percentage(325/1000)
+
+.buyer__email
+  width: percentage(275/1000)
+
+.buyer__country-code
+  width: percentage(120/1000)
+
+.buyer__phone
+  width: percentage(235/1000)
+
+.payment
+  +roboto-b
+  font-size: 15px
+  .radio
+    +roboto-l
+    span
+      padding-left: 35px
+
+.payment__table
+  td
+    vertical-align: middle
+  thead
+    td
+      padding: 12px 0
+  tbody
+    td
+      padding-top: 30px
+      padding-bottom: 30px
+      &:first-child
+        padding-left: 28px
+    tr
+      border-bottom: 2px solid $orange
+      &:nth-child(odd)
+        background: #f4fcff
+        border-color: $blue
+
+.payment__operator
+  font-size: 24px
+  color: $blue
+  text-align: center
+  padding: 0 40px 0 20px
+
+.payment__total
+  font-size: 24px

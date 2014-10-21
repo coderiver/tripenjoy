@@ -109,7 +109,17 @@
               </div>
             </td>
             <td>
-              <div class="passenger__sex"><a href="#" class="ico ico_male is-active"></a><a href="#" class="ico ico_female"></a><a href="#" class="ico ico_kid"></a></div>
+              <div class="passenger__sex">
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex"><i class="ico ico_male is-active"></i>
+                </label>
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex" checked><i class="ico ico_female"></i>
+                </label>
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex"><i class="ico ico_kid"></i>
+                </label>
+              </div>
             </td>
           </tr>
           <tr>
@@ -201,7 +211,17 @@
               </div>
             </td>
             <td>
-              <div class="passenger__sex"><a href="#" class="ico ico_male is-active"></a><a href="#" class="ico ico_female"></a><a href="#" class="ico ico_kid"></a></div>
+              <div class="passenger__sex">
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex-second" checked><i class="ico ico_male is-active"></i>
+                </label>
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex-second"><i class="ico ico_female"></i>
+                </label>
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex-second"><i class="ico ico_kid"></i>
+                </label>
+              </div>
             </td>
           </tr>
           <tr>
@@ -209,13 +229,13 @@
               <div class="passenger__document">
                 <div class="input"><span class="input__label">Документ:</span>
                   <label class="radio">
-                    <input type="radio" name="document" checked><span>заграничный</span>
+                    <input type="radio" name="document-second" checked><span>заграничный</span>
                   </label>
                   <label class="radio">
-                    <input type="radio" name="document"><span>общенациональный</span>
+                    <input type="radio" name="document-second"><span>общенациональный</span>
                   </label>
                   <label class="radio">
-                    <input type="radio" name="document"><span>свидетельство</span>
+                    <input type="radio" name="document-second"><span>свидетельство</span>
                   </label>
                 </div>
               </div>
@@ -257,6 +277,109 @@
         </table>
       </div>
       <!--end passenger-->
+    </div>
+    <div class="head head_justify">
+      <div class="l-center">
+        <h3 class="title">Контактные данные покупателя</h3>
+        <p class="head__text">Если у вас уже есть аккаунт TripEnjoy<a href="#">Авторизируйтесь</a></p>
+      </div>
+    </div>
+    <div class="l-center">
+      <!--begin buyer-contacts-->
+      <div class="buyer">
+        <div class="buyer__name">
+          <div class="input input_simple"><span class="input__label">Ф.И.О.:</span>
+            <input type="text">
+          </div>
+        </div>
+        <div class="buyer__email">
+          <div class="input input_simple"><span class="input__label">E-mail:</span>
+            <input type="text">
+          </div>
+        </div>
+        <div class="buyer__country-code">
+          <div class="input input_simple"><span class="input__label">Код страны:</span>
+            <div class="select"><span class="select__value"></span>
+              <ul class="select__drop">
+                <li><a href="#" data-option="1">+001</a></li>
+                <li><a href="#" data-option="1">+002</a></li>
+                <li><a href="#" data-option="1">+003</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="buyer__phone">
+          <div class="input input_simple"><span class="input__label">Номер телефона:</span>
+            <input type="text">
+          </div>
+        </div>
+      </div>
+      <!--end buyer-contacts-->
+    </div>
+    <div class="head head_justify head_blue">
+      <div class="l-center">
+        <h3 class="title">Оплата</h3>
+        <p class="head__text">Выбранные билеты необходимо оплатить до <b>21 сентября 2014 г</b>.</p>
+        <div class="clock">
+          <div class="clock__tile"><span class="clock__value">03</span><span class="clock__label">ч</span></div>
+          <div class="clock__tile"><span class="clock__value">15</span><span class="clock__label">м</span></div>
+          <div class="clock__tile"><span class="clock__value">36</span><span class="clock__label">сек</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="l-center">
+      <!--begin payment-->
+      <div class="payment">
+        <table class="payment__table">
+          <thead>
+            <tr></tr>
+            <td><span>Способ оплаты:</span></td>
+            <td><span>Тариф:</span></td>
+            <td></td>
+            <td><span>Таксы, сборы:</span></td>
+            <td></td>
+            <td><span>К оплате:</span></td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label class="radio">
+                  <input type="radio" name="payment" checked><span><a href="#">Банковской картой</a></span><img src="img/card.png">
+                </label>
+              </td>
+              <td>16 000 руб.</td>
+              <td class="payment__operator">+</td>
+              <td>12 000 руб.</td>
+              <td class="payment__operator">=</td>
+              <td class="payment__total">28 000 руб.</td>
+            </tr>
+            <tr>
+              <td>
+                <label class="radio">
+                  <input type="radio" name="payment"><span><a href="#">Платежной системой</a></span><img src="img/wm.png">
+                </label>
+              </td>
+              <td>16 000 руб.</td>
+              <td class="payment__operator">+</td>
+              <td>13 500 руб.</td>
+              <td class="payment__operator">=</td>
+              <td class="payment__total">29 500 руб.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--end payment-->
+      <!--begin info-text-->
+      <div class="info-text">
+        <label class="checkbox">
+          <input type="checkbox"><span>Я хочу получать информацию о специальных акциях на сайте</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox"><span>Я принимаю <a href="#">соглашение</a>, условия возврата и обмена, а также обработки моих персональных данных</span>
+        </label><a href="#" class="btn">Перейти к Оплате</a>
+      </div>
+      <!--end info-text-->
+      
     </div>
     <!--end content-->
     <!--begin footer-->

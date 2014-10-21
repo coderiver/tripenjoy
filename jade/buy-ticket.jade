@@ -123,9 +123,15 @@ block content
                 input(type="text", placeholder="ГГГГ")
           td
             .passenger__sex
-              a(href="#").ico.ico_male.is-active
-              a(href="#").ico.ico_female
-              a(href="#").ico.ico_kid
+              label.passenger__sex-radio-btn
+                input(type="radio", name="sex")
+                i.ico.ico_male.is-active
+              label.passenger__sex-radio-btn
+                input(type="radio", name="sex", checked)
+                i.ico.ico_female
+              label.passenger__sex-radio-btn
+                input(type="radio", name="sex")
+                i.ico.ico_kid
         tr
           td
             .passenger__document
@@ -218,9 +224,15 @@ block content
                 input(type="text", placeholder="ГГГГ")
           td
             .passenger__sex
-              a(href="#").ico.ico_male.is-active
-              a(href="#").ico.ico_female
-              a(href="#").ico.ico_kid
+              label.passenger__sex-radio-btn
+                input(type="radio", name="sex-second", checked)
+                i.ico.ico_male.is-active
+              label.passenger__sex-radio-btn
+                input(type="radio", name="sex-second")
+                i.ico.ico_female
+              label.passenger__sex-radio-btn
+                input(type="radio", name="sex-second")
+                i.ico.ico_kid
         tr
           td
             .passenger__document
@@ -228,13 +240,13 @@ block content
                 span.input__label
                   | Документ:
                 label.radio
-                  input(type="radio", name="document", checked)
+                  input(type="radio", name="document-second", checked)
                   span заграничный
                 label.radio
-                  input(type="radio", name="document")
+                  input(type="radio", name="document-second")
                   span общенациональный
                 label.radio
-                  input(type="radio", name="document")
+                  input(type="radio", name="document-second")
                   span свидетельство
           td
             .passenger__nationality
@@ -276,4 +288,146 @@ block content
               i.ico.ico_clear
               | Очистить
     //end passenger
+
+  .head.head_justify
+    .l-center
+      h3.title
+        | Контактные данные покупателя
+      p.head__text
+        | Если у вас уже есть аккаунт TripEnjoy
+        a(href="#")
+          | Авторизируйтесь
+
+  .l-center
+    //begin buyer-contacts
+    .buyer
+      .buyer__name
+        .input.input_simple
+          span.input__label
+            | Ф.И.О.:
+          input(type="text")
+      .buyer__email
+        .input.input_simple
+          span.input__label
+            | E-mail:
+          input(type="text")
+      .buyer__country-code
+        .input.input_simple
+          span.input__label
+            | Код страны:
+          .select
+            span.select__value
+            ul.select__drop
+              li
+                a(href="#", data-option="1")
+                  | +001
+              li
+                a(href="#", data-option="1")
+                  | +002
+              li
+                a(href="#", data-option="1")
+                  | +003
+      .buyer__phone
+        .input.input_simple
+          span.input__label
+            | Номер телефона:
+          input(type="text")
+    //end buyer-contacts
+
+  .head.head_justify.head_blue
+    .l-center
+      h3.title
+        | Оплата
+      p.head__text
+        | Выбранные билеты необходимо оплатить до <b>21 сентября 2014 г</b>.
+      .clock
+        .clock__tile
+          span.clock__value
+            | 03
+          span.clock__label
+            | ч
+        .clock__tile
+          span.clock__value
+            | 15
+          span.clock__label
+            | м
+        .clock__tile
+          span.clock__value
+            | 36
+          span.clock__label
+            | сек
+
+  .l-center
+    //begin payment
+    .payment
+      table.payment__table
+        thead
+          tr
+          td
+            span
+              | Способ оплаты:
+          td
+            span
+              | Тариф:
+          td
+          td
+            span
+              | Таксы, сборы:
+          td
+          td
+            span
+              | К оплате:
+        tbody
+          tr
+            td
+              label.radio
+                input(type="radio", name="payment", checked)
+                span
+                  a(href="#")
+                    | Банковской картой
+                img(src="img/card.png")
+            td
+              | 16 000 руб.
+            td.payment__operator
+              | +
+            td
+              | 12 000 руб.
+            td.payment__operator
+              | =
+            td.payment__total
+              | 28 000 руб.
+          tr
+            td
+              label.radio
+                input(type="radio", name="payment")
+                span
+                  a(href="#")
+                    | Платежной системой
+                img(src="img/wm.png")
+            td
+              | 16 000 руб.
+            td.payment__operator
+              | +
+            td
+              | 13 500 руб.
+            td.payment__operator
+              | =
+            td.payment__total
+              | 29 500 руб.
+    //end payment
+
+    //begin info-text
+    .info-text
+      label.checkbox
+        input(type="checkbox")
+        span
+          | Я хочу получать информацию о специальных акциях на сайте
+      label.checkbox
+        input(type="checkbox")
+        span
+          | Я принимаю <a href="#">соглашение</a>, условия возврата и обмена, а также обработки моих персональных данных
+      a(href="#").btn
+        | Перейти к Оплате
+    //end info-text
+
 

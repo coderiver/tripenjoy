@@ -251,23 +251,6 @@
     &:hover
       background: #F4FCFF
 
-
-.head
-  margin-top: 50px
-  margin-bottom: 16px
-  padding-bottom: 16px
-  border-bottom: 1px dashed #acacac
-  &:first-child
-    margin-top: 0
-  &__text
-    +roboto
-    font-size: 15px
-    line-height: 1.1
-    color: #757575
-    .title + &
-      margin-top: 10px
-
-
 .title
   +roboto-l
   font-size: 24px
@@ -275,13 +258,12 @@
   color: $text
   text-transform: uppercase
 
-
 .select
   position: relative
   padding: 0 15px 0 10px
   position: relative
   z-index: 1
-  width: 172px
+  // width: 172px
   height: 42px
   box-sizing: border-box
   border: 1px solid $blue-border
@@ -314,7 +296,8 @@
     right: -1px
     overflow: hidden
     background: #FFF
-    border-top: 1px solid $blue-border
+    // border-top: 1px solid $blue-border
+    border: 1px solid rgba(8, 21, 39, 0.29)
     color: $text
     font-size: 15px
     line-height: 1.33
@@ -401,6 +384,7 @@
     opacity: 0
   span
     display: inline-block
+    vertical-align: middle
     font-size: 14px
     position: relative
     padding-left: 25px
@@ -429,7 +413,49 @@
       +tr
   input[type="radio"]:checked + span:after
     opacity: 1
+  img
+    display: inline-block
+    vertical-align: middle
+    margin-left: 20px
 
+.clock
+  display: inline-block
+  font-size: 0
+  &__tile
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    margin-left: 20px
+    width: 45px
+    height: 55px
+    background: $orange
+    border: 2px solid #fff
+    border-radius: 4px
+    +roboto-b
+    font-size: 24px
+    line-height: 1
+    color: #FFF
+    &:before
+      content: ":"
+      position: absolute
+      top: 10px
+      left: -15px
+    &:first-child
+      margin-left: 0
+      &:before
+        display: none
+  &__value
+    display: block
+    text-align: center
+    margin-top: 11px
+  &__label
+    position: absolute
+    top: 35px
+    left: 0
+    right: 0
+    +roboto
+    text-align: center
+    font-size: 14px
 
 
 
