@@ -135,7 +135,8 @@
 .input
   display: block
   position: relative
-  input[type="text"], input[type="number"]
+
+  input
     display: block
     width: 100%
     box-sizing: border-box
@@ -151,9 +152,28 @@
     +placeholder
       color: #081527
     &:focus
-      box-shadow: 0 0 0 1px rgba(8, 21, 39, 0.29)
+      // box-shadow: 0 0 0 1px rgba(8, 21, 39, 0.29)
+      border-color: rgba(8, 21, 39, 0.29)
       + .ico
         opacity: 1
+
+  textarea
+    width: 100%
+    padding: 10px
+    box-sizing: border-box
+    border: 1px solid $blue-border
+    background: #FFF
+    box-shadow: none
+    outline: none
+    +roboto-l
+    font-size: 15px
+    line-height: 1.333
+    color: #081527
+    +transition(0.1s linear)
+    &:focus
+      // box-shadow: 0 0 0 1px rgba(8, 21, 39, 0.29)
+      border-color: rgba(8, 21, 39, 0.29)
+
   & > .ico
     position: absolute
     top: 0
@@ -164,6 +184,7 @@
     line-height: 40px
     color: $orange
     opacity: 0.7
+
   &__right
     position: absolute
     top: 0
@@ -177,6 +198,7 @@
       +roboto
     .ico
       margin-left: 5px
+
   &__arrow
     position: absolute
     top: 0
@@ -193,12 +215,26 @@
       border: 1px solid transparent
       border-width: 6px 6px 0 6px
       border-top-color: $orange
+
   &__label
     display: block
     +roboto-b
     font-size: 14px
     line-height: 1
     margin-bottom: 12px
+
+  &__error-msg
+    display: none
+    margin-top: 13px
+    padding:  7px 10px
+    font-size: 14px
+    line-height: 20px
+    +roboto-b
+    text-transform: uppercase
+    color: #FFF
+    background: $orange
+
+
   &_ico-right
     input[type="text"]
       padding-left: 10px
@@ -208,19 +244,30 @@
       right: 0
       width: 35px
       text-align: left
+
   &_drop
-    input[type="text"]
+    input
       padding-right: 20px
+
   &_simple
-    input[type="text"], input[type="number"]
+    input
       padding: 10px
       border: 1px solid $blue-border
+
   &_multiple
-    input[type="text"], input[type="number"]
+    input
       display: inline-block
       width: percentage(54/192)
       &:last-child
         width: percentage(74/192)
+
+  &.is-error
+    input
+      border-color: $orange
+      outline: 1px solid $orange
+      outline-offset: 0
+    .input__error-msg
+      display: block
 
 .btn
   display: inline-block
@@ -456,6 +503,14 @@
     +roboto
     text-align: center
     font-size: 14px
+
+.tel
+  display: inline-block
+  font-size: 24px
+  +roboto-l
+  line-height:  1.4
+  color: $text
+  text-decoration: none
 
 
 

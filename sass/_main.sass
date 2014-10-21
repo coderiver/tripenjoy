@@ -3,18 +3,18 @@
   height: 582px
   overflow: hidden
   background: $blue
-  &:before,
-  &:after
-    content: ""
-    position: absolute
-    z-index: 2
-    height: 0
-    width: 100%
-    border-top: 1px dashed #acacac
-  &:before
-    top: 0
-  &:after
-    bottom: 0
+  // &:before,
+  // &:after
+  //   content: ""
+  //   position: absolute
+  //   z-index: 2
+  //   height: 0
+  //   width: 100%
+  //   border-top: 1px dashed #acacac
+  // &:before
+  //   top: 0
+  // &:after
+  //   bottom: 0
 
 
 .promo
@@ -564,7 +564,7 @@
   padding-bottom: 16px
   border-bottom: 1px dashed #acacac
   &:first-child
-    margin-top: 0
+    margin-top: 30px
   .clock
     display: inline-block
     vertical-align: middle
@@ -879,3 +879,84 @@
 
 .payment__total
   font-size: 24px
+
+.base
+  overflow: hidden
+  margin: 25px 0 45px 0
+
+.base__container
+  margin: 0 -50px -40px 0
+  font-size: 0
+
+.base__item
+  display: inline-block
+  vertical-align: top
+  box-sizing: border-box
+  width: percentage(350/1000)
+  max-width: 350px
+  padding-right: percentage(50/1000)
+  margin-bottom: 40px
+
+.base__list
+  +roboto
+  li
+    position: relative
+    padding-left: 20px
+    font-size: 14px
+    line-height: 1.3
+    margin-top: 15px
+    &:first-child
+      margin-top: 0
+    a
+      color: $blue
+    &:before
+      @extend .ico:before
+      content: '\e81a'
+      position: absolute
+      top: 0
+      left: 0
+      width: auto
+      font-size: 16px
+      line-height: 1
+      color: #333
+
+
+.contact-form
+  .input_simple
+    display: inline-block
+    vertical-align: top
+    width: percentage(300/615)
+    margin-left: percentage(15/615)
+    &:first-child
+      margin-left: 0
+  .btn
+    margin-top: 30px
+
+.contact-form__row
+  margin-top: 30px
+  font-size: 0
+  .head + &
+    margin-top: 20px
+
+
+.captcha
+  .input
+    max-width: 175px
+
+.captcha__pic
+  display: inline-block
+  vertical-align: bottom
+  margin-left: 20px
+  img
+    display: block
+
+
+.contacts
+  margin-top: 20px
+  font-size: 14px
+  line-height: 1.37
+  .input__label
+    margin-bottom: 5px
+    margin-top: 30px
+    &:first-child
+      margin-top: 0

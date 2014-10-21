@@ -1,0 +1,97 @@
+extend layout/layout
+
+block title
+  title Conatct Form
+
+block content
+  .head
+    .l-center
+      h1.title
+        | контакты
+
+  .l-center
+    .l-two-col
+      .col1
+        .head.head_small
+          h3.title
+            | Напишите нам
+        //begin contact-form
+        .contact-form
+          .contact-form__row
+            .input.input_simple
+              span.input__label
+                | Ваш вопрос о:
+              .select
+                span.select__value
+                ul.select__drop
+                  li
+                    a(href="#", data-option="1")
+                      | Вопрос 1
+                  li
+                    a(href="#", data-option="2")
+                      | Вопрос 2
+                  li
+                    a(href="#", data-option="3")
+                      | Вопрос 3
+          .contact-form__row
+            .input.input_simple.is-error
+              span.input__label
+                | Имя:
+              input(type="text")
+              p.input__error-msg
+                | укажите ваше имя
+            .input.input_simple
+              span.input__label
+                | Фамилия:
+              input(type="text")
+              p.input__error-msg
+                | укажите вашу фамилию
+
+          .contact-form__row
+            .input.input_simple
+              span.input__label
+                | Организация:
+              input(type="text")
+            .input.input_simple
+              span.input__label
+                | Номер телефона:
+              input(type="text")
+
+          .contact-form__row
+            .input
+              span.input__label
+                | Ваш вопрос:
+              textarea(rows="9")
+
+          .contact-form__row.captcha
+            .input.input_simple
+              span.input__label
+                | Введите цифры:
+              input(type="text")
+            .captcha__pic
+              img(src="img/captcha.png")
+          button(type="submit").btn
+            | Отправить
+        //end contact-form
+
+      .col2
+        //begin contacts
+        .head.head_small
+          h3.title
+            | Свяжитесь с нами
+        .contacts
+          span.input__label
+            | Физический адрес:
+          span Россия, г. Москва <br> Манежная площадь, д.2, стр. 1
+          span.input__label
+            | Представительство в г. Москва:
+          a(href="tel:+74952292712").tel
+            | +7 495 229-27-12
+          a(href="tel:+74952292712").tel
+            | +7 495 229-27-12
+          span.input__label
+            | Представительство в г. Санкт Петербург:
+          span.tel
+            | +7 495 229-27-12
+        //end contacts
+
