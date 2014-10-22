@@ -1,0 +1,133 @@
+extend layout/layout2
+
+block title
+  title Tours Results
+
+block content
+  .l-center
+    .wrap
+      //begin tour
+      .tour
+        .tour__head
+          i.ico.ico_clock
+          | Самый удобный
+        .tour__row
+          .hotel
+            .hotel__pic
+              img(src="http://placehold.it/95x95")
+            .hotel__container
+              .hotel__container-in
+                .tour__operator
+                  img(src="img/tui.png", alt="")
+                .hotel__name
+                  | Best Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+        .tour__row
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 10
+            .tour__info-item
+              .tour__label
+                | Номер
+              span.tour__room
+                | стандарт
+            .tour__info-item
+              .tour__label
+                | Питание
+              a.tour__food(href="#")
+                  | ro
+        .tour__bottom
+          span.tour__price
+            | Итого: <b>30 000 руб.</b>
+          button.btn
+            | Купить
+      //end tour
+
+      //begin tour
+      .tour
+        .tour__head.tour__head_orange
+          i.ico.ico_percent
+          | Самый Дешевый
+        .tour__row
+          .hotel
+            .hotel__pic
+              img(src="http://placehold.it/95x95")
+            .hotel__container
+              .hotel__container-in
+                .tour__operator
+                  img(src="img/transaero.png", alt="")
+                .hotel__name
+                  | Koppers
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+        .tour__row
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 7
+            .tour__info-item
+              .tour__label
+                | Номер
+              span.tour__room
+                | стандарт
+            .tour__info-item
+              .tour__label
+                | Питание
+              a.tour__food(href="#")
+                  | bb
+        .tour__bottom
+          span.tour__price
+            | Итого: <b>25 620 руб.</b>
+          button.btn
+            | Купить
+      //end tour

@@ -9,22 +9,25 @@ html
     link(rel="stylesheet" media="all" href="css/screen.css")
     <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   body
-    //begin header
-    block header
-      include ../include/header
-    //end header
+    .out
+      //begin header
+      block header
+        include ../include/header
+      //end header
 
-    //begin content
-    block toparea
-      include ../include/search
+      //begin content
+      block toparea
+        include ../include/search
 
-    block content
-    //end content
+      block content
+      //end content
 
-    //begin footer
-    block footer
-      include ../include/footer
-    //end footer
+      //begin footer
+      block footer
+        include ../include/footer
+      //end footer
+
+    block popup
 
     //load scripts
     script(src="js/lib/head.js" data-headjs-load="js/init.js")

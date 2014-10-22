@@ -40,6 +40,9 @@
     font-size: 24px
     &:before
       content: '\e805'
+  &_location2
+    &:before
+      content: '\e81c'
   &_load
     font-size: 20px
     &:before
@@ -49,7 +52,6 @@
     &:before
       content: '\e802'
   &_star
-    font-size: 20px
     &:before
       content: '\e80d'
   &_person
@@ -86,6 +88,9 @@
     &:before
       content: '\e812'
       width: auto
+  &_planes
+    &:before
+      content: '\e808'
   &_clock
     &:before
       content: '\e80F'
@@ -113,6 +118,10 @@
   &_kid
     &:before
       content: '\e816'
+  &_envelope
+    &:before
+      content: '\e81b'
+      width: auto
 
 // use png files (sprite)
 // .icon
@@ -184,6 +193,9 @@
     line-height: 40px
     color: $orange
     opacity: 0.7
+    +tr
+    &_star
+      font-size: 20px
 
   &__right
     position: absolute
@@ -253,6 +265,11 @@
     input
       padding: 10px
       border: 1px solid $blue-border
+    &.is-error
+      input
+        border-color: $orange
+        outline: 1px solid $orange
+        outline-offset: 0
 
   &_multiple
     input
@@ -264,8 +281,10 @@
   &.is-error
     input
       border-color: $orange
-      outline: 1px solid $orange
-      outline-offset: 0
+      outline: 2px solid $orange
+      outline-offset: -1px
+      +placeholder
+        color: $orange
     .input__error-msg
       display: block
 

@@ -139,6 +139,34 @@
   width: percentage(160/1000)
   margin-left: percentage(48/1000)
 
+.search__error-msg
+  display: none
+  position: relative
+  z-index: 1
+  margin: -22px 0 13px
+  padding: 14px 42px
+  font-size: 16px
+  line-height: 20px
+  +roboto-b
+  color: #FFF
+  text-transform: uppercase
+  background-color: rgba(17,130,178,0.5)
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.11) 0%, rgba(0, 0, 0, 0.11) 100%)
+  border: 1px solid rgba(255,255,255,0.5)
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.36)
+  &:before
+    content: ""
+    position: absolute
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background: #fff
+    top: 50%
+    left: 18px
+    margin-top: -4px
+  &.is-visible
+    display: block
+
 
 .search-result
   margin-bottom: 23px

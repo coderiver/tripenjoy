@@ -1,0 +1,132 @@
+extends layout/layout
+
+block title
+  title Search Error
+
+block toparea
+  include include/search-error
+
+block content
+  //begin map
+  #map.map
+    include include/map.html
+  //end map
+
+  .l-center
+    //begin promo
+    .promo
+      .promo__item
+        .ico.ico_compass
+        span
+          | Визовая поддержка
+      .promo__item
+        .ico.ico_umbrela
+        span
+          | Страхование туристов
+      .promo__item
+        .ico.ico_car-rental
+        span
+          | Аренда автомобилей
+      .promo__item
+        .ico.ico_car-transfer
+        span
+          | Заказ трансфера
+    //end promo
+
+    //begin slider
+    .slider
+      .slider__header
+        h2.slider__title
+          | Популярные города
+        .slider__nav
+          .slider__prev.ico.ico_prev
+          .slider__next.ico.ico_next
+
+      .slider__wrap
+        .slider__main.js-slick-slider
+
+          a(href="#").slider__item
+            .slider__item-pic
+              img(src="http://placehold.it/240x185")
+            .slider__item-bottom
+              .slider__item-text
+                span.name
+                  | Анапа, Россия
+                span.price
+                  | от 2 000 руб.
+
+          a(href="#").slider__item
+            .slider__item-pic
+              img(src="http://placehold.it/240x185")
+            .slider__item-bottom
+              .slider__item-text
+                span.name
+                  | Анапа, Россия
+                span.price
+                  | от 20 000 руб.
+
+          a(href="#").slider__item
+            .slider__item-pic
+              img(src="http://placehold.it/240x185")
+            .slider__item-bottom
+              .slider__item-text
+                span.name
+                  | Анапа, Россия
+                span.price
+                  | от 2 000 руб.
+
+          a(href="#").slider__item
+            .slider__item-pic
+              img(src="http://placehold.it/240x185")
+            .slider__item-bottom
+              .slider__item-text
+                span.name
+                  | Анапа, Россия
+                span.price
+                  | от 20 000 руб.
+
+          a(href="#").slider__item
+           .slider__item-pic
+             img(src="http://placehold.it/240x185")
+           .slider__item-bottom
+             .slider__item-text
+               span.name
+                 | Анапа, Россия
+               span.price
+                 | от 20 000 руб.
+
+          a(href="#").slider__item
+           .slider__item-pic
+             img(src="http://placehold.it/240x185")
+           .slider__item-bottom
+             .slider__item-text
+               span.name
+                 | Анапа, Россия
+               span.price
+                 | от 20 000 руб.
+
+          a(href="#").slider__item
+           .slider__item-pic
+             img(src="http://placehold.it/240x185")
+           .slider__item-bottom
+             .slider__item-text
+               span.name
+                 | Анапа, Россия
+               span.price
+                 | от 20 000 руб.
+    //end slider
+
+    //begin info-text
+    .info-text
+      dl
+        dt
+          | TRIPENJOY
+        dd
+          | — это один из ярких проектов ГК «Pay.Travel», который объединяет продажу ключевых
+          | услуг в области путешествий в рамках единого масштабного on-line сервиса.
+          | Все возможные сервисы для организации путешествий объединены в рамках единой платформы,
+          | что позволяет максимально удобно и оперативно организовать свой отдых или бизнес-поездку.
+
+      a.btn(href="#")
+        | Узнать больше
+    //end info-text

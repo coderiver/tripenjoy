@@ -95,3 +95,19 @@ block content
             | +7 495 229-27-12
         //end contacts
 
+    button.btn.js-popup-show(data-popup="success", style="margin-top: 50px")
+      | нажми меня
+  .overlay
+
+block popup
+  #success.popup.popup_success.js-popup
+    .popup__in
+      i.ico.ico_envelope
+      strong
+        | Спасибо!
+      p
+        | Ваше сообщение успешно отправленно.
+        | Мы свяжемся с вами в ближайшее время.
+      button.btn.js-popup-hide
+        | Продолжить
+

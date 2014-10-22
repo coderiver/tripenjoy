@@ -80,21 +80,27 @@ $blue-border: #d6eef9
 
 
 =tr
-  +transition(all 0.2s linear)
+  +transition(all 0.1s linear)
 =tr-color
-  +transition(color 0.2s linear)
+  +transition(color 0.1s linear)
 
 
 body
-  font-family: Arial, sans-serif
+  +roboto-l
   font-size: 14px
   line-height: 1.4
-  +roboto-l
 
 a
   color: $orange
   text-decoration: underline
   &:hover
     text-decoration: none
+
+.is-blurred
+  +blur(6px)
+  overflow: hidden
+
+.no-overflow
+  overflow: hidden
 
 // common blocks

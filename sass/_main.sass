@@ -603,11 +603,14 @@
     .title
       +roboto-b
   &_small
+    margin-top: 0
     border-bottom: 1px solid #e5e5e5
     padding-bottom: 10px
     line-height: 1.15
     font-size: 14px
     +justify
+    &:first-child
+      margin-top: 0
     .title
       +roboto-b
       font-size: 14px
@@ -628,11 +631,19 @@
 
 
 .popup
+  display: none
+  position: fixed
+  z-index: 101
+  top: 50%
+  left: 50%
   background: #FFF
   box-shadow: 0 19px 51px rgba(9, 12, 18, 0.27)
-  position: absolute
-  z-index: 101
+  +transform(translateX(-50%) translateY(-50%))
+  &.is-visible
+    display: block
+
   &_return
+    position: absolute
     top: -87px
     left: 0
     width: 100%
@@ -641,6 +652,51 @@
         background: #FFF
         border: 1px solid $border
         border-width: 1px 0 0
+
+  &_success
+    box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
+    font-size: 24px
+    line-height: 1.4
+    strong
+      +roboto-b
+    .popup__in
+      position: relative
+      background: #fff
+      padding: 50px 50px 85px
+      z-index: 1
+    &:before
+      content: ""
+      position: absolute
+      z-index: 1
+      top: -35px
+      left: -35px
+      width: 80px
+      height: 80px
+      background: #FFF
+      border-radius: 50%
+      box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
+    .ico
+      position: absolute
+      top: -29px
+      left: -29px
+      width: 64px
+      height: 64px
+      border: 2px solid $orange
+      box-shadow: 0 0 0 5px #FFF
+      color: $orange
+      text-align: center
+      font-size: 28px
+      line-height: 64px
+      border-radius: 50%
+      background: #FFF
+      &:before
+        line-height: 1
+        width: auto
+    .btn
+      position: absolute
+      bottom: 12px
+      right: 12px
+
 
 .popup__header
   padding: 32px 30px 32px 47px
@@ -666,6 +722,7 @@
 
 
 .overlay
+  display: none
   position: fixed
   z-index: 100
   top: 0
@@ -673,6 +730,8 @@
   right: 0
   bottom: 0
   background: rgba(255,255,255,0.56)
+  &.is-visible
+    display: block
 
 
 .tiled-text
@@ -896,6 +955,9 @@
   max-width: 350px
   padding-right: percentage(50/1000)
   margin-bottom: 40px
+  .head
+    margin-top: 30px
+
 
 .base__list
   +roboto
@@ -960,3 +1022,200 @@
     margin-top: 30px
     &:first-child
       margin-top: 0
+
+
+.article
+  font-size: 15px
+  line-height: 1.6
+  +roboto
+  strong
+    +roboto-b
+  p
+    margin: 22px 0
+    &:first-child
+      margin-top: -5px
+    &:last-child
+      margin-bottom: 0
+  .with-icon
+    position: relative
+    padding-left: 100px
+    .ico
+      color: $orange
+      position: absolute
+      top: 0
+      left: 0
+      width: 100px
+      text-align: center
+      font-size: 55px
+      line-height: 1
+  & > img
+    float: left
+    margin-right: 25px
+
+
+.navigation
+  font-size: 14px
+  +roboto
+  line-height: 20px
+  color: $blue
+  li
+    margin-top: -5px
+    &:first-child
+      margin-top: 0
+    &.is-active
+      a
+        background: $blue
+        color: #fff
+  a
+    display: block
+    color: inherit
+    +tr
+    padding: 10px
+    &:hover, .is-active
+      color: #FFF
+      background: $blue
+
+.banner
+  margin: 45px 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+
+.tour
+  @extend .ticket
+
+.tour__head
+  @extend .ticket__head
+  &_orange
+    color: $orange
+
+.tour__bottom
+  @extend .ticket__bottom
+
+.tour__price
+  @extend .ticket__price
+
+.tour__operator
+  position: absolute
+  top: 0
+  right: 0
+  width: 75px
+  img
+    display: block
+    max-width: 100%
+    margin: auto
+
+.tour__info
+  padding: 15px 13px
+  background: #edfaff
+  +justify
+  border: 1px solid $border
+  border-width: 1px 0
+
+.tour__info-item
+  display: inline-block
+  vertical-align: top
+
+.tour__label
+  @extend .ticket__label
+
+.tour__date
+  @extend .ticket__time
+  display: inline-block
+  vertical-align: top
+  margin-right: 5px
+
+.tour__date-extend
+  @extend .ticket__location
+  display: inline-block
+  vertical-align: top
+  b
+    text-transform: uppercase
+
+.tour__nights
+  display: block
+  margin: auto
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  border: 2px solid $orange
+  color: $orange
+  font-size: 20px
+  line-height: 30px
+  text-align: center
+
+.tour__room
+  +roboto-b
+  text-transform: uppercase
+  font-size: 12px
+
+.tour__food
+  +roboto-b
+  font-size: 12px
+  text-transform: uppercase
+  color: $orange
+  a
+    color: inherit
+
+
+.hotel
+  +clr
+  padding: 13px
+  box-sizing: border-box
+
+.hotel__pic
+  float: left
+  img
+    display: block
+    max-width: 100%
+
+.hotel__container
+  font-size: 0
+  margin-left: 110px
+  white-space: nowrap
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    width: 0
+    height: 100%
+    min-height: 95px
+
+.hotel__container-in
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  padding-right: 75px
+  white-space: normal
+  width: 100%
+  box-sizing: border-box
+
+.hotel__name
+  display: inline-block
+  vertical-align: middle
+  +roboto-b
+  font-size: 20px
+  line-height: 1
+  text-transform: uppercase
+  margin-right: 8px
+
+.hotel__rating
+  display: inline-block
+  vertical-align: middle
+  font-size: 12px
+  color: $orange
+  .ico_star
+    margin-right: 2px
+
+.hotel__location
+  display: block
+  margin-top: 15px
+  color: #777
+  font-size: 14px
+  line-height: 1.15
+  .ico
+    margin: 0 4px 0 8px
+  a
+    display: inline-block
