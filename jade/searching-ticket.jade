@@ -157,12 +157,9 @@ block content
         span.select__value
           | Авиакомпания
         ul.select__drop
-          li
-            a(href="#", data-option="1") Любой
-          li
-            a(href="#", data-option="2") Бизнесс
-          li
-            a(href="#", data-option="3") Эконом
+          - var i = 1
+          each item in ['Любой', 'Бизнесс', 'Эконом']
+            li(data-option=i++)= item
 
       .wrap-round
         ul.sort__list
@@ -512,7 +509,7 @@ block content
       .spinner
     //end ticket-list
 
-    .overlay
+    .overlay(style="display: block")
     .tiled-text
       .tile и
       .tile д

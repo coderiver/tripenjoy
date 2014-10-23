@@ -11,14 +11,180 @@ block content
         .tour__head
           i.ico.ico_clock
           | Самый удобный
+        .hotel
+          .hotel__pic
+            img(src="http://placehold.it/95x95")
+          .hotel__container
+            .hotel__container-in
+              .hotel__operator
+                img(src="img/tui.png", alt="")
+              .hotel__name
+                | Best Semiramis
+              .hotel__rating
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+              .hotel__location
+                | Испания, Коста-дель-Маресме
+                a(href="#")
+                  i.ico.ico_location2
+                  | Карта
+        .tour__info
+          .tour__info-item
+            span.tour__label
+              | Вылет
+            span.tour__date
+              | 8
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Обратно
+            span.tour__date
+              | 18
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Ночей
+            span.tour__nights
+              | 10
+          .tour__info-item
+            .tour__label
+              | Номер
+            span.tour__room
+              b
+                | стандарт
+          .tour__info-item
+            .tour__label
+              | Питание
+            a.tour__food(href="#")
+                | ro
+        .tour__bottom
+          span.tour__price
+            | Итого: <b>30 000 руб.</b>
+          button.btn
+            | Купить
+      //end tour
+
+      //begin tour
+      .tour
+        .tour__head.tour__head_orange
+          i.ico.ico_percent
+          | Самый Дешевый
+        .hotel
+          .hotel__pic
+            img(src="http://placehold.it/95x95")
+          .hotel__container
+            .hotel__container-in
+              .hotel__operator
+                img(src="img/transaero.png", alt="")
+              .hotel__name
+                | Koppers
+              .hotel__rating
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+              .hotel__location
+                | Испания, Коста-дель-Маресме
+                a(href="#")
+                  i.ico.ico_location2
+                  | Карта
+        .tour__info
+          .tour__info-item
+            span.tour__label
+              | Вылет
+            span.tour__date
+              | 8
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Обратно
+            span.tour__date
+              | 18
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Ночей
+            span.tour__nights
+              | 7
+          .tour__info-item
+            .tour__label
+              | Номер
+            span.tour__room
+              b
+                | стандарт
+          .tour__info-item
+            .tour__label
+              | Питание
+            a.tour__food(href="#")
+                | bb
+        .tour__bottom
+          span.tour__price
+            | Итого: <b>25 620 руб.</b>
+          button.btn
+            | Купить
+      //end tour
+
+  .head
+    .l-center
+      h1.title
+        | Отсортировать варианты по:
+
+  .l-center
+    //begin sort
+    .sort.sort_select
+      .select
+        span.select__value
+          | Городу
+        ul.select__drop
+          - var i = 1;
+          each item in ['город 1', 'город 2', 'город 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | Отелю
+        ul.select__drop
+          - var i = 1;
+          each item in ['отель 1', 'отель 2', 'отель 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | Категории
+        ul.select__drop
+          - var i = 1;
+          each item in ['категория 1', 'категория 2', 'категория 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | Питанию
+        ul.select__drop
+          - var i = 1;
+          each item in ['питание 1', 'питание 2', 'питание 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | Туроператору
+        ul.select__drop
+          - var i = 1;
+          each item in ['туроператор 1', 'туроператор 2', 'туроператор 3']
+            li(data-option=i++)= item
+    //end sort
+
+    //begin ticket-list
+    .ticket-list
+      //begin tour
+      .tour.tour_wide
         .tour__row
           .hotel
             .hotel__pic
               img(src="http://placehold.it/95x95")
             .hotel__container
               .hotel__container-in
-                .tour__operator
-                  img(src="img/tui.png", alt="")
                 .hotel__name
                   | Best Semiramis
                 .hotel__rating
@@ -32,7 +198,6 @@ block content
                   a(href="#")
                     i.ico.ico_location2
                     | Карта
-        .tour__row
           .tour__info
             .tour__info-item
               span.tour__label
@@ -54,37 +219,146 @@ block content
               span.tour__nights
                 | 10
             .tour__info-item
-              .tour__label
-                | Номер
-              span.tour__room
-                | стандарт
-            .tour__info-item
-              .tour__label
-                | Питание
-              a.tour__food(href="#")
-                  | ro
+              span.tour__label
+                | Туроператор
+              img(src="img/tui.png", alt="")
+        .tour__row
+          table.tour__option-table
+            tr
+              td
+                .tour__option
+                  i.ico.ico_family
+                  | 2 ADL
+                .tour__option
+                  i.ico.ico_bed
+                  | стандартная комната
+              td
+                .tour__option
+                  i.ico.ico_forks
+                  | все включено
+                .tour__option
+                  i.ico.ico_direction
+                  | SVO-AYT-DMO
+              td
+                .tour__option-cleen
+                  i.ico.ico_plane
+                  .tour__option-status
+                    i.ico.ico_no
+                .tour__option-cleen
+                  i.ico.ico_home
+                  .tour__option-status
+                    i.ico.ico_yes
+                .tour__option-cleen
+                  i.ico.ico_plane2
+                  .tour__option-status
+                    span
+                      | по запросу
         .tour__bottom
-          span.tour__price
-            | Итого: <b>30 000 руб.</b>
-          button.btn
-            | Купить
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 30 000
+              sub
+                | руб.
+            button.btn
+              | Купить
       //end tour
-
       //begin tour
-      .tour
-        .tour__head.tour__head_orange
-          i.ico.ico_percent
-          | Самый Дешевый
+      .tour.tour_wide
         .tour__row
           .hotel
             .hotel__pic
               img(src="http://placehold.it/95x95")
             .hotel__container
               .hotel__container-in
-                .tour__operator
-                  img(src="img/transaero.png", alt="")
                 .hotel__name
-                  | Koppers
+                  | Best Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 8
+            .tour__info-item
+              span.tour__label
+                | Туроператор
+              img(src="img/transaero.png", alt="")
+        .tour__row
+          table.tour__option-table
+            tr
+              td
+                .tour__option
+                  i.ico.ico_family
+                  | 2 ADL
+                .tour__option
+                  i.ico.ico_bed
+                  | стандартная комната
+              td
+                .tour__option
+                  i.ico.ico_forks
+                  | все включено
+                .tour__option
+                  i.ico.ico_direction
+                  | SVO-AYT-DMO
+              td
+                .tour__option-cleen
+                  i.ico.ico_plane
+                  .tour__option-status
+                    i.ico.ico_no
+                .tour__option-cleen
+                  i.ico.ico_home
+                  .tour__option-status
+                    i.ico.ico_yes
+                .tour__option-cleen
+                  i.ico.ico_plane2
+                  .tour__option-status
+                    span
+                      | по запросу
+        .tour__bottom
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 25 500
+              sub
+                | руб.
+            button.btn
+              | Купить
+      //end tour
+      //begin tour
+      .tour.tour_wide
+        .tour__row
+          .hotel
+            .hotel__pic
+              img(src="http://placehold.it/95x95")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Oasis Tossa
                 .hotel__rating
                   i.ico.ico_star
                   i.ico.ico_star
@@ -94,6 +368,287 @@ block content
                   a(href="#")
                     i.ico.ico_location2
                     | Карта
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 15
+        .tour__row
+          table.tour__option-table
+            tr
+              td
+                .tour__option
+                  i.ico.ico_family
+                  | 2 ADL
+                .tour__option
+                  i.ico.ico_bed
+                  | стандартная комната
+              td
+                .tour__option
+                  i.ico.ico_forks
+                  | все включено
+                .tour__option
+                  i.ico.ico_direction
+                  | SVO-AYT-DMO
+              td
+                .tour__option-cleen
+                  i.ico.ico_plane
+                  .tour__option-status
+                    i.ico.ico_no
+                .tour__option-cleen
+                  i.ico.ico_home
+                  .tour__option-status
+                    i.ico.ico_yes
+                .tour__option-cleen
+                  i.ico.ico_plane2
+                  .tour__option-status
+                    i.ico.ico_yes
+        .tour__bottom
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 21 000
+              sub
+                | руб.
+            button.btn
+              | Купить
+            .tour__number
+              span.tour__label
+                | Туров <br> в отель
+              | 3
+            button.btn.btn_blue.js-popup-show(data-popup="targetPopup")
+              | Выбрать
+      //end tour
+      //begin tour
+      .tour.tour_wide
+        .tour__row
+          .hotel
+            .hotel__pic
+              img(src="http://placehold.it/95x95")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Best Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 10
+            .tour__info-item
+              span.tour__label
+                | Туроператор
+              img(src="img/tui.png", alt="")
+        .tour__row
+          table.tour__option-table
+            tr
+              td
+                .tour__option
+                  i.ico.ico_family
+                  | 2 ADL
+                .tour__option
+                  i.ico.ico_bed
+                  | стандартная комната
+              td
+                .tour__option
+                  i.ico.ico_forks
+                  | все включено
+                .tour__option
+                  i.ico.ico_direction
+                  | SVO-AYT-DMO
+              td
+                .tour__option-cleen
+                  i.ico.ico_plane
+                  .tour__option-status
+                    i.ico.ico_no
+                .tour__option-cleen
+                  i.ico.ico_home
+                  .tour__option-status
+                    i.ico.ico_yes
+                .tour__option-cleen
+                  i.ico.ico_plane2
+                  .tour__option-status
+                    span
+                      | по запросу
+        .tour__bottom
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 30 000
+              sub
+                | руб.
+            button.btn
+              | Купить
+      //end tour
+      //begin tour
+      .tour.tour_wide
+        .tour__row
+          .hotel
+            .hotel__pic
+              img(src="http://placehold.it/95x95")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Best Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 8
+            .tour__info-item
+              span.tour__label
+                | Туроператор
+              img(src="img/transaero.png", alt="")
+        .tour__row
+          table.tour__option-table
+            tr
+              td
+                .tour__option
+                  i.ico.ico_family
+                  | 2 ADL
+                .tour__option
+                  i.ico.ico_bed
+                  | стандартная комната
+              td
+                .tour__option
+                  i.ico.ico_forks
+                  | все включено
+                .tour__option
+                  i.ico.ico_direction
+                  | SVO-AYT-DMO
+              td
+                .tour__option-cleen
+                  i.ico.ico_plane
+                  .tour__option-status
+                    i.ico.ico_no
+                .tour__option-cleen
+                  i.ico.ico_home
+                  .tour__option-status
+                    i.ico.ico_yes
+                .tour__option-cleen
+                  i.ico.ico_plane2
+                  .tour__option-status
+                    span
+                      | по запросу
+        .tour__bottom
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 25 500
+              sub
+                | руб.
+            button.btn
+              | Купить
+            .tour__number
+              span.tour__label
+                | Туров <br> в отель
+              | 12
+            button.btn.btn_blue.js-popup-show(data-popup="targetPopup")
+              | Выбрать
+      //end tour
+
+      .spinner
+    //end ticket-list
+
+    //- .overlay(style="display: block")
+
+block popup
+  #targetPopup.popup.popup_wide(style="display: block")
+    .popup__in.is-visible
+      .popup__header
+        .title
+          | Туры в отель
+        .popup__close.js-popup-hide
+          | Закрыть
+          i.ico.ico_close
+      //begin hotel
+      .hotel
+        .hotel__pic
+          img(src="http://placehold.it/95x95")
+        .hotel__container
+          .hotel__container-in
+            .hotel__name
+              | Best Semiramis
+            .hotel__rating
+              i.ico.ico_star
+              i.ico.ico_star
+              i.ico.ico_star
+              i.ico.ico_star
+              i.ico.ico_star
+            .hotel__location
+              | Испания, Коста-дель-Маресме
+              a(href="#")
+                i.ico.ico_location2
+                | Карта
+      //end hotel
+      //begin tour
+      .tour.tour_wide
         .tour__row
           .tour__info
             .tour__info-item
@@ -114,20 +669,75 @@ block content
               span.tour__label
                 | Ночей
               span.tour__nights
-                | 7
+                | 15
             .tour__info-item
-              .tour__label
+              span.tour__label
                 | Номер
               span.tour__room
-                | стандарт
+                | <b>Стандартный</b> двухместный
             .tour__info-item
-              .tour__label
+              span.tour__label
                 | Питание
-              a.tour__food(href="#")
-                  | bb
+              span.tour__food
+                | Все включено
+            .tour__info-item
+              span.tour__label
+                | Туроператор
+              img(src="img/tui.png", alt="")
         .tour__bottom
-          span.tour__price
-            | Итого: <b>25 620 руб.</b>
-          button.btn
-            | Купить
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 30 000
+              sub
+                | руб.
+            button.btn
+              | Купить
+      //end tour
+      //begin tour
+      .tour.tour_wide
+        .tour__row
+          .tour__info
+            .tour__info-item
+              span.tour__label
+                | Вылет
+              span.tour__date
+                | 8
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Обратно
+              span.tour__date
+                | 18
+              span.tour__date-extend
+                | <b>Октября,</b>среда
+            .tour__info-item
+              span.tour__label
+                | Ночей
+              span.tour__nights
+                | 15
+            .tour__info-item
+              span.tour__label
+                | Номер
+              span.tour__room
+                | <b>Стандартный</b> двухместный
+            .tour__info-item
+              span.tour__label
+                | Питание
+              span.tour__food
+                | Все включено
+            .tour__info-item
+              span.tour__label
+                | Туроператор
+              img(src="img/transaero.png", alt="")
+        .tour__bottom
+          .tour__bottom-in
+            span.tour__price
+              b
+                | 30 000
+              sub
+                | руб.
+            button.btn
+              | Купить
       //end tour

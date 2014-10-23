@@ -1,8 +1,9 @@
 head.ready(function() {
 
   $(document).on("click", function(){
-   $(".js-popup").fadeOut(200);
-   $('.overlay').hide();
+   $('.popup').fadeOut(200);
+   $('.popup__in').removeClass('is-visible');
+   // $('.overlay').hide();
    $('.out').removeClass('is-blurred');
    $('body').removeClass('no-overflow');
 
@@ -27,14 +28,14 @@ head.ready(function() {
     $(this).find('.select__drop').slideToggle(200);
   });
 
-  $('.select__drop a').on('click', function(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    var optionID = $(this).attr('data-option');
-    var optionText  = $(this).text();
-    var value = $(this).parents('.select').find('.select__value');
-    value.attr('data-selected-option', optionID).text(optionText);
-    $(this).parents('.select__drop').slideUp(100);
+  $('.select__drop li').on('click', function(event) {
+    if ( !$(this).parents('.js-no').length ) {
+      var optionID = $(this).attr('data-option');
+      var optionText  = $(this).text();
+      var value = $(this).parents('.select').find('.select__value');
+      value.attr('data-selected-option', optionID).text(optionText);
+      $(this).parents('.select__drop').slideUp(100);
+    };
   });
 
   $('.select__drop').on('click', function(event) {
@@ -45,19 +46,26 @@ head.ready(function() {
   $('.js-popup-show').on('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
-    var popup = $('#' + $(this).attr('data-popup'));
-    popup.fadeIn(400);
-    $('.overlay').show();
-    $('.out').addClass('is-blurred');
+
+    var popup       = $('#' + $(this).attr('data-popup'));
+    var poupContent = popup.find('.popup__in');
+
     $('body').addClass('no-overflow');
+    // $('.out').addClass('is-blurred');
+    // $('.overlay').show();
+    popup.fadeIn(200);
+    setTimeout( function() {
+      poupContent.addClass('is-visible');
+    }, 200);
   });
-  $('.js-popup').on('click', function(event) {
+  $('.popup__in').on('click', function(event) {
     event.stopPropagation();
   });
   $('.js-popup-hide').on('click', function(event) {
     event.preventDefault();
-    $(this).parents('.js-popup').fadeOut(200);
-    $('.overlay').hide();
+    $(this).parents('.popup__in').removeClass('is-visible');
+    $(this).parents('.popup').fadeOut(200);
+    // $('.overlay').hide();
     $('.out').removeClass('is-blurred');
     $('body').removeClass('no-overflow');
   });

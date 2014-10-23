@@ -5,78 +5,83 @@ block title
 
 block content
   .l-center
-    //begin ticket
-    .ticket.ticket_wide.ticket_buy
-      .ticket__row
-        i.ico.ico_plane
-        .ticket__date
-          | <b>26 сентября</b>, пятница
-      .ticket__row
-        .ticket__duration
-          | 3 ч 55 мин
-          .ticket__duration-extra
-            | Через Кишинев
-            span.ticket__label
-              | 6ч 20м
-        .ticket__departure
-          span.ticket__label
-            | Вылет
-          span.ticket__time
-            | 19:45
-          span.ticket__location
-            | <b>Шереметьево,</b> Москва
-        .ticket__arrival
-          span.ticket__label
-            | Прибытие 26 сентября
-          span.ticket__time
-            | 21:40
-          span.ticket__location
-            | <b>Шарль-де-Голь,</b> Париж
-        .ticket__flight
-          span.ticket__label
-            | Рейс
-          | <b>AF-1745,</b> эконом
-        .ticket__info
-          span.ticket__label
-            | Перевозчик
-          img(src="img/af.png", alt="")
-          | <b>Air France</b>, <span>AIRBUS A321</span>, <em>мест 3+</em>
-      .ticket__row
-        i.ico.ico_plane2
-        .ticket__date
-          | <b>26 сентября</b>, пятница
-      .ticket__row
-        .ticket__duration
-          | 3 ч 55 мин
-          .ticket__duration-extra
-            | Через Кишинев
-            span.ticket__label
-              | 6ч 20м
-        .ticket__departure
-          span.ticket__label
-            | Вылет
-          span.ticket__time
-            | 19:45
-          span.ticket__location
-            | <b>Шереметьево,</b> Москва
-        .ticket__arrival
-          span.ticket__label
-            | Прибытие 26 сентября
-          span.ticket__time
-            | 21:40
-          br
-          span.ticket__location
-            | <b>Шарль-де-Голь,</b> Париж
-        .ticket__flight
-          span.ticket__label
-            | Рейс
-          |<b>AF-1745,</b> эконом
-        .ticket__info
-          span.ticket__label
-            | Перевозчик
-          img(src="img/af.png", alt="")
-          | <b>Air France</b>, <span>AIRBUS A321</span>, <em>мест 3+</em>
-    //end ticket
+    //begin tour
+    .tour.tour_wide.tour_buy
+      .tour__row
+        .hotel
+          .hotel__pic
+            img(src="http://placehold.it/95x95")
+          .hotel__container
+            .hotel__container-in
+              .hotel__name
+                | Best Semiramis
+              .hotel__rating
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+              .hotel__location
+                | Испания, Коста-дель-Маресме
+                a(href="#")
+                  i.ico.ico_location2
+                  | Карта
+        .tour__info
+          .tour__info-item
+            span.tour__label
+              | Вылет
+            span.tour__date
+              | 8
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Обратно
+            span.tour__date
+              | 18
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Ночей
+            span.tour__nights
+              | 10
+          .tour__info-item
+            span.tour__label
+              | Туроператор
+            img(src="img/tui.png", alt="")
+      .tour__row
+        table.tour__option-table
+          tr
+            td
+              .tour__option
+                i.ico.ico_family
+                | 2 ADL
+              .tour__option
+                i.ico.ico_bed
+                | стандартная комната
+            td
+              .tour__option
+                i.ico.ico_forks
+                | все включено
+              .tour__option
+                i.ico.ico_direction
+                | SVO-AYT-DMO
+            td
+              .tour__option-cleen
+                i.ico.ico_plane
+                .tour__option-status
+                  i.ico.ico_no
+              .tour__option-cleen
+                i.ico.ico_home
+                .tour__option-status
+                  i.ico.ico_yes
+              .tour__option-cleen
+                i.ico.ico_plane2
+                .tour__option-status
+                  span
+                    | по запросу
+    //end tour
 
   .head
     .l-center

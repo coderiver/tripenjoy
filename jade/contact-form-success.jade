@@ -24,15 +24,9 @@ block content
               .select
                 span.select__value
                 ul.select__drop
-                  li
-                    a(href="#", data-option="1")
-                      | Вопрос 1
-                  li
-                    a(href="#", data-option="2")
-                      | Вопрос 2
-                  li
-                    a(href="#", data-option="3")
-                      | Вопрос 3
+                  - var i = 1
+                  each item in ['Вопрос 1', 'Вопрос 2', 'Вопрос 3']
+                    li(data-option=i++)= item
           .contact-form__row
             .input.input_simple
               span.input__label
@@ -97,17 +91,17 @@ block content
 
     button.btn.js-popup-show(data-popup="success", style="margin-top: 50px")
       | нажми меня
-  .overlay
 
 block popup
-  #success.popup.popup_success.js-popup
-    .popup__in
-      i.ico.ico_envelope
-      strong
-        | Спасибо!
-      p
-        | Ваше сообщение успешно отправленно.
-        | Мы свяжемся с вами в ближайшее время.
-      button.btn.js-popup-hide
-        | Продолжить
+  #success.popup.popup_success(style="display: block")
+    .popup__in.is-visible
+      .popup__container
+        i.ico.ico_envelope
+        strong
+          | Спасибо!
+        p
+          | Ваше сообщение успешно отправленно.
+          | Мы свяжемся с вами в ближайшее время.
+        button.btn.js-popup-hide
+          | Продолжить
 

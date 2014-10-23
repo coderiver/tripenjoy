@@ -32,6 +32,7 @@
       <div class="search">
         <div class="l-center">
           <div class="search__in">
+            <div class="search__error-msg">укажите место прибытия</div>
             <div class="search__col1">
               <label class="input">
                 <input type="text" placeholder="Откуда?"><i class="ico ico_location"></i>
@@ -82,9 +83,9 @@
                 <div class="input input_simple"><span class="input__label">Ваш вопрос о:</span>
                   <div class="select"><span class="select__value"></span>
                     <ul class="select__drop">
-                      <li><a href="#" data-option="1">Вопрос 1</a></li>
-                      <li><a href="#" data-option="2">Вопрос 2</a></li>
-                      <li><a href="#" data-option="3">Вопрос 3</a></li>
+                      <li data-option='1'>Вопрос 1</li>
+                      <li data-option='2'>Вопрос 2</li>
+                      <li data-option='3'>Вопрос 3</li>
                     </ul>
                   </div>
                 </div>
@@ -133,7 +134,6 @@
         </div>
         <button data-popup="success" style="margin-top: 50px" class="btn js-popup-show">нажми меня</button>
       </div>
-      <div class="overlay"></div>
       <!--end content-->
       <!--begin footer-->
       <footer class="footer">
@@ -186,13 +186,15 @@
       </footer>
       <!--end footer-->
     </div>
-    <div id="success" class="popup popup_success js-popup">
-      <div class="popup__in"><i class="ico ico_envelope"></i><strong>Спасибо!</strong>
-        <p>
-          Ваше сообщение успешно отправленно.
-          Мы свяжемся с вами в ближайшее время.
-        </p>
-        <button class="btn js-popup-hide">Продолжить</button>
+    <div id="success" style="display: block" class="popup popup_success">
+      <div class="popup__in is-visible">
+        <div class="popup__container"><i class="ico ico_envelope"></i><strong>Спасибо!</strong>
+          <p>
+            Ваше сообщение успешно отправленно.
+            Мы свяжемся с вами в ближайшее время.
+          </p>
+          <button class="btn js-popup-hide">Продолжить</button>
+        </div>
       </div>
     </div>
     <!--load scripts-->

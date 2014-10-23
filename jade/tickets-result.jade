@@ -153,17 +153,34 @@ block content
             a(href="#")
               | Времени вылета
 
-      .select
+      .select.select_check.js-no
         span.select__value
           | Авиакомпания
         ul.select__drop
           li
-            a(href="#", data-option="1") Любой
+            label.checkbox
+              input(type="checkbox")
+              span
+                | Transavia
+              img(src="img/transavia.png")
           li
-            a(href="#", data-option="2") Бизнесс
+            label.checkbox
+              input(type="checkbox")
+              span
+                | Trasnsaero
+              img(src="img/transavia.png")
           li
-            a(href="#", data-option="3") Эконом
-
+            label.checkbox
+              input(type="checkbox")
+              span
+                | Air France
+              img(src="img/af.png")
+          li
+            label.checkbox
+              input(type="checkbox")
+              span
+                | KLM
+              img(src="img/klm.png")
 
       .wrap-round
         ul.sort__list

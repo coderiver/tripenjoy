@@ -190,7 +190,7 @@
   width: percentage(490/1000)
   max-width: 490px
   margin-left: percentage(20/1000)
-  margin-bottom: 20px
+  // margin-bottom: 20px
   box-sizing: border-box
   border: 1px solid $border
   box-shadow: 0 1px 1px rgba(9, 12, 18, 0.09)
@@ -494,6 +494,9 @@
     display: block
     margin: auto
     width: 100%
+    margin: 14px 0 0
+
+  .btn_blue
     margin: 14px 0
 
   &.ticket_buy
@@ -524,6 +527,12 @@
     display: inline-block
     vertical-align: middle
     min-width: 172px
+  &_select
+    text-align: left
+    &:after
+      display: none
+    .select + .select
+      margin-left: 15px
 
 .sort__list
   font-size: 0
@@ -565,9 +574,6 @@
   border-bottom: 1px dashed #acacac
   &:first-child
     margin-top: 30px
-  .clock
-    display: inline-block
-    vertical-align: middle
   &__text
     display: inline-block
     +roboto
@@ -622,6 +628,22 @@
       vertical-align: middle
       font-size: 14px
       color: #8b8b8b
+  .clock
+    display: inline-block
+    vertical-align: middle
+  .hotel
+    display: inline-block
+    vertical-align: middle
+    padding: 0
+  .hotel__name
+    +roboto-l
+    font-size: 24px
+  .hotel__location
+    margin-top: 5px
+    +roboto
+  .btn
+    display: inline-block
+    vertical-align: middle
 
 
 .wrap-round
@@ -634,47 +656,57 @@
   display: none
   position: fixed
   z-index: 101
-  top: 50%
-  left: 50%
-  background: #FFF
-  box-shadow: 0 19px 51px rgba(9, 12, 18, 0.27)
-  +transform(translateX(-50%) translateY(-50%))
-  &.is-visible
-    display: block
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(255,255,255,0.56)
+  +vertical
 
-  &_return
-    position: absolute
-    top: -87px
-    left: 0
-    width: 100%
+  &_wide
+    .popup__in
+      width: 1000px
     .ticket
       &:nth-child(n)
         background: #FFF
         border: 1px solid $border
         border-width: 1px 0 0
+    .hotel
+      padding: 25px 30px 25px 45px
+      width: 100%
+      border-top: 1px solid $border
+    .tour__row
+      padding: 50px 40px 50px 45px
+      box-sizing: border-box
+      .tour__info
+        display: block
+        width: 100%
+        padding: 0
 
   &_success
-    box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
     font-size: 24px
     line-height: 1.4
     strong
       +roboto-b
-    .popup__in
+    .popup__container
       position: relative
       background: #fff
       padding: 50px 50px 85px
       z-index: 1
-    &:before
-      content: ""
-      position: absolute
-      z-index: 1
-      top: -35px
-      left: -35px
-      width: 80px
-      height: 80px
-      background: #FFF
-      border-radius: 50%
       box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
+    .popup__in
+      width: 600px
+      &:before
+        content: ""
+        position: absolute
+        z-index: 1
+        top: -35px
+        left: -35px
+        width: 80px
+        height: 80px
+        background: #FFF
+        border-radius: 50%
+        box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
     .ico
       position: absolute
       top: -29px
@@ -697,6 +729,18 @@
       bottom: 12px
       right: 12px
 
+.popup__in
+  opacity: 0
+  display: inline-block
+  vertical-align: middle
+  background: #FFF
+  box-shadow: 0 19px 51px rgba(9, 12, 18, 0.27)
+  text-align: left
+  position: relative
+  +transition(opacity 0.2s linear)
+  // +transform(translateX(-50%) translateY(-50%))
+  &.is-visible
+    opacity: 1
 
 .popup__header
   padding: 32px 30px 32px 47px
@@ -1094,18 +1138,11 @@
 .tour__bottom
   @extend .ticket__bottom
 
+.tour__bottom-in
+  @extend .ticket__bottom-in
+
 .tour__price
   @extend .ticket__price
-
-.tour__operator
-  position: absolute
-  top: 0
-  right: 0
-  width: 75px
-  img
-    display: block
-    max-width: 100%
-    margin: auto
 
 .tour__info
   padding: 15px 13px
@@ -1117,6 +1154,16 @@
 .tour__info-item
   display: inline-block
   vertical-align: top
+  font-size: 12px
+  +roboto
+  img
+    display: block
+    margin: auto
+    max-width: 85px
+  b
+    +roboto-b
+    display: block
+    text-transform: uppercase
 
 .tour__label
   @extend .ticket__label
@@ -1131,6 +1178,7 @@
   @extend .ticket__location
   display: inline-block
   vertical-align: top
+  margin-top: 6px
   b
     text-transform: uppercase
 
@@ -1147,17 +1195,17 @@
   text-align: center
 
 .tour__room
-  +roboto-b
-  text-transform: uppercase
-  font-size: 12px
+  // +roboto-b
+  // text-transform: uppercase
+  // font-size: 12px
 
 .tour__food
   +roboto-b
   font-size: 12px
   text-transform: uppercase
-  color: $orange
-  a
-    color: inherit
+  // color: $orange
+  // a
+  //   color: inherit
 
 
 .hotel
@@ -1217,5 +1265,157 @@
   line-height: 1.15
   .ico
     margin: 0 4px 0 8px
+    position: relative
+    top: -1px
   a
     display: inline-block
+    // color: $orange
+
+.hotel__operator
+  position: absolute
+  top: 0
+  right: 0
+  width: 75px
+  img
+    display: block
+    max-width: 100%
+    margin: auto
+
+
+.tour_wide
+  @extend .ticket_wide
+
+  .tour__row
+    float: left
+    width: percentage(801/1000)
+    border-right: 1px solid $border
+    font-size: 0
+
+  .hotel
+    display: inline-block
+    vertical-align: middle
+    width: percentage(430/800)
+
+  .hotel__container-in
+    padding-right: 0
+
+  .tour__info
+    display: inline-block
+    vertical-align: middle
+    width: percentage(370/800)
+    border: none
+    background: none
+    box-sizing: border-box
+    padding: 0 30px 0 0
+
+  .tour__date-extend
+    margin-top: 6px
+
+  .tour__label
+    margin-bottom: 3px
+    color: #777
+
+  .tour__option-table
+    font-size: 16px
+    td
+      padding: 18px
+      border: 1px solid $border
+      border-width: 1px 0 0 1px
+      vertical-align: middle
+      &:first-child
+        border-left: none
+        width: percentage(285/800)
+      &:last-child
+        width: percentage(245/800)
+        // text-align: center
+        vertical-align: top
+        // padding-top: 25px
+        // padding-bottom: 60px
+        padding: 25px 30px 60px
+        +justify
+
+  .tour__option
+    display: block
+    margin-top: 15px
+    padding: 5px 0 5px 48px
+    position: relative
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    +clr
+    &:first-child
+      margin-top: 0
+    .ico
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      height: auto
+      width: 48px
+      text-align: center
+      font-size: 30px
+      line-height: 30px
+      color: $blue
+    .ico_bed
+      font-size: 21px
+      color: $orange
+    .ico_forks
+      color: $orange
+      font-size: 34px
+
+  .tour__option-cleen
+    display: inline-block
+    vertical-align: top
+    // margin-right: percentage(45/200)
+    position: relative
+    &:last-child
+      margin-right: 0
+    & > .ico
+      color: $blue
+      font-size: 25px
+      line-height: 1
+    .ico_plane, .ico_plane2
+      position: static
+      margin: 0
+
+  .tour__option-status
+    position: absolute
+    top: 57px
+    left: 50%
+    +transform(translateX(-50%) translateY(-50%))
+    line-height: 1
+    span
+      display: inline-block
+      +roboto-b
+      font-size: 12px
+      line-height: 1.3
+      text-transform: uppercase
+      color: $orange
+      text-align: center
+
+  .tour__number
+    @extend .ticket__return-flight
+    color: $orange
+    border: none
+    padding-top: 0
+    +roboto
+    .tour__label
+      top: 3px
+      font-size: 12px
+      line-height: 1.3
+
+  .btn_blue
+    margin: 14px 0 0
+
+  &.tour_buy
+    .tour__row
+      width: 100%
+      border-right: none
+    .hotel
+      width: percentage(630/1000)
+    .tour__info
+      width: percentage(370/1000)
+    .tour__option-table
+      td:last-child
+        padding-left: 50px
+        padding-right: 50px

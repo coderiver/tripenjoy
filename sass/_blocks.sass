@@ -14,7 +14,8 @@
     speak: none
     display: inline-block
     text-decoration: inherit
-    width: 1em
+    // width: 1em
+    width: auto
     text-align: center
     font-variant: normal
     text-transform: none
@@ -122,14 +123,56 @@
     &:before
       content: '\e81b'
       width: auto
+  &_family
+    &:before
+      content: '\e81f'
+  &_forks
+    &:before
+      content: '\e820'
+  &_bed
+    &:before
+      content: '\e81d'
+      width: auto
+  &_direction
+    &:before
+      content: '\e81e'
+  &_home
+    &:before
+      content: '\e822'
+  &_yes
+    width: 16px
+    height: 16px
+    border: 2px solid $orange
+    border-radius: 50%
+    font-size: 16px
+    line-height: 1
+    text-align: center
+    &:before
+      content: '\e821'
+      font-size: 14px
+      color: $orange
+      line-height: 1
+      position: relative
+      top: -3px
+  &_no
+    width: 16px
+    height: 16px
+    border: 2px solid $orange
+    border-radius: 50%
+    font-size: 16px
+    line-height: 1
+    text-align: center
+    &:before
+      content: '\e819'
+      font-size: 14px
+      color: $orange
+      line-height: 1
+      position: relative
+      top: -1px
+  &_back
+    &:before
+      content: '\e823'
 
-// use png files (sprite)
-// .icon
-//   display: inline-block
-//   vertical-align: middle
-//   position: relative
-//   &_user
-//     +s(user)
 
 
 
@@ -290,7 +333,9 @@
 
 .btn
   display: inline-block
+  box-sizing: border-box
   min-width: 200px
+  padding: 0 20px
   height: 40px
   line-height: 40px
   font-size: 18px
@@ -316,6 +361,16 @@
     font-size: 18px
     &:hover
       background: #F4FCFF
+  &_blue-mod
+    height: 42px
+    line-height: 42px
+    +roboto-b
+    text-transform: uppercase
+    text-decoration: underline
+    font-size: 14px
+  .ico_back
+    margin-left: 10px
+    font-size: 13px
 
 .title
   +roboto-l
@@ -367,19 +422,24 @@
     color: $text
     font-size: 15px
     line-height: 1.33
-    a
-      color: $text
-      text-decoration: none
-      display: block
+    li
       padding: 10px
       &:hover
         background: $blue-border
+    a
+      color: inherit
+      text-decoration: none
+      display: block
   &_check
     .select__drop
       right: -50px
       padding: 12px 25px 12px 12px
       border: 1px solid rgba(8, 21, 39, 0.29)
       line-height: 40px
+      cursor: default
+      li
+        padding: 0
+        background: none
     .checkbox
       width: 100%
 
