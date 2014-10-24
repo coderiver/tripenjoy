@@ -14,6 +14,226 @@ block content
           a(href="#")
             i.ico.ico_location2
             | Карта
-      a(href="#").btn.btn_blue.btn_blue-mod
+      button.btn.btn_blue.btn_blue-mod
         | Вернуться к результатам поиска
         i.ico.ico_back
+
+  .l-center
+    //begin about
+    .about
+      .about__left
+        a(href="#", data-popup="gallery").js-popup-show
+          .about__pic
+              img(src="img/hotel.jpg")
+          .about__pics
+            div
+              img(src="img/hotel1.jpg")
+            div
+              img(src="img/hotel2.jpg")
+            div
+              img(src="img/hotel3.jpg")
+            div
+              img(src="img/hotel4.jpg")
+            div
+              img(src="img/hotel5.jpg")
+            div
+              img(src="img/hotel6.jpg")
+             div
+              img(src="img/hotel.jpg")
+
+      .about__right
+        .tab.js-tabs
+          ul.tab__selectors.js-tab
+            li.is-active
+              | описание
+            li
+              | удобства и услуги
+          .tab__content.js-tabcontent
+            div.tab__content-item
+              p
+                | Апарт-отель Le Prince Regent расположен в Латинском квартале
+                | Парижа, в 2 минутах ходьбы от Сорбоннского университета.
+                | Он располагает роскошным спа-центром с турецкой баней и 
+                | крытым бассейном.
+              p
+                | Этот дизайнерский апарт-отель предлагает звукоизолированные
+                | апартаменты с современной обстановкой. Во всех апартаментах
+                | имеется кухня и гостиная, а также бесплатный Wi-Fi, спутниковое
+                | телевидение и DVD/CD-плеер.
+              p
+                | Каждое утро в баре спа-центра Spa 28 подается завтрак
+                | «шведский стол». Гостям также предлагаются разнообразные
+                | косметические и массажные процедуры.
+
+              p
+                | Апарт-отель со спа-центром Le Prince Regent находится всего
+                | в 5 минутах ходьбы от Люксембургского сада и Собора
+                | Парижской Богоматери. В 300 метрах от апарт-отеля
+                | расположена станция метро Odeon. Отсюда можно без
+                | пересадок добраться до Монмартра.
+            div.tab__content-item
+              p
+                | Апарт-отель Le Prince Regent расположен в Латинском квартале
+                | Парижа, в 2 минутах ходьбы от Сорбоннского университета.
+                | Он располагает роскошным спа-центром с турецкой баней и 
+                | крытым бассейном.
+              p
+                | Этот дизайнерский апарт-отель предлагает звукоизолированные
+                | апартаменты с современной обстановкой. Во всех апартаментах
+                | имеется кухня и гостиная, а также бесплатный Wi-Fi, спутниковое
+                | телевидение и DVD/CD-плеер.
+              p
+                | Апарт-отель со спа-центром Le Prince Regent находится всего
+                | в 5 минутах ходьбы от Люксембургского сада и Собора
+                | Парижской Богоматери. В 300 метрах от апарт-отеля
+                | расположена станция метро Odeon. Отсюда можно без
+                | пересадок добраться до Монмартра.
+    //end about
+    //begin tour
+    .tour.tour_wide
+      .tour__row
+        .hotel
+          .hotel__pic
+            img(src="img/hotel4.jpg")
+          .hotel__container
+            .hotel__container-in
+              .hotel__name
+                | Mabilon
+              .hotel__rating
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+              .hotel__location
+                | Испания, Коста-дель-Маресме
+                a(href="#")
+                  i.ico.ico_location2
+                  | Карта
+        .tour__info
+          .tour__info-item
+            span.tour__label
+              | Вылет
+            span.tour__date
+              | 8
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Обратно
+            span.tour__date
+              | 18
+            span.tour__date-extend
+              | <b>Октября,</b>среда
+          .tour__info-item
+            span.tour__label
+              | Ночей
+            span.tour__nights
+              | 10
+      .tour__row
+        table.tour__option-table
+          tr
+            td
+              .tour__option
+                i.ico.ico_family
+                | 2 ADL
+              .tour__option
+                i.ico.ico_bed
+                | стандартная комната
+            td
+              .tour__option
+                i.ico.ico_forks
+                | под запрос
+              .tour__option
+                i.ico.ico_direction
+                | SVO-AYT-DMO
+            td
+              .tour__option-cleen
+                i.ico.ico_plane
+                .tour__option-status
+                  span
+                    | по запросу
+              .tour__option-cleen
+                i.ico.ico_home
+                .tour__option-status
+                  i.ico.ico_yes
+              .tour__option-cleen
+                i.ico.ico_plane2
+                .tour__option-status
+                  i.ico.ico_no
+      .tour__bottom
+        .tour__bottom-in
+          span.tour__price
+            b
+              | 18 000
+            sub
+              | руб.
+          button.btn
+            | Купить
+    //end tour
+
+block popup
+  #gallery.popup.popup_wide(style="display: block")
+    .popup__in.is-visible
+      .popup__header
+        .title
+          | Фотографии отеля
+        .popup__close.js-popup-hide
+          | Закрыть
+          i.ico.ico_close
+      //begin gallery
+      .gallery
+        .gallery__main
+          .gallery__slides.js-slick-gallery
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+             div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+          .gallery__prev.ico.ico_prev
+          .gallery__next.ico.ico_next
+        .gallery__wrap
+          .gallery__carousel.js-slick-carousel
+            div.slide
+              img(src="img/hotel1.jpg")
+            div.slide
+              img(src="img/hotel1.jpg")
+            div.slide
+              img(src="img/hotel2.jpg")
+            div.slide
+              img(src="img/hotel3.jpg")
+            div.slide
+              img(src="img/hotel4.jpg")
+            div.slide
+              img(src="img/hotel5.jpg")
+            div.slide
+              img(src="img/hotel6.jpg")
+            div.slide
+              img(src="img/hotel.jpg")
+            div.slide
+              img(src="img/hotel4.jpg")
+            div.slide
+              img(src="img/hotel1.jpg")
+            div.slide
+              img(src="img/hotel3.jpg")
+            div.slide
+              img(src="img/hotel2.jpg")
+      //end gallery

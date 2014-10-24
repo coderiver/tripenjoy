@@ -186,6 +186,7 @@
   position: relative
 
 .ticket
+  position: relative
   float: left
   width: percentage(490/1000)
   max-width: 490px
@@ -210,6 +211,20 @@
     vertical-align: middle
     min-width: 1px
     padding: 0 25px
+
+.ticket__download
+  position: absolute
+  top: 12px
+  right: 12px
+  text-transform: uppercase
+  color: $orange
+  font-size: 15px
+  +roboto-b
+  .ico
+    font-size: 24px
+    margin-right: 5px
+    position: relative
+    top: -2px
 
 .ticket__label
   display: block
@@ -516,6 +531,79 @@
     .ticket__info
       width: percentage(150/950)
 
+.ticket-area
+  + .head_small
+    margin-top: 40px
+
+.ticket_simple
+  width: 100%
+  float: none
+  padding: 20px 0
+  max-width: none
+  margin: 0
+  box-shadow: none
+  & + &
+    border-top: none
+  &:last-child
+    border-bottom: 2px solid $orange
+
+  .ticket__row
+    float: none
+    width: auto
+    border: none
+    margin-bottom: 20px
+    margin-top: 20px
+    padding-top: 0
+    font-size: 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+  .ticket__date
+    display: block
+    width: auto
+    em
+      font-style: normal
+      color: $orange
+
+  .ticket__item
+    display: inline-block
+    vertical-align: top
+    width: 33.33%
+    margin: 0
+
+  .ticket__time
+    display: inline-block
+    vertical-align: top
+    margin-right: 5px
+
+  .ticket__location
+    display: inline-block
+    vertical-align: top
+    margin-top: 2px
+
+  .ticket__flight
+    line-height: 1.1
+    b
+      display: block
+
+  .ticket__label
+    margin-bottom: 2px
+
+  .ticket__info
+    display: inline-block
+    vertical-align: top
+    padding: 0
+    margin: 0
+    background: none
+    line-height: 1.15
+    border: none
+    img, b, em
+      display: block
+    *
+      vertical-align: baseline
+
 
 .sort
   +justify
@@ -661,6 +749,7 @@
   right: 0
   bottom: 0
   background: rgba(255,255,255,0.56)
+  white-space: nowrap
   +vertical
 
   &_wide
@@ -670,11 +759,11 @@
       &:nth-child(n)
         background: #FFF
         border: 1px solid $border
-        border-width: 1px 0 0
+        border-width: 0 0 1px
     .hotel
       padding: 25px 30px 25px 45px
       width: 100%
-      border-top: 1px solid $border
+      // border-top: 1px solid $border
     .tour__row
       padding: 50px 40px 50px 45px
       box-sizing: border-box
@@ -738,16 +827,22 @@
   text-align: left
   position: relative
   +transition(opacity 0.2s linear)
+  white-space: normal
   // +transform(translateX(-50%) translateY(-50%))
   &.is-visible
     opacity: 1
 
 .popup__header
   padding: 32px 30px 32px 47px
+  border-bottom: 1px solid $border
   +justify
   .title
     display: inline-block
     vertical-align: middle
+  +rh(750)
+    padding-top: 15px
+    padding-bottom: 15px
+
 
 .popup__close
   display: inline-block
@@ -1075,7 +1170,7 @@
   strong
     +roboto-b
   p
-    margin: 22px 0
+    margin: 25px 0
     &:first-child
       margin-top: -5px
     &:last-child
@@ -1083,6 +1178,7 @@
   .with-icon
     position: relative
     padding-left: 100px
+    margin: 40px 0
     .ico
       color: $orange
       position: absolute
@@ -1095,6 +1191,8 @@
   & > img
     float: left
     margin-right: 25px
+  .l-center > &
+    margin-top: 40px
 
 
 .navigation
@@ -1215,6 +1313,9 @@
 
 .hotel__pic
   float: left
+  width: 95px
+  height: 95px
+  overflow: hidden
   img
     display: block
     max-width: 100%
@@ -1419,3 +1520,187 @@
       td:last-child
         padding-left: 50px
         padding-right: 50px
+
+
+.about
+  display: table
+  & + .tour
+    margin-top: 60px
+
+
+.about__left
+  display: table-cell
+  width: percentage(445/1000)
+  vertical-align: top
+  padding-right: 20px
+
+.about__right
+  display: table-cell
+  vertical-align: top
+  outline: 2px dashed #B2E2F5
+  outline-offset: -2px
+  position: relative
+  z-index: 1
+
+.about__pic
+  overflow: hidden
+  width: 425px
+  height: 425px
+  img
+    display: block
+    margin: auto
+    // max-width: 100%
+
+.about__pics
+  margin-right: -8px
+  font-size: 0
+  img
+    display: inline-block
+    vertical-align: top
+    width: 101px
+    height: 101px
+    margin: 7px 7px 0 0
+  div
+    display: inline-block
+    vertical-align: top
+    width: 101px
+    height: 101px
+    margin: 7px 7px 0 0
+    overflow: hidden
+    img
+      display: block
+      width: auto
+      height: auto
+      margin: 0
+      // max-width: 100%
+
+
+.tab
+  height: 100%
+  // border: 2px dashed #B2E2F5
+  +roboto
+  position: relative
+  z-index: 2
+
+.tab__selectors
+  font-size: 0
+  background: #FFF
+  // borde-bottom: 2px dashed #B2E2F5
+  li
+    // margin: 0 0 -2px 0
+    display: inline-block
+    vertical-align: top
+    padding: 10px 25px
+    outline: 2px dashed #B2E2F5
+    outline-offset: -2px
+    outline-color: #FFF
+    font-size: 18px
+    line-height: 1.4
+    text-transform: uppercase
+    color: $orange
+    text-decoration: underline
+    cursor: pointer
+    &:hover
+      text-decoration: none
+    &.is-active
+      position: relative
+      outline-color: #B2E2F5
+      color: #141617
+      +roboto-b
+      text-decoration: none
+      &:after
+        content: ""
+        position: absolute
+        bottom: -2px
+        left: 2px
+        right: 2px
+        height: 4px
+        background: #FFF
+
+.tab__content
+  // margin: 0 -2px
+  border-top: 2px dashed #B2E2F5
+  line-height: 1.7
+  font-size: 14px
+  p
+    margin: 25px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+.tab__content-item
+  display: none
+  padding: 50px 40px
+  &:first-child
+    display: block
+
+
+.gallery
+  max-width: 690px
+  margin: auto
+  padding: 60px 100px
+  +rh(800)
+    padding: 15px 100px
+
+.gallery__main
+  position: relative
+
+.gallery__slides
+  border: 3px solid #e6e6e7
+  overflow: hidden
+  .slide
+    // max-height: 460px
+    // display: none
+    // &:first-child
+    //   display: block
+  img
+    display: block
+    max-width: 100%
+
+.gallery__wrap
+  overflow: hidden
+
+.gallery__carousel
+  margin: 18px -9px
+  +clr
+  .slide
+    float: left
+    margin: 0 9px
+    width: 100px
+    height: 100px
+    overflow: hidden
+  img
+    display: block
+    // max-width: 100%
+
+.gallery__next,
+.gallery__prev
+  position: absolute
+  top: 50%
+  color: #CCC
+  font-size: 40px
+  line-height: 1
+  margin-top: -20px
+  cursor: pointer
+  +user-select(none)
+
+.gallery__prev
+  left: -90px
+
+.gallery__next
+  right: -90px
+
+
+.profile
+  .input
+    display: inline-block
+    vertical-align: top
+    margin-top: 15px
+    margin-right: 12px
+    width: percentage(265/670)
+
+  .passenger__sex
+    display: block
+    margin: 20px 0 0 2px
+    text-align: left

@@ -172,6 +172,9 @@
   &_back
     &:before
       content: '\e823'
+  &_pdf
+    &:before
+      content: '\e824'
 
 
 
@@ -318,8 +321,9 @@
     input
       display: inline-block
       width: percentage(54/192)
+      white-space: nowrap
       &:last-child
-        width: percentage(74/192)
+        width: percentage(79/192)
 
   &.is-error
     input
@@ -371,6 +375,8 @@
   .ico_back
     margin-left: 10px
     font-size: 13px
+    position: relative
+    top: -1px
 
 .title
   +roboto-l

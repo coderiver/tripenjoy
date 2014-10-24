@@ -1,0 +1,81 @@
+extend layout/layout
+
+block title
+  title My Profile
+
+block content
+  .head
+    .l-center
+      h1.title
+        | Мои заказы
+
+  .l-center
+    .l-two-col.l-two-col_mod
+      .col1
+        .head.head_small
+          .title
+            | Персональные данные
+
+        .profile
+          .passenger__sex
+            label.passenger__sex-radio-btn
+              input(type="radio", name="sex", checked)
+              i.ico.ico_male
+            label.passenger__sex-radio-btn
+              input(type="radio", name="sex")
+              i.ico.ico_female
+            label.passenger__sex-radio-btn
+              input(type="radio", name="sex")
+              i.ico.ico_kid
+
+          .input.input_simple
+            span.input__label
+              | Фамилия:
+            input(type="text")
+
+          .input.input_simple
+            span.input__label
+              | Имя:
+            input(type="text")
+
+          .input.input_simple
+            span.input__label
+              | Отчество:
+            input(type="text")
+
+          .input.input_simple.input_multiple
+            span.input__label
+              | Дата рождения:
+            input(type="text")
+            input(type="text")
+            input(type="text")
+
+        .info-text
+          label.checkbox
+            input(type="checkbox")
+            span
+              | Я хочу получать информацию о специальных акциях на сайте
+          label.checkbox
+            input(type="checkbox")
+            span
+              | Я принимаю <a href="#">соглашение</a>, условия возврата и обмена, а также обработки моих персональных данных
+          button.btn
+            | Сохранить
+
+
+      .col2
+        .head.head_small
+          .title
+            | Личный кабинет
+        ul.navigation
+          li
+            a(href="#")
+              | Мои заказы
+          li.is-active
+            a(href="#")
+              | Мой профиль
+          li
+            a(href="#")
+              | Изменить пароль
+        .banner
+          img(src="img/banner.jpg", alt="")

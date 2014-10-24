@@ -1,0 +1,215 @@
+extend layout/layout
+
+block title
+  title Kabinet
+
+block content
+  .head
+    .l-center
+      h1.title
+        | Мои заказы
+
+  .l-center
+    .l-two-col.l-two-col_mod
+      .col1
+        .head.head_small
+          .title
+            | Грядущие
+        .ticket-area
+          //begin ticket
+          .ticket.ticket_simple
+            .ticket__row
+              i.ico.ico_plane
+              .ticket__date
+                | <b>26 сентября (<em>7 ДНЕЙ</em>),</b> пятница
+
+            .ticket__row
+              .ticket__duration.ticket__item
+                | 10 ч 55 мин
+                .ticket__duration-extra
+                  | Через Кишинев
+                  span.ticket__label
+                    | 6ч 20м
+              .ticket__flight.ticket__item
+                span.ticket__label
+                  | Рейс
+                | <b>AF-1745,</b>
+                | эконом
+
+            .ticket__row
+              .ticket__departure.ticket__item
+                span.ticket__label
+                  | Вылет
+                span.ticket__time
+                  | 19:45
+                span.ticket__location
+                  | <b>Шереметьево,</b> Москва
+              .ticket__arrival.ticket__item
+                span.ticket__label
+                  | Прибытие 26 сентября
+                span.ticket__time
+                  | 21:40
+                br
+                span.ticket__location
+                  | <b>Шарль-де-Голь,</b> Париж
+              .ticket__info.ticket__item
+                span.ticket__label
+                  | Перевозчик
+                img(src="img/af.png", alt="")
+                | <b>Air France,</b> <span>AIRBUS A321</span>, <em>мест 3+</em>
+
+            a(href="#").ticket__download
+              i.ico.ico_pdf
+              | скачать pdf
+          //end ticket
+          //begin ticket
+          .ticket.ticket_simple
+            .ticket__row
+              i.ico.ico_plane2
+              .ticket__date
+                | <b>29 сентября (<em>9 ДНЕЙ</em>),</b> пятница
+
+            .ticket__row
+              .ticket__duration.ticket__item
+                | 10 ч 55 мин
+                .ticket__duration-extra
+                  | Через Кишинев
+                  span.ticket__label
+                    | 6ч 20м
+              .ticket__flight.ticket__item
+                span.ticket__label
+                  | Рейс
+                | <b>AF-1745,</b>
+                | эконом
+
+            .ticket__row
+              .ticket__departure.ticket__item
+                span.ticket__label
+                  | Вылет
+                span.ticket__time
+                  | 19:45
+                span.ticket__location
+                  | <b>Шереметьево,</b> Москва
+              .ticket__arrival.ticket__item
+                span.ticket__label
+                  | Прибытие 26 сентября
+                span.ticket__time
+                  | 21:40
+                br
+                span.ticket__location
+                  | <b>Шарль-де-Голь,</b> Париж
+              .ticket__info.ticket__item
+                span.ticket__label
+                  | Перевозчик
+                img(src="img/af.png", alt="")
+                | <b>Air France,</b> <span>AIRBUS A321</span>, <em>мест 3+</em>
+
+            a(href="#").ticket__download
+              i.ico.ico_pdf
+              | скачать pdf
+          //end ticket
+
+        .head.head_small
+          .title
+            | Предыдущие заказы
+        .ticket-area
+          //begin ticket
+          .ticket.ticket_simple
+            .ticket__row
+              i.ico.ico_plane
+              .ticket__date
+                | <b>26 сентября (<em>7 ДНЕЙ</em>),</b> пятница
+
+            .ticket__row
+              .ticket__duration.ticket__item
+                | 10 ч 55 мин
+                .ticket__duration-extra
+                  | Через Кишинев
+                  span.ticket__label
+                    | 6ч 20м
+              .ticket__flight.ticket__item
+                span.ticket__label
+                  | Рейс
+                | <b>AF-1745,</b>
+                | эконом
+
+            .ticket__row
+              .ticket__departure.ticket__item
+                span.ticket__label
+                  | Вылет
+                span.ticket__time
+                  | 19:45
+                span.ticket__location
+                  | <b>Шереметьево,</b> Москва
+              .ticket__arrival.ticket__item
+                span.ticket__label
+                  | Прибытие 26 сентября
+                span.ticket__time
+                  | 21:40
+                br
+                span.ticket__location
+                  | <b>Шарль-де-Голь,</b> Париж
+              .ticket__info.ticket__item
+                span.ticket__label
+                  | Перевозчик
+                img(src="img/af.png", alt="")
+                | <b>Air France,</b> <span>AIRBUS A321</span>, <em>мест 3+</em>
+          //end ticket
+          //begin ticket
+          .ticket.ticket_simple
+            .ticket__row
+              i.ico.ico_plane2
+              .ticket__date
+                | <b>29 сентября (<em>9 ДНЕЙ</em>),</b> пятница
+
+            .ticket__row
+              .ticket__duration.ticket__item
+                | 10 ч 55 мин
+                .ticket__duration-extra
+                  | Через Кишинев
+                  span.ticket__label
+                    | 6ч 20м
+              .ticket__flight.ticket__item
+                span.ticket__label
+                  | Рейс
+                | <b>AF-1745,</b>
+                | эконом
+
+            .ticket__row
+              .ticket__departure.ticket__item
+                span.ticket__label
+                  | Вылет
+                span.ticket__time
+                  | 19:45
+                span.ticket__location
+                  | <b>Шереметьево,</b> Москва
+              .ticket__arrival.ticket__item
+                span.ticket__label
+                  | Прибытие 26 сентября
+                span.ticket__time
+                  | 21:40
+                br
+                span.ticket__location
+                  | <b>Шарль-де-Голь,</b> Париж
+              .ticket__info.ticket__item
+                span.ticket__label
+                  | Перевозчик
+                img(src="img/af.png", alt="")
+                | <b>Air France,</b> <span>AIRBUS A321</span>, <em>мест 3+</em>
+          //end ticket
+      .col2
+        .head.head_small
+          .title
+            | Личный кабинет
+        ul.navigation
+          li.is-active
+            a(href="#")
+              | Мои заказы
+          li
+            a(href="#")
+              | Мой профиль
+          li
+            a(href="#")
+              | Изменить пароль
+        .banner
+          img(src="img/banner.jpg", alt="")

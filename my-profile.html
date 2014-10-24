@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index</title>
+    <title>My Profile</title>
     <meta name="viewport" content="width=1040px">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
@@ -66,32 +66,67 @@
         </div>
       </div>
       <!--end search-->
-      <div class="l-center">
-        <ol class="pagelist">
-          <li><a href="main.html">main</a></li>
-          <li><a href="tickets-result.html">tickets-result</a></li>
-          <li><a href="tickets-result-one-way.html">tickets-result-one-way</a></li>
-          <li><a href="select-return.html">select-return</a></li>
-          <li><a href="searching-ticket.html">searching-ticket</a></li>
-          <li><a href="buy-ticket.html">buy-ticket</a></li>
-          <li><a href="knowledge-base.html">knowledge-base</a></li>
-          <li><a href="contact-form.html">contact-form</a></li>
-          <li><a href="contact-form-error.html">contact-form-error</a></li>
-          <li><a href="contact-form-success.html">contact-form-success</a></li>
-          <li><a href="text-info.html">text-info</a></li>
-          <li><a href="main-search-error.html">main-search-error</a></li>
-          <li><a href="tours-results.html">tours-results</a></li>
-          <li><a href="buy-tour.html">buy-tour</a></li>
-          <li><a href="hotel-card.html">hotel-card</a></li>
-          <li><a href="text-page.html">text-page</a></li>
-          <li><a href="kabinet.html">kabinet</a></li>
-          <li><a href="my-profile.html">my-profile</a></li>
-        </ol>
+      <div class="head">
+        <div class="l-center">
+          <h1 class="title">Мои заказы</h1>
+        </div>
       </div>
-      <style>
-        ol.pagelist { margin: 100px auto; list-style: decimal; margin-left: 20px}
-        ol.pagelist a { font-size: 20px; color: #000; font-weight: bold; text-decoration: none }
-      </style>
+      <div class="l-center">
+        <div class="l-two-col l-two-col_mod">
+          <div class="col1">
+            <div class="head head_small">
+              <div class="title">Персональные данные</div>
+            </div>
+            <div class="profile">
+              <div class="passenger__sex">
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex" checked><i class="ico ico_male"></i>
+                </label>
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex"><i class="ico ico_female"></i>
+                </label>
+                <label class="passenger__sex-radio-btn">
+                  <input type="radio" name="sex"><i class="ico ico_kid"></i>
+                </label>
+              </div>
+              <div class="input input_simple"><span class="input__label">Фамилия:</span>
+                <input type="text">
+              </div>
+              <div class="input input_simple"><span class="input__label">Имя:</span>
+                <input type="text">
+              </div>
+              <div class="input input_simple"><span class="input__label">Отчество:</span>
+                <input type="text">
+              </div>
+              <div class="input input_simple input_multiple"><span class="input__label">Дата рождения:</span>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+              </div>
+            </div>
+            <div class="info-text">
+              <label class="checkbox">
+                <input type="checkbox"><span>Я хочу получать информацию о специальных акциях на сайте</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox"><span>Я принимаю <a href="#">соглашение</a>, условия возврата и обмена, а также обработки моих персональных данных</span>
+              </label>
+              <button class="btn">Сохранить</button>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="head head_small">
+              <div class="title">Личный кабинет</div>
+            </div>
+            <ul class="navigation">
+              <li><a href="#">Мои заказы</a></li>
+              <li class="is-active"><a href="#">Мой профиль</a></li>
+              <li><a href="#">Изменить пароль</a></li>
+            </ul>
+            <div class="banner"><img src="img/banner.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
       <!--end content-->
       <!--begin footer-->
       <footer class="footer">
