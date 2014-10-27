@@ -6,28 +6,9 @@
         | укажите место прибытия
       .search__col1
         label.input
-          input(type="text", placeholder="Откуда?")
+          input(type="text", placeholder="Город или название отеля")
           i.ico.ico_location
-          .input__right
-            span mow
-            i.ico.ico_load
-        label.input
-          input(type="text", placeholder="Куда?")
-          i.ico.ico_location
-          .input__right
-            span mow
-            i.ico.ico_load
-
-      .search__col2
-        label.input.input_ico-right
-          input(type="text", placeholder="Дата отъезда")
-          i.ico.ico_calendar
-        label.input.input_ico-right
-          input(type="text", placeholder="Количество ночей")
-          i.ico.ico_moon
-
-      .search__col2
-        .select.select_icon.select_wide.js-no
+        .select.select_icon.js-no
           i.ico.ico_person
           span.select__value
             | 1 человек
@@ -53,6 +34,11 @@
                 input(type="text", value="0")
                 .input-number__up
                 .input-number__down
+
+      .search__col2
+        label.input.input_ico-right
+          input(type="text", placeholder="Дата заезда")
+          i.ico.ico_calendar
         .select.select_icon
           i.ico.ico_star
           span.select__value
@@ -62,6 +48,11 @@
             each item in ['Любой', 'Бизнесс', 'Эконом']
               li(data-option=i++)= item
 
+      .search__col2
+        label.input.input_ico-right
+          input(type="text", placeholder="Дата заезда")
+          i.ico.ico_calendar
+
       button.btn
-        | Поиск рейсов
+        | Поиск отеля
 //end search

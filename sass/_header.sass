@@ -122,13 +122,13 @@
   // box-shadow: 0 13px 40px rgba(0, 101, 145, 0.3)
   +clr
   .input
-    & + .input
+    & + .input, & + .select
       margin-top: 13px
   .btn
     float: right
   .select
     z-index: auto
-    & + .select
+    & + .select, & + .input
       margin-top: 13px
   &_result
     padding: 20px 0 20px
@@ -149,7 +149,7 @@
   margin-left: percentage(48/1000)
   position: relative
 
-.search_tours
+.search_mod
   .search__col2
     width: percentage(200/1000)
     margin-left: percentage(40/1000)
@@ -190,12 +190,17 @@
   line-height: 1.33
   .ico
     font-size: inherit
+    margin: 0 7px 0 10px
   .ico_plane
     margin: 0 7px 0 10px
   .ico_calendar
     margin: 0 5px 0 10px
     position: relative
     top: -1px
+  .ico_palm,.ico_moon
+    font-size: 18px
+    position: relative
+    top: -2px
   a
     color: #FFF
     +tr
@@ -203,7 +208,8 @@
       text-decoration: none
 
 .search-result__from,
-.search-result__to
+.search-result__to,
+.search-result__night
   display: inline-block
 
 .search-result__change
@@ -233,6 +239,14 @@
       bottom: 48px
     .switch__slider-in
       bottom: 0
+  &_arrows
+    .switch__top
+      &:before
+        content: '\e827'
+    .switch__bottom
+      &:before
+        content: '\e828'
+
 
 .switch__top,
 .switch__bottom
