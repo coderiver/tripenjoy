@@ -7,218 +7,257 @@
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
   <body>
-    <!--begin header-->
-    <header class="header">
-      <!--begin header__top-->
-      <div class="header__top">
+    <div class="out">
+      <!--begin header-->
+      <header class="header">
+        <!--begin header__top-->
+        <div class="header__top">
+          <div class="l-center">
+            <div class="header__top-right"><a href="tel:88007707477" class="header__phone"><i class="ico ico_phone"></i>8 800 770 7477</a><a href="#" class="header__user"><i class="ico ico_user"></i>Личный кабинет</a></div><a href="index.html" class="logo">TripEnjoy</a>
+            <nav class="header__nav">
+              <ul>
+                <li class="is-active"><a href="#">Авиабилеты</a></li>
+                <li><a href="#">Ж/Д билеты</a></li>
+                <li><a href="#">Отели</a></li>
+                <li><a href="#">Туры</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!--end header__top-->
+      </header>
+      <!--end header-->
+      <!--begin content-->
+      <!--begin search-->
+      <div class="search">
         <div class="l-center">
-          <div class="header__top-right"><a href="tel:88007707477" class="header__phone"><i class="ico ico_phone"></i>8 800 770 7477</a><a href="#" class="header__user"><i class="ico ico_user"></i>Личный кабинет</a></div><a href="index.html" class="logo">TripEnjoy</a>
-          <nav class="header__nav">
-            <ul>
-              <li class="is-active"><a href="#">Авиабилеты</a></li>
-              <li><a href="#">Ж/Д билеты</a></li>
-              <li><a href="#">Отели</a></li>
-              <li><a href="#">Туры</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!--end header__top-->
-    </header>
-    <!--begin search-->
-    <div class="search">
-      <div class="l-center">
-        <div class="search__in">
-          <div class="search__col1">
-            <label class="input">
-              <input type="text" placeholder="Откуда?"><i class="ico ico_location"></i>
-              <div class="input__right"><span>mow</span><i class="ico ico_load"></i></div>
-            </label>
-            <label class="input">
-              <input type="text" placeholder="Куда?"><i class="ico ico_location"></i>
-              <div class="input__right"><span>mow</span><i class="ico ico_load"></i></div>
-            </label>
-          </div>
-          <div class="search__col2">
-            <label class="input input_ico-right">
-              <input type="text" placeholder="Дата отъезда"><i class="ico ico_calendar"></i>
-            </label>
-            <label class="input input_ico-right">
-              <input type="text" placeholder="Дата возврата"><i class="ico ico_calendar"></i>
-            </label>
-          </div>
-          <div class="search__col2">
-            <label class="input input_drop">
-              <input type="text" placeholder="Любой"><i class="ico ico_star"></i>
-              <div class="input__arrow"></div>
-            </label>
-            <label class="input input_drop">
-              <input type="text" placeholder="1 человек"><i class="ico ico_person"></i>
-              <div class="input__arrow"></div>
-            </label>
-          </div>
-          <button class="btn">Поиск рейсов</button>
-        </div>
-      </div>
-    </div>
-    <!--end search-->
-    <!--end header-->
-    <!--begin content-->
-    <div class="head">
-      <div class="l-center">
-        <h2 class="title">База знаний</h2>
-      </div>
-    </div>
-    <div class="l-center">
-      <!--begin base-->
-      <div class="base">
-        <div class="base__container">
-          <div class="base__item">
-            <div class="head head_small">
-              <h3 class="title">Самое популярное</h3>
-              <div class="head__text">(22)</div>
+          <div class="search__in">
+            <div class="search__error-msg">укажите место прибытия</div>
+            <div class="search__col1">
+              <label class="input">
+                <input type="text" placeholder="Откуда?"><i class="ico ico_location"></i>
+                <div class="input__right"><span>mow</span><i class="ico ico_load"></i></div>
+              </label>
+              <label class="input">
+                <input type="text" placeholder="Куда?"><i class="ico ico_location"></i>
+                <div class="input__right"><span>mow</span><i class="ico ico_load"></i></div>
+              </label>
             </div>
-            <ul class="base__list">
-              <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
-              <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
-              <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
-              <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
-              <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
-            </ul>
-          </div>
-          <div class="base__item">
-            <div class="head head_small">
-              <h3 class="title">Вопросы</h3>
-              <div class="head__text">(22)</div>
+            <div class="search__col2">
+              <div class="switch">
+                <div class="switch__top"></div>
+                <div class="switch__bottom"></div>
+                <div class="switch__slider">
+                  <div class="switch__slider-wrap">
+                    <div class="switch__slider-in">
+                      <div class="switch__top"></div>
+                      <div class="switch__bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <label class="input input_ico-right">
+                <input type="text" placeholder="Дата отъезда"><i class="ico ico_calendar"></i>
+              </label>
+              <label class="input input_ico-right">
+                <input type="text" placeholder="Дата возврата"><i class="ico ico_calendar"></i>
+              </label>
             </div>
-            <ul class="base__list">
-              <li><a href="#">Он собрал семь своих заглавных букв, подпоясал инициал за пояс?</a></li>
-              <li><a href="#">Грустный реторический вопрос?</a></li>
-              <li><a href="#">Она предупредила его: В моей стране все переписывается по несколько раз.</a></li>
-              <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
-              <li><a href="#">Вскоре ему повстречался коварный составитель</a></li>
-            </ul>
-          </div>
-          <div class="base__item">
-            <div class="head head_small">
-              <h3 class="title">Другие</h3>
-              <div class="head__text">(22)</div>
+            <div class="search__col2">
+              <div class="select select_icon"><i class="ico ico_star"></i><span class="select__value">Любой</span>
+                <ul class="select__drop">
+                  <li data-option='1'>Любой</li>
+                  <li data-option='2'>Бизнесс</li>
+                  <li data-option='3'>Эконом</li>
+                </ul>
+              </div>
+              <div class="select select_icon select_wide js-no"><i class="ico ico_person"></i><span class="select__value">1 человек</span>
+                <ul class="select__drop">
+                  <li>
+                    <div class="input-number"><strong>Взрослые</strong><span>(старше 12)</span>
+                      <input type="text" value="0">
+                      <div class="input-number__up"></div>
+                      <div class="input-number__down"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="input-number"><strong>Дети</strong><span>(2-12)</span>
+                      <input type="text" value="0">
+                      <div class="input-number__up"></div>
+                      <div class="input-number__down"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="input-number"><strong>Младенцы</strong><span>(0-2)</span>
+                      <input type="text" value="0">
+                      <div class="input-number__up"></div>
+                      <div class="input-number__down"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul class="base__list">
-              <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
-              <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
-              <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
-              <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
-              <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
-            </ul>
-          </div>
-          <div class="base__item">
-            <div class="head head_small">
-              <h3 class="title">Самое популярное</h3>
-              <div class="head__text">(22)</div>
-            </div>
-            <ul class="base__list">
-              <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
-              <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
-              <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
-              <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
-              <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
-            </ul>
-          </div>
-          <div class="base__item">
-            <div class="head head_small">
-              <h3 class="title">Вопросы</h3>
-              <div class="head__text">(22)</div>
-            </div>
-            <ul class="base__list">
-              <li><a href="#">Он собрал семь своих заглавных букв, подпоясал инициал за пояс?</a></li>
-              <li><a href="#">Грустный реторический вопрос?</a></li>
-              <li><a href="#">Она предупредила его: В моей стране все переписывается по несколько раз.</a></li>
-              <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
-              <li><a href="#">Вскоре ему повстречался коварный составитель</a></li>
-            </ul>
-          </div>
-          <div class="base__item">
-            <div class="head head_small">
-              <h3 class="title">Другие</h3>
-              <div class="head__text">(22)</div>
-            </div>
-            <ul class="base__list">
-              <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
-              <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
-              <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
-              <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
-              <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
-            </ul>
+            <button class="btn">Поиск рейсов</button>
           </div>
         </div>
       </div>
-      <!--end base-->
-      <!--begin info-text-->
-      <div class="info-text">
-        <dl>
-          <dt>TRIPENJOY</dt>
-          <dd>
-            — это один из ярких проектов ГК «Pay.Travel»,
-            который объединяет продажу ключевых услуг в области путешествий в рамках единого масштабного on-line сервиса.
-            Все возможные сервисы для организации путешествий объединены в рамках единой платформы,
-            что позволяет максимально удобно и оперативно организовать свой отдых или бизнес-поездку.
-          </dd>
-        </dl><a href="#" class="btn">Узнать больше</a>
-      </div>
-      <!--end info-text-->
-    </div>
-    <!--end content-->
-    <!--begin footer-->
-    <footer class="footer">
-      <!--begin footer__main-->
-      <div class="l-center">
-        <div class="footer__main">
-          <ul class="footer__list">
-            <li>Личный кабинет</li>
-            <li><a href="#">Авиабилеты онлайн</a></li>
-            <li><a href="#">Ж/д билеты онлайн</a></li>
-            <li><a href="#">Билеты на автобус</a></li>
-            <li><a href="#">Бронирование отелей</a></li>
-            <li><a href="#">Страхование онлайн</a></li>
-          </ul>
-          <ul class="footer__list">
-            <li>Справка</li>
-            <li><a href="#">FAQ по авиабилетам</a></li>
-            <li><a href="#">Расписание самолётов</a></li>
-            <li><a href="#">Справочник аэропортов</a></li>
-            <li><a href="#">Рейтинг авиакомпаний</a></li>
-            <li><a href="#">Отдых и путешествия</a></li>
-            <li><a href="#">Техническая справка</a></li>
-          </ul>
-          <ul class="footer__list">
-            <li>TripEnjoy</li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Для агентств</a></li>
-            <li><a href="#">Служба поддержки</a></li>
-            <li><a href="#">Форум</a></li>
-            <li><a href="#">Вакансии</a></li>
-          </ul>
-          <div class="footer__lang"><a href="#" class="is-active">rus</a><a href="#">eng</a></div>
-          <div class="footer__payments"><img src="img/cards.png" alt=""></div>
-        </div>
-      </div>
-      <!--end footer__main-->
-      <!--begin footer__bottom-->
-      <div class="footer__bottom">
+      <!--end search-->
+      <div class="head">
         <div class="l-center">
-          <div class="footer__copy"><span>2008-2014 TripEnjoy</span><br>Онлайн бронирование.</div>
-          <div class="footer__phone"><a href="tel:88007003388">8 800 700 33 88</a><br>Горячая линия:<br>c 9:00 до 21:00 по Москве</div>
-          <div class="footer__subscribe"><span>Подписаться на рассылку спецпредложений</span>
-            <div class="input">
-              <input type="text" placeholder="Ваш e-mail"><i class="ico ico_mail"></i>
-            </div><a href="#" class="btn">Подписаться</a>
-          </div>
+          <h2 class="title">База знаний</h2>
         </div>
       </div>
-      <!--end footer__bottom-->
-    </footer>
-    <!--end footer-->
+      <div class="l-center">
+        <!--begin base-->
+        <div class="base">
+          <div class="base__container">
+            <div class="base__item">
+              <div class="head head_small">
+                <h3 class="title">Самое популярное</h3>
+                <div class="head__text">(22)</div>
+              </div>
+              <ul class="base__list">
+                <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
+                <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
+                <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
+                <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
+                <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
+              </ul>
+            </div>
+            <div class="base__item">
+              <div class="head head_small">
+                <h3 class="title">Вопросы</h3>
+                <div class="head__text">(22)</div>
+              </div>
+              <ul class="base__list">
+                <li><a href="#">Он собрал семь своих заглавных букв, подпоясал инициал за пояс?</a></li>
+                <li><a href="#">Грустный реторический вопрос?</a></li>
+                <li><a href="#">Она предупредила его: В моей стране все переписывается по несколько раз.</a></li>
+                <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
+                <li><a href="#">Вскоре ему повстречался коварный составитель</a></li>
+              </ul>
+            </div>
+            <div class="base__item">
+              <div class="head head_small">
+                <h3 class="title">Другие</h3>
+                <div class="head__text">(22)</div>
+              </div>
+              <ul class="base__list">
+                <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
+                <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
+                <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
+                <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
+                <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
+              </ul>
+            </div>
+            <div class="base__item">
+              <div class="head head_small">
+                <h3 class="title">Самое популярное</h3>
+                <div class="head__text">(22)</div>
+              </div>
+              <ul class="base__list">
+                <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
+                <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
+                <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
+                <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
+                <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
+              </ul>
+            </div>
+            <div class="base__item">
+              <div class="head head_small">
+                <h3 class="title">Вопросы</h3>
+                <div class="head__text">(22)</div>
+              </div>
+              <ul class="base__list">
+                <li><a href="#">Он собрал семь своих заглавных букв, подпоясал инициал за пояс?</a></li>
+                <li><a href="#">Грустный реторический вопрос?</a></li>
+                <li><a href="#">Она предупредила его: В моей стране все переписывается по несколько раз.</a></li>
+                <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
+                <li><a href="#">Вскоре ему повстречался коварный составитель</a></li>
+              </ul>
+            </div>
+            <div class="base__item">
+              <div class="head head_small">
+                <h3 class="title">Другие</h3>
+                <div class="head__text">(22)</div>
+              </div>
+              <ul class="base__list">
+                <li><a href="#">Проснувшись однажды утром после беспокойного сна, Грегор Замза?</a></li>
+                <li><a href="#">Лежа на панцирнотвердой спине?</a></li>
+                <li><a href="#">Его многочисленные, убого тонкие по сравнению?</a></li>
+                <li><a href="#">Далеко-далеко за словесными горами в стране гласных?</a></li>
+                <li><a href="#">Великий Оксмокс предупреждал ее?</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--end base-->
+        <!--begin info-text-->
+        <div class="info-text">
+          <dl>
+            <dt>TRIPENJOY</dt>
+            <dd>
+              — это один из ярких проектов ГК «Pay.Travel»,
+              который объединяет продажу ключевых услуг в области путешествий в рамках единого масштабного on-line сервиса.
+              Все возможные сервисы для организации путешествий объединены в рамках единой платформы,
+              что позволяет максимально удобно и оперативно организовать свой отдых или бизнес-поездку.
+            </dd>
+          </dl><a href="#" class="btn">Узнать больше</a>
+        </div>
+        <!--end info-text-->
+      </div>
+      <!--end content-->
+      <!--begin footer-->
+      <footer class="footer">
+        <!--begin footer__main-->
+        <div class="l-center">
+          <div class="footer__main">
+            <ul class="footer__list">
+              <li>Личный кабинет</li>
+              <li><a href="#">Авиабилеты онлайн</a></li>
+              <li><a href="#">Ж/д билеты онлайн</a></li>
+              <li><a href="#">Билеты на автобус</a></li>
+              <li><a href="#">Бронирование отелей</a></li>
+              <li><a href="#">Страхование онлайн</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li>Справка</li>
+              <li><a href="#">FAQ по авиабилетам</a></li>
+              <li><a href="#">Расписание самолётов</a></li>
+              <li><a href="#">Справочник аэропортов</a></li>
+              <li><a href="#">Рейтинг авиакомпаний</a></li>
+              <li><a href="#">Отдых и путешествия</a></li>
+              <li><a href="#">Техническая справка</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li>TripEnjoy</li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Для агентств</a></li>
+              <li><a href="#">Служба поддержки</a></li>
+              <li><a href="#">Форум</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+            <div class="footer__lang"><a href="#" class="is-active">rus</a><a href="#">eng</a></div>
+            <div class="footer__payments"><img src="img/cards.png" alt=""></div>
+          </div>
+        </div>
+        <!--end footer__main-->
+        <!--begin footer__bottom-->
+        <div class="footer__bottom">
+          <div class="l-center">
+            <div class="footer__copy"><span>2008-2014 TripEnjoy</span><br>Онлайн бронирование.</div>
+            <div class="footer__phone"><a href="tel:88007003388">8 800 700 33 88</a><br>Горячая линия:<br>c 9:00 до 21:00 по Москве</div>
+            <div class="footer__subscribe"><span>Подписаться на рассылку спецпредложений</span>
+              <div class="input">
+                <input type="text" placeholder="Ваш e-mail"><i class="ico ico_mail"></i>
+              </div><a href="#" class="btn">Подписаться</a>
+            </div>
+          </div>
+        </div>
+        <!--end footer__bottom-->
+      </footer>
+      <!--end footer-->
+    </div>
     <!--load scripts-->
     <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
   </body>

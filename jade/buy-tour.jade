@@ -127,14 +127,14 @@ block content
                 input(type="text", placeholder="ММ")
                 input(type="text", placeholder="ГГГГ")
           td
-            .passenger__sex
-              label.passenger__sex-radio-btn
+            .select-sex
+              label.select-sex__radio-btn
                 input(type="radio", name="sex")
                 i.ico.ico_male.is-active
-              label.passenger__sex-radio-btn
+              label.select-sex__radio-btn
                 input(type="radio", name="sex", checked)
                 i.ico.ico_female
-              label.passenger__sex-radio-btn
+              label.select-sex__radio-btn
                 input(type="radio", name="sex")
                 i.ico.ico_kid
         tr
@@ -222,14 +222,14 @@ block content
                 input(type="text", placeholder="ММ")
                 input(type="text", placeholder="ГГГГ")
           td
-            .passenger__sex
-              label.passenger__sex-radio-btn
+            .select-sex
+              label.select-sex__radio-btn
                 input(type="radio", name="sex-second", checked)
                 i.ico.ico_male.is-active
-              label.passenger__sex-radio-btn
+              label.select-sex__radio-btn
                 input(type="radio", name="sex-second")
                 i.ico.ico_female
-              label.passenger__sex-radio-btn
+              label.select-sex__radio-btn
                 input(type="radio", name="sex-second")
                 i.ico.ico_kid
         tr
@@ -293,18 +293,18 @@ block content
 
   .l-center
     //begin buyer-contacts
-    .buyer
-      .buyer__name
+    .contact-data
+      .contact-data__name
         .input.input_simple
           span.input__label
             | Ф.И.О.:
           input(type="text")
-      .buyer__email
+      .contact-data__email
         .input.input_simple
           span.input__label
             | E-mail:
           input(type="text")
-      .buyer__country-code
+      .contact-data__country-code
         .input.input_simple
           span.input__label
             | Код страны:
@@ -314,7 +314,7 @@ block content
               - var i = 1
               each item in ['+001', '+002', '+003']
                 li(data-option=i++)= item
-      .buyer__phone
+      .contact-data__phone
         .input.input_simple
           span.input__label
             | Номер телефона:

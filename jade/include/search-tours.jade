@@ -1,8 +1,8 @@
 //begin search
-.search.iserror
+.search.search_tours
   .l-center
     .search__in
-      .search__error-msg.is-visible
+      .search__error-msg
         | укажите место прибытия
       .search__col1
         label.input
@@ -11,7 +11,7 @@
           .input__right
             span mow
             i.ico.ico_load
-        label.input.is-error
+        label.input
           input(type="text", placeholder="Куда?")
           i.ico.ico_location
           .input__right
@@ -19,31 +19,14 @@
             i.ico.ico_load
 
       .search__col2
-        .switch
-          .switch__top
-          .switch__bottom
-          .switch__slider
-            .switch__slider-wrap
-              .switch__slider-in
-                .switch__top
-                .switch__bottom
-
         label.input.input_ico-right
           input(type="text", placeholder="Дата отъезда")
           i.ico.ico_calendar
         label.input.input_ico-right
-          input(type="text", placeholder="Дата возврата")
-          i.ico.ico_calendar
+          input(type="text", placeholder="Количество ночей")
+          i.ico.ico_moon
 
       .search__col2
-        .select.select_icon
-          i.ico.ico_star
-          span.select__value
-            | Любой
-          ul.select__drop
-            - var i = 1
-            each item in ['Любой', 'Бизнесс', 'Эконом']
-              li(data-option=i++)= item
         .select.select_icon.select_wide.js-no
           i.ico.ico_person
           span.select__value
@@ -70,6 +53,14 @@
                 input(type="text", value="0")
                 .input-number__up
                 .input-number__down
+        .select.select_icon
+          i.ico.ico_star
+          span.select__value
+            | Класс отеля
+          ul.select__drop
+            - var i = 1
+            each item in ['Любой', 'Бизнесс', 'Эконом']
+              li(data-option=i++)= item
 
       button.btn
         | Поиск рейсов

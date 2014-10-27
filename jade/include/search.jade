@@ -19,6 +19,15 @@
             i.ico.ico_load
 
       .search__col2
+        .switch
+          .switch__top
+          .switch__bottom
+          .switch__slider
+            .switch__slider-wrap
+              .switch__slider-in
+                .switch__top
+                .switch__bottom
+
         label.input.input_ico-right
           input(type="text", placeholder="Дата отъезда")
           i.ico.ico_calendar
@@ -27,14 +36,40 @@
           i.ico.ico_calendar
 
       .search__col2
-        label.input.input_drop
-          input(type="text", placeholder="Любой")
+        .select.select_icon
           i.ico.ico_star
-          .input__arrow
-        label.input.input_drop
-          input(type="text", placeholder="1 человек")
+          span.select__value
+            | Любой
+          ul.select__drop
+            - var i = 1
+            each item in ['Любой', 'Бизнесс', 'Эконом']
+              li(data-option=i++)= item
+        .select.select_icon.select_wide.js-no
           i.ico.ico_person
-          .input__arrow
+          span.select__value
+            | 1 человек
+          ul.select__drop
+            li
+              .input-number
+                strong Взрослые
+                span (старше 12)
+                input(type="text", value="0")
+                .input-number__up
+                .input-number__down
+            li
+              .input-number
+                strong Дети
+                span (2-12)
+                input(type="text", value="0")
+                .input-number__up
+                .input-number__down
+            li
+              .input-number
+                strong Младенцы
+                span (0-2)
+                input(type="text", value="0")
+                .input-number__up
+                .input-number__down
 
       button.btn
         | Поиск рейсов

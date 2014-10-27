@@ -967,12 +967,35 @@
     display: block
     margin-top: 5px
 
-.passenger__sex
+.passenger__passport
+  .input
+    display: inline-block
+    vertical-align: top
+    width: percentage(104/172)
+    min-width: 1px
+    &:first-child
+      width: percentage(64/172)
+
+.passenger__clear
+  display: block
+  margin-top: 35px
+  text-align: center
+  color: $text
+  +tr-color
+  &:hover
+    color: $orange
+  .ico
+    color: $orange
+    font-size: 16px
+    margin-right: 5px
+
+.select-sex
   min-width: 130px
   margin-top: 26px
   text-align: center
+  +user-select(none)
 
-.passenger__sex-radio-btn
+.select-sex__radio-btn
   display: inline-block
   margin-left: 25px
   position: relative
@@ -998,30 +1021,8 @@
   .ico_kid
     font-size: 25px
 
-.passenger__passport
-  .input
-    display: inline-block
-    vertical-align: top
-    width: percentage(104/172)
-    min-width: 1px
-    &:first-child
-      width: percentage(64/172)
 
-.passenger__clear
-  display: block
-  margin-top: 35px
-  text-align: center
-  color: $text
-  +tr-color
-  &:hover
-    color: $orange
-  .ico
-    color: $orange
-    font-size: 16px
-    margin-right: 5px
-
-
-.buyer
+.contact-data
   margin-top: 30px
   font-size: 0
   & > div
@@ -1031,16 +1032,16 @@
     &:first-child
       margin-left: 0
 
-.buyer__name
+.contact-data__name
   width: percentage(325/1000)
 
-.buyer__email
+.contact-data__email
   width: percentage(275/1000)
 
-.buyer__country-code
+.contact-data__country-code
   width: percentage(120/1000)
 
-.buyer__phone
+.contact-data__phone
   width: percentage(235/1000)
 
 .payment
@@ -1700,7 +1701,55 @@
     margin-right: 12px
     width: percentage(265/670)
 
-  .passenger__sex
+  .select-sex
     display: block
     margin: 20px 0 0 2px
     text-align: left
+
+  .contact-data
+    margin-top: 0
+    .input
+      width: 100%
+
+  .contact-data__email
+    width: percentage(265/670)
+
+  .contact-data__country-code
+    width: percentage(125/670)
+
+  .contact-data__phone
+    width: percentage(230/670)
+
+  .head
+    margin-top: 35px
+    &:first-child
+      margin-top: 0
+
+.profile__document
+  .radio
+    display: inline-block
+    margin: 3px 0
+  & + .input
+    display: block
+
+
+.profile__document-data
+  display: inline-block
+  width: percentage(265/670)
+  margin-right: 12px
+  white-space: nowrap
+  .input
+    width: percentage(165/265)
+    margin-right: 0
+    &:first-child
+      width: percentage(96/265)
+
+.profile_password
+  .input
+    margin-top: 30px
+    &:first-child
+      display: block
+      margin-top: 0
+  & > .btn
+    display: block
+    margin-top: 30px

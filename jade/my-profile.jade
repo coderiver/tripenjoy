@@ -12,19 +12,19 @@ block content
   .l-center
     .l-two-col.l-two-col_mod
       .col1
-        .head.head_small
-          .title
-            | Персональные данные
-
         .profile
-          .passenger__sex
-            label.passenger__sex-radio-btn
+          .head.head_small
+            .title
+              | Персональные данные
+
+          .select-sex
+            label.select-sex__radio-btn
               input(type="radio", name="sex", checked)
               i.ico.ico_male
-            label.passenger__sex-radio-btn
+            label.select-sex__radio-btn
               input(type="radio", name="sex")
               i.ico.ico_female
-            label.passenger__sex-radio-btn
+            label.select-sex__radio-btn
               input(type="radio", name="sex")
               i.ico.ico_kid
 
@@ -49,6 +49,74 @@ block content
             input(type="text")
             input(type="text")
             input(type="text")
+
+          .contact-data
+            .contact-data__email
+              .input.input_simple
+                span.input__label
+                  | E-mail:
+                input(type="text")
+            .contact-data__country-code
+              .input.input_simple
+                span.input__label
+                  | Код страны:
+                .select
+                  span.select__value
+                  ul.select__drop
+                    - var i = 1
+                    each item in ['+001','+002','+003']
+                      li(data-option=i++)= item
+            .contact-data__phone
+              .input.input_simple
+                span.input__label
+                  | Номер телефона:
+                input(type="text")
+
+          .head.head_small
+            .title
+              | Ваш документ
+
+          .profile__document
+            span.input__label
+              | Документ:
+            label.radio
+              input(type="radio", name="doc", checked)
+              span заграничный
+            br
+            label.radio
+              input(type="radio", name="doc")
+              span общенациональный
+            br
+            label.radio
+              input(type="radio", name="doc")
+              span свидетельство
+
+          .input.input_simple
+            span.input__label
+              | Гражданство:
+            .select
+              span.select__value
+              ul.select__drop
+                - var i = 1
+                each item in ['гражданство 1','гражданство 2','гражданство 3']
+                  li(data-option=i++)= item
+
+          .profile__document-data
+            .input.input_simple
+              span.input__label
+                | Серия:
+              input(type="text")
+            .input.input_simple
+              span.input__label
+                | Номер:
+              input(type="text")
+
+          .input.input_simple.input_multiple
+              span.input__label
+                | Срок действия:
+              input(type="text")
+              input(type="text")
+              input(type="text")
 
         .info-text
           label.checkbox
