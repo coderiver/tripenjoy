@@ -36,7 +36,7 @@
           i.ico.ico_calendar
 
       .search__col2
-        .select.select_icon
+        .select.select_search
           i.ico.ico_star
           span.select__value
             | Тип вагона
@@ -44,7 +44,7 @@
             - var i = 1
             each item in ['Любой', 'Бизнесс', 'Эконом']
               li(data-option=i++)= item
-        .select.select_icon.select_wide.js-no
+        .select.select_search.select_wide.js-no
           i.ico.ico_person
           span.select__value
             | 1 человек

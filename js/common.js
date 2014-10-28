@@ -24,6 +24,7 @@ head.ready(function() {
     });
   };
 
+  //gallery
   if ( $(".js-slick-gallery").length ) {
     $(".js-slick-gallery").slick({
       slidesToShow: 1,
@@ -49,6 +50,9 @@ head.ready(function() {
       asNavFor: '.js-slick-gallery'
     });
   };
+
+  //rating
+  $('.rating__select').barrating('show');
 
   //custom select
   $('.select').on('click', function(event) {

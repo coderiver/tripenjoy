@@ -27,7 +27,7 @@
           i.ico.ico_moon
 
       .search__col2
-        .select.select_icon.select_wide.js-no
+        .select.select_search.select_wide.js-no
           i.ico.ico_person
           span.select__value
             | 1 человек
@@ -53,14 +53,32 @@
                 input(type="text", value="0")
                 .input-number__up
                 .input-number__down
-        .select.select_icon
+        .select.select_search.select_rating.js-no
           i.ico.ico_star
           span.select__value
             | Класс отеля
           ul.select__drop
-            - var i = 1
-            each item in ['Любой', 'Бизнесс', 'Эконом']
-              li(data-option=i++)= item
+            li
+              .rating
+                span.rating__left
+                  | от
+                select.rating__select
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+            li
+              .rating
+                span.rating__left
+                  | до
+                .rating__center
+                select.rating__select
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
 
       button.btn
         | Поиск рейсов
