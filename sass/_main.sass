@@ -18,21 +18,19 @@
 
 
 .promo
+  width: 100%
+  display: table
   margin: 55px 0
-  font-size: 0
-  +clr
-  +justify
 
 .promo__item
-  display: inline-block
-  vertical-align: middle
-  box-sizing: border-box
+  display: table-cell
   font-size: 20px
   line-height: 1.2
-  +clr
+  padding-left: 80px
+  &:first-child
+    padding-left: 0
   .ico
     float: left
-    margin-right: 20px
     color: $orange
     font-size: 44px
     line-height: 1
@@ -621,6 +619,8 @@
       display: none
     .select + .select
       margin-left: 15px
+  *
+    text-align: left
 
 .sort__list
   font-size: 0
@@ -825,6 +825,7 @@
   display: inline-block
   vertical-align: middle
   background: #FFF
+  border: 1px solid $border
   box-shadow: 0 19px 51px rgba(9, 12, 18, 0.27)
   text-align: left
   position: relative
@@ -1257,6 +1258,7 @@
   vertical-align: top
   font-size: 12px
   +roboto
+  line-height: 1.2
   img
     display: block
     margin: auto
@@ -1268,24 +1270,25 @@
 
 .tour__label
   @extend .ticket__label
+  margin-bottom: 10px
 
 .tour__date
   @extend .ticket__time
   display: inline-block
   vertical-align: top
-  margin-right: 5px
+  margin: -6px 5px 0 0
 
 .tour__date-extend
   @extend .ticket__location
   display: inline-block
   vertical-align: top
-  margin-top: 6px
+  margin-top: 0
   b
     text-transform: uppercase
 
 .tour__nights
   display: block
-  margin: auto
+  margin: -4px auto 0
   width: 30px
   height: 30px
   border-radius: 50%
@@ -1296,17 +1299,12 @@
   text-align: center
 
 .tour__room
-  // +roboto-b
-  // text-transform: uppercase
-  // font-size: 12px
+  line-height: 1.33
 
 .tour__food
   +roboto-b
   font-size: 12px
   text-transform: uppercase
-  // color: $orange
-  // a
-  //   color: inherit
 
 
 .hotel
@@ -1412,11 +1410,14 @@
     box-sizing: border-box
     padding: 0 30px 0 0
 
+  .tour__date
+    // margin-top: 0
+
   .tour__date-extend
-    margin-top: 6px
+    margin-top: 0px
 
   .tour__label
-    margin-bottom: 3px
+    margin-bottom: 10px
     color: #777
 
   .tour__option-table
@@ -1495,7 +1496,7 @@
       line-height: 1.3
       text-transform: uppercase
       color: $orange
-      text-align: center
+      text-align: center !important
 
   .tour__number
     @extend .ticket__return-flight
@@ -1540,10 +1541,16 @@
 .about__right
   display: table-cell
   vertical-align: top
-  outline: 2px dashed #B2E2F5
-  outline-offset: -2px
   position: relative
   z-index: 1
+  &:before
+    content: ""
+    position: absolute
+    top: 43px
+    left: 0
+    right: 0
+    bottom: 0
+    border: 2px dashed #B2E2F5
 
 .about__pic
   overflow: hidden
@@ -1579,24 +1586,22 @@
 
 
 .tab
-  height: 100%
-  // border: 2px dashed #B2E2F5
-  +roboto
   position: relative
   z-index: 2
+  padding-top: 45px
+  +roboto
 
 .tab__selectors
+  height: 45px
   font-size: 0
-  background: #FFF
-  // borde-bottom: 2px dashed #B2E2F5
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
   li
-    // margin: 0 0 -2px 0
     display: inline-block
     vertical-align: top
     padding: 10px 25px
-    outline: 2px dashed #B2E2F5
-    outline-offset: -2px
-    outline-color: #FFF
     font-size: 18px
     line-height: 1.4
     text-transform: uppercase
@@ -1607,22 +1612,21 @@
       text-decoration: none
     &.is-active
       position: relative
-      outline-color: #B2E2F5
+      padding: 8px 23px
+      border: 2px dashed #B2E2F5
       color: #141617
       +roboto-b
       text-decoration: none
       &:after
         content: ""
         position: absolute
-        bottom: -2px
-        left: 2px
-        right: 2px
+        bottom: -3px
+        left: 0
+        right: 0
         height: 4px
         background: #FFF
 
 .tab__content
-  // margin: 0 -2px
-  border-top: 2px dashed #B2E2F5
   line-height: 1.7
   font-size: 14px
   p
