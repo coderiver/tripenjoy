@@ -514,73 +514,12 @@ block content
     //end ticket-list
 
 block popup
-  #searching.popup.popup_clean
+  #searching.popup.popup_message
     .popup__in
-      //begin flip-text
-      .flip-text
-        .char
-          | и
-          .char__top
-            span и
-          .char__bottom
-            span и
-        .char
-          | д
-          .char__top
-            span д
-          .char__bottom
-            span д
-        .char
-          | е
-          .char__top
-            span е
-          .char__bottom
-            span е
-        .char
-          | т
-          .char__top
-            span т
-          .char__bottom
-            span т
-
-        .char
-          .char__top
-          .char__bottom
-
-        .char
-          | п
-          .char__top
-            span п
-          .char__bottom
-            span п
-        .char
-          | о
-          .char__top
-            span о
-          .char__bottom
-            span о
-        .char
-          | и
-          .char__top
-            span и
-          .char__bottom
-            span и
-        .char
-          | с
-          .char__top
-            span с
-          .char__bottom
-            span с
-        .char
-          | к
-          .char__top
-            span к
-          .char__bottom
-            span к
-        .char
-          | ...
-          .char__top
-            span ...
-          .char__bottom
-            span ...
-      //end flip-text
+      .popup__container
+        .ico.ico_attention !
+        p
+          | Не найдены варианты перелета,
+          | соответствующие вашим критериям
+      button.btn.js-popup-hide
+        | Продолжить

@@ -750,6 +750,7 @@
   left: 0
   right: 0
   bottom: 0
+  background: #FFF
   background: rgba(255,255,255,0.56)
   white-space: nowrap
   +vertical
@@ -774,7 +775,7 @@
         width: 100%
         padding: 0
 
-  &_success
+  &_message
     font-size: 24px
     line-height: 1.4
     strong
@@ -784,7 +785,6 @@
       background: #fff
       padding: 50px 50px 85px
       z-index: 1
-      box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
     .popup__in
       width: 600px
       &:before
@@ -815,10 +815,20 @@
       &:before
         line-height: 1
         width: auto
+    .ico_attention
+      +roboto-l
+      font-size: 63px
     .btn
       position: absolute
+      z-index: 2
       bottom: 12px
       right: 12px
+
+  &_clean
+    .popup__in
+      background: none
+      border: none
+      box-shadow: none
 
 .popup__in
   opacity: 0
@@ -1722,3 +1732,28 @@
   & > .btn
     display: block
     margin-top: 30px
+
+
+.load
+  .flip-text + &
+    margin-top: 45px
+.load__level-wrap
+  width: 100%
+  padding: 1px
+  border: 1px solid $blue-border
+  border-radius: 6px 6px
+
+.load__level
+  max-width: 100%
+  min-width: 0
+  height: 10px
+  border-radius: 5px 5px
+  background: $blue
+
+.load__value
+  display: block
+  margin-top: 18px
+  text-align: center
+  +roboto-l
+  font-size: 30px
+  line-height: 1

@@ -11,6 +11,18 @@ head.ready(function() {
    closeSelectDropDown();
   });
 
+  //jquery ui datepicker
+  $.datepicker.setDefaults(
+    $.extend(
+      {'dateFormat':'dd.mm.yy'},
+      $.datepicker.regional['ru']
+    )
+  );
+  $('.datepicker').datepicker({
+    // changeMonth: true,
+    // changeYear: true
+  });
+
   //slider
   if ( $(".js-slick-slider").length ) {
     $(".js-slick-slider").slick({
@@ -153,14 +165,4 @@ head.ready(function() {
     };
     $(this).siblings('input').val(value);
   });
-
-  // flipText('.flip-text');
 });
-
-
-// var flipText = function(selector) {
-//   var selector = $(selector);
-//   var text = selector.text
-//   console.log(this);
-//   console.log(selector);
-// }
