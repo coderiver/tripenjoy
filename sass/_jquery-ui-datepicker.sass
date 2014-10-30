@@ -56,13 +56,13 @@
   z-index: 100
 
 // Interaction Cues
- *----------------------------------
+// *----------------------------------
 
 .ui-state-disabled
   cursor: default !important
 
 // Icons
- *----------------------------------
+// *----------------------------------
 
 // states and images
 
@@ -73,7 +73,7 @@
   background-repeat: no-repeat
 
 // Misc visuals
- *----------------------------------
+// *----------------------------------
 
 // Overlays
 
@@ -343,9 +343,10 @@
   color: $text
   +roboto
   +tr
-  &:hover
+  &:hover, &.ui-state-active
     background: $orange
     color: #FFF
+
 
 .ui-datepicker-title
   +roboto-b

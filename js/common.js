@@ -20,8 +20,19 @@ head.ready(function() {
   );
   $('.datepicker').datepicker({
     // changeMonth: true,
-    // changeYear: true
+    // changeYear: true,
   });
+
+  $('.datepicker').on('click', function(event) {
+    var placeholderText = $(this).attr('placeholder');
+    $(this).attr('placeholder', '__.__.____');
+    $(this).mask('00.00.0000');
+    $(this).on('focusout', function(event) {
+      if ( $(this).val() === '' ) {
+        $(this).attr('placeholder', placeholderText);
+      };
+    });
+  })
 
   //slider
   if ( $(".js-slick-slider").length ) {
