@@ -34,6 +34,7 @@ head.ready(function() {
     });
   })
 
+
   //slider
   if ( $(".js-slick-slider").length ) {
     $(".js-slick-slider").slick({

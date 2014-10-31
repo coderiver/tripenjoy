@@ -221,11 +221,18 @@
     +transition(0.1s linear)
     +placeholder
       color: #AEAEAE
+      opacity: 1
     &:focus
       // box-shadow: 0 0 0 1px rgba(8, 21, 39, 0.29)
       border-color: rgba(8, 21, 39, 0.29)
       + .ico
         opacity: 1
+      +placeholder
+        opacity: 0
+    &.datepicker
+      &:focus
+        +placeholder
+          opacity: 1
 
   textarea
     width: 100%
