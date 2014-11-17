@@ -1,0 +1,454 @@
+extends layout/layout2
+
+block title
+  title Train Ticket One Way
+
+block header
+  include include/header-train
+
+block toparea
+  //begin search-result
+  .search.search_result
+    .l-center
+      .search-result
+        .search-result__from
+          | Москва, Россия
+        i.ico.ico_arrow
+
+        .search-result__to
+          | Санкт-Петербург, Россия
+          i.ico.ico_calendar
+          | 19.09.2014
+
+        a.search-result__change(href="#")
+          | Изменить условия поиска
+  //end search-result
+
+block content
+  .l-center
+    .wrap
+      //begin ticket
+      .ticket
+        .ticket__head
+          i.ico.ico_clock
+          | Самый удобный
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+          .ticket__flight
+            | Сидячий
+        .ticket__row
+          .ticket__duration
+            | 3 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+        .ticket__info
+          | №752А, Сапсан
+        .ticket__bottom
+          span.ticket__price
+            | Итого: <b>30 000 руб.</b>
+          button.btn
+            | Купить
+      //end ticket
+      //begin ticket
+      .ticket
+        .ticket__head.ticket__head_orange
+          i.ico.ico_percent
+          | Самый Дешевый
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+          .ticket__flight
+            | Сидячий
+        .ticket__row
+          .ticket__duration
+            | 3 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+        .ticket__info
+          | № 752А, Сапсан
+        .ticket__bottom
+          span.ticket__price
+            | Итого: <b>12 000 руб.</b>
+          button.btn
+            | Купить
+      //end ticket
+
+  .head
+    .l-center
+      h3.title
+        | Отсортировать варианты перелёта по:
+
+  .l-center
+    //begin sort
+    .sort
+      .wrap-round
+        ul.sort__list
+          li.is-active
+            a(href="#")
+              | Стоимости
+          li
+            a(href="#")
+              | Продолжительности
+          li
+            a(href="#")
+              | Времени отправления
+          li
+            a(href="#")
+              | Времени прибытия
+
+      .select.select_check.js-no
+        span.select__value
+          | Типы вагонов
+        ul.select__drop
+          li
+            label.checkbox
+              input(type="checkbox")
+              span
+                | Transavia
+              img(src="img/transavia.png")
+          li
+            label.checkbox
+              input(type="checkbox")
+              span
+                | Trasnsaero
+              img(src="img/transavia.png")
+          li
+            label.checkbox
+              input(type="checkbox")
+              span
+                | Air France
+              img(src="img/af.png")
+          li
+            label.checkbox
+              input(type="checkbox")
+              span
+                | KLM
+              img(src="img/klm.png")
+
+      .select
+        span.select__value
+          | Все поезда
+        ul.select__drop
+          li(data-option="1")
+            | Не все
+          li(data-option="2")
+            | Или все
+          li(data-option="3")
+            | Ой все!
+    //end sort
+
+    //begin ticket-list
+    .ticket-list
+      //begin ticket
+      .ticket.ticket_wide.ticket_train
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__train-number
+            | <b>№030А,</b> скорый
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+        .ticket__row
+          .ticket__duration
+            | 10 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+          .ticket__flight
+            span.ticket__label
+              | Места
+            a(href="#") Сидячий
+            br
+            a(href="#") Плацкарт
+            br
+            a(href="#") Купе
+          .ticket__info
+            span.ticket__label
+              | Цена от
+            | 663 руб.
+            br
+            | 1 305 руб.
+            br
+            | 2 666 руб.
+        .ticket__bottom
+          .ticket__bottom-in
+            .ticket__price
+              | <b>633</b> <sub>руб.</sub>
+            button.btn
+              | Купить
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_train
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__train-number
+            | <b>№030А,</b> скорый
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+        .ticket__row
+          .ticket__duration
+            | 10 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+          .ticket__flight
+            span.ticket__label
+              | Места
+            a(href="#") Сидячий
+            br
+            a(href="#") Плацкарт
+            br
+            a(href="#") Купе
+          .ticket__info
+            span.ticket__label
+              | Цена от
+            | 663 руб.
+            br
+            | 1 305 руб.
+            br
+            | 2 666 руб.
+        .ticket__bottom
+          .ticket__bottom-in
+            .ticket__price
+              | <b>1 305</b> <sub>руб.</sub>
+            button.btn
+              | Купить
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_train
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__train-number
+            | <b>№030А,</b> обычный
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+        .ticket__row
+          .ticket__duration
+            | 10 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+          .ticket__flight
+            span.ticket__label
+              | Места
+            a(href="#") Сидячий
+            br
+            a(href="#") Плацкарт
+            br
+            a(href="#") Купе
+          .ticket__info
+            span.ticket__label
+              | Цена от
+            | 663 руб.
+            br
+            | 1 305 руб.
+            br
+            | 2 666 руб.
+        .ticket__bottom
+          .ticket__bottom-in
+            .ticket__price
+              | <b>633</b> <sub>руб.</sub>
+            button.btn
+              | Купить
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_train
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__train-number
+            | <b>№030А,</b> скорый
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+        .ticket__row
+          .ticket__duration
+            | 10 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+          .ticket__flight
+            span.ticket__label
+              | Места
+            a(href="#") Сидячий
+            br
+            a(href="#") Плацкарт
+            br
+            a(href="#") Купе
+          .ticket__info
+            span.ticket__label
+              | Цена от
+            | 663 руб.
+            br
+            | 1 305 руб.
+            br
+            | 2 666 руб.
+        .ticket__bottom
+          .ticket__bottom-in
+            .ticket__price
+              | <b>1 305</b> <sub>руб.</sub>
+            button.btn
+              | Купить
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_train
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__train-number
+            | <b>№030А,</b> скорый
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+        .ticket__row
+          .ticket__duration
+            | 10 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+          .ticket__flight
+            span.ticket__label
+              | Места
+            a(href="#") Сидячий
+            br
+            a(href="#") Плацкарт
+            br
+            a(href="#") Купе
+          .ticket__info
+            span.ticket__label
+              | Цена от
+            | 663 руб.
+            br
+            | 1 305 руб.
+            br
+            | 2 666 руб.
+        .ticket__bottom
+          .ticket__bottom-in
+            .ticket__price
+              | <b>633</b> <sub>руб.</sub>
+            button.btn
+              | Купить
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_train
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__train-number
+            | <b>№030А,</b> скорый
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+        .ticket__row
+          .ticket__duration
+            | 10 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+          .ticket__flight
+            span.ticket__label
+              | Места
+            a(href="#") Сидячий
+            br
+            a(href="#") Купе
+          .ticket__info
+            span.ticket__label
+              | Цена от
+            | 663 руб.
+            br
+            | 2 666 руб.
+        .ticket__bottom
+          .ticket__bottom-in
+            .ticket__price
+              | <b>1 305</b> <sub>руб.</sub>
+            button.btn
+              | Купить
+      //end ticket
+      .spinner
+    //end ticket-list

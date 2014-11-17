@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Train Ticket One Way</title>
+    <meta name="viewport" content="width=1040px">
+    <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="out">
+      <!--begin header-->
+      <header class="header">
+        <!--begin header__top-->
+        <div class="header__top">
+          <div class="l-center">
+            <div class="header__top-right"><a href="tel:88007707477" class="header__phone"><i class="ico ico_phone"></i>8 800 770 7477</a><a href="#" class="header__user"><i class="ico ico_user"></i>Личный кабинет</a></div><a href="index.html" class="logo">TripEnjoy</a>
+            <nav class="header__nav">
+              <ul>
+                <li><a href="#">Авиабилеты</a></li>
+                <li class="is-active"><a href="#">Ж/Д билеты</a></li>
+                <li><a href="#">Отели</a></li>
+                <li><a href="#">Туры</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!--end header__top-->
+      </header>
+      <!--end header-->
+      <!--begin content-->
+      <!--begin search-result-->
+      <div class="search search_result">
+        <div class="l-center">
+          <div class="search-result">
+            <div class="search-result__from">Москва, Россия</div><i class="ico ico_arrow"></i>
+            <div class="search-result__to">Санкт-Петербург, Россия<i class="ico ico_calendar"></i>19.09.2014</div><a href="#" class="search-result__change">Изменить условия поиска</a>
+          </div>
+        </div>
+      </div>
+      <!--end search-result-->
+      <div class="l-center">
+        <div class="wrap">
+          <!--begin ticket-->
+          <div class="ticket">
+            <div class="ticket__head"><i class="ico ico_clock"></i>Самый удобный</div>
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+              <div class="ticket__flight">Сидячий</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">3 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+            </div>
+            <div class="ticket__info">№752А, Сапсан</div>
+            <div class="ticket__bottom"><span class="ticket__price">Итого: <b>30 000 руб.</b></span>
+              <button class="btn">Купить</button>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket">
+            <div class="ticket__head ticket__head_orange"><i class="ico ico_percent"></i>Самый Дешевый</div>
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+              <div class="ticket__flight">Сидячий</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">3 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+            </div>
+            <div class="ticket__info">№ 752А, Сапсан</div>
+            <div class="ticket__bottom"><span class="ticket__price">Итого: <b>12 000 руб.</b></span>
+              <button class="btn">Купить</button>
+            </div>
+          </div>
+          <!--end ticket-->
+        </div>
+      </div>
+      <div class="head">
+        <div class="l-center">
+          <h3 class="title">Отсортировать варианты перелёта по:</h3>
+        </div>
+      </div>
+      <div class="l-center">
+        <!--begin sort-->
+        <div class="sort">
+          <div class="wrap-round">
+            <ul class="sort__list">
+              <li class="is-active"><a href="#">Стоимости</a></li>
+              <li><a href="#">Продолжительности</a></li>
+              <li><a href="#">Времени отправления</a></li>
+              <li><a href="#">Времени прибытия</a></li>
+            </ul>
+          </div>
+          <div class="select select_check js-no"><span class="select__value">Типы вагонов</span>
+            <ul class="select__drop">
+              <li>
+                <label class="checkbox">
+                  <input type="checkbox"><span>Transavia</span><img src="img/transavia.png">
+                </label>
+              </li>
+              <li>
+                <label class="checkbox">
+                  <input type="checkbox"><span>Trasnsaero</span><img src="img/transavia.png">
+                </label>
+              </li>
+              <li>
+                <label class="checkbox">
+                  <input type="checkbox"><span>Air France</span><img src="img/af.png">
+                </label>
+              </li>
+              <li>
+                <label class="checkbox">
+                  <input type="checkbox"><span>KLM</span><img src="img/klm.png">
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="select"><span class="select__value">Все поезда</span>
+            <ul class="select__drop">
+              <li data-option="1">Не все</li>
+              <li data-option="2">Или все</li>
+              <li data-option="3">Ой все!</li>
+            </ul>
+          </div>
+        </div>
+        <!--end sort-->
+        <!--begin ticket-list-->
+        <div class="ticket-list">
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_train">
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__train-number"><b>№030А,</b> скорый</div>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">10 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+              <div class="ticket__flight"><span class="ticket__label">Места</span><a href="#">Сидячий</a><br><a href="#">Плацкарт</a><br><a href="#">Купе</a></div>
+              <div class="ticket__info"><span class="ticket__label">Цена от</span>663 руб.<br>1 305 руб.<br>2 666 руб.</div>
+            </div>
+            <div class="ticket__bottom">
+              <div class="ticket__bottom-in">
+                <div class="ticket__price"><b>633</b> <sub>руб.</sub></div>
+                <button class="btn">Купить</button>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_train">
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__train-number"><b>№030А,</b> скорый</div>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">10 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+              <div class="ticket__flight"><span class="ticket__label">Места</span><a href="#">Сидячий</a><br><a href="#">Плацкарт</a><br><a href="#">Купе</a></div>
+              <div class="ticket__info"><span class="ticket__label">Цена от</span>663 руб.<br>1 305 руб.<br>2 666 руб.</div>
+            </div>
+            <div class="ticket__bottom">
+              <div class="ticket__bottom-in">
+                <div class="ticket__price"><b>1 305</b> <sub>руб.</sub></div>
+                <button class="btn">Купить</button>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_train">
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__train-number"><b>№030А,</b> обычный</div>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">10 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+              <div class="ticket__flight"><span class="ticket__label">Места</span><a href="#">Сидячий</a><br><a href="#">Плацкарт</a><br><a href="#">Купе</a></div>
+              <div class="ticket__info"><span class="ticket__label">Цена от</span>663 руб.<br>1 305 руб.<br>2 666 руб.</div>
+            </div>
+            <div class="ticket__bottom">
+              <div class="ticket__bottom-in">
+                <div class="ticket__price"><b>633</b> <sub>руб.</sub></div>
+                <button class="btn">Купить</button>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_train">
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__train-number"><b>№030А,</b> скорый</div>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">10 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+              <div class="ticket__flight"><span class="ticket__label">Места</span><a href="#">Сидячий</a><br><a href="#">Плацкарт</a><br><a href="#">Купе</a></div>
+              <div class="ticket__info"><span class="ticket__label">Цена от</span>663 руб.<br>1 305 руб.<br>2 666 руб.</div>
+            </div>
+            <div class="ticket__bottom">
+              <div class="ticket__bottom-in">
+                <div class="ticket__price"><b>1 305</b> <sub>руб.</sub></div>
+                <button class="btn">Купить</button>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_train">
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__train-number"><b>№030А,</b> скорый</div>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">10 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+              <div class="ticket__flight"><span class="ticket__label">Места</span><a href="#">Сидячий</a><br><a href="#">Плацкарт</a><br><a href="#">Купе</a></div>
+              <div class="ticket__info"><span class="ticket__label">Цена от</span>663 руб.<br>1 305 руб.<br>2 666 руб.</div>
+            </div>
+            <div class="ticket__bottom">
+              <div class="ticket__bottom-in">
+                <div class="ticket__price"><b>633</b> <sub>руб.</sub></div>
+                <button class="btn">Купить</button>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_train">
+            <div class="ticket__row"><i class="ico ico_arrow"></i>
+              <div class="ticket__train-number"><b>№030А,</b> скорый</div>
+              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
+            </div>
+            <div class="ticket__row">
+              <div class="ticket__duration">10 ч 55 мин</div>
+              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
+              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+              <div class="ticket__flight"><span class="ticket__label">Места</span><a href="#">Сидячий</a><br><a href="#">Купе</a></div>
+              <div class="ticket__info"><span class="ticket__label">Цена от</span>663 руб.<br>2 666 руб.</div>
+            </div>
+            <div class="ticket__bottom">
+              <div class="ticket__bottom-in">
+                <div class="ticket__price"><b>1 305</b> <sub>руб.</sub></div>
+                <button class="btn">Купить</button>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <div class="spinner"></div>
+        </div>
+        <!--end ticket-list-->
+      </div>
+      <!--end content-->
+      <!--begin footer-->
+      <footer class="footer">
+        <!--begin footer__main-->
+        <div class="l-center">
+          <div class="footer__main">
+            <ul class="footer__list">
+              <li>Личный кабинет</li>
+              <li><a href="#">Авиабилеты онлайн</a></li>
+              <li><a href="#">Ж/д билеты онлайн</a></li>
+              <li><a href="#">Билеты на автобус</a></li>
+              <li><a href="#">Бронирование отелей</a></li>
+              <li><a href="#">Страхование онлайн</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li>Справка</li>
+              <li><a href="#">FAQ по авиабилетам</a></li>
+              <li><a href="#">Расписание самолётов</a></li>
+              <li><a href="#">Справочник аэропортов</a></li>
+              <li><a href="#">Рейтинг авиакомпаний</a></li>
+              <li><a href="#">Отдых и путешествия</a></li>
+              <li><a href="#">Техническая справка</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li>TripEnjoy</li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Для агентств</a></li>
+              <li><a href="#">Служба поддержки</a></li>
+              <li><a href="#">Форум</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+            <div class="footer__lang"><a href="#" class="is-active">rus</a><a href="#">eng</a></div>
+            <div class="footer__payments"><img src="img/cards.png" alt=""></div>
+          </div>
+        </div>
+        <!--end footer__main-->
+        <!--begin footer__bottom-->
+        <div class="footer__bottom">
+          <div class="l-center">
+            <div class="footer__copy"><span>2008-2014 TripEnjoy</span><br>Онлайн бронирование.</div>
+            <div class="footer__phone"><a href="tel:88007003388">8 800 700 33 88</a><br>Горячая линия:<br>c 9:00 до 21:00 по Москве</div>
+            <div class="footer__subscribe"><span>Подписаться на рассылку спецпредложений</span>
+              <div class="input">
+                <input type="text" placeholder="Ваш e-mail"><i class="ico ico_mail"></i>
+              </div><a href="#" class="btn">Подписаться</a>
+            </div>
+          </div>
+        </div>
+        <!--end footer__bottom-->
+      </footer>
+      <!--end footer-->
+    </div>
+    <!--load scripts-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

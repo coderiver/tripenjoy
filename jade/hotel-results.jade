@@ -1,0 +1,103 @@
+extends layout/layout2
+
+block title
+  title Hotel Results
+
+block header
+  include include/header-hotel
+
+block toparea
+  //begin search-result
+  .search.search_result
+    .l-center
+      .search-result
+        i.ico.ico_palm
+        .search-result__from
+          | Барселона, Испания
+        i.ico.ico_calendar
+        | 19.09.2014
+
+        .search-result__night
+          i.ico.ico_moon
+          | 10 ночей
+
+        a.search-result__change(href="#")
+          | Изменить условия поиска
+  //end search-result
+
+block content
+  .l-center
+    .wrap
+      //begin ticket
+      .ticket.ticket_hotel
+        .ticket__head
+          i.ico.ico_clock
+          | Самый удобный
+        .hotel
+          .hotel__pic
+            img(src="img/hotel4.jpg")
+          .hotel__container
+            .hotel__container-in
+              .hotel__name
+                | Best Semiramis
+              .hotel__rating
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+              .hotel__location
+                | Испания, Коста-дель-Маресме
+                a(href="#")
+                  i.ico.ico_location2
+                  | Карта
+              .hotel__services(style="font-size:12px")
+                .ico.ico_service-wifi
+                .ico.ico_service-parking
+                .ico.ico_service-animal
+                .ico.ico_service-food
+                .ico.ico_service-pool
+                .ico.ico_service-flight
+
+        .ticket__bottom
+          span.ticket__price
+            | Итого: <b>30 000 руб.</b>
+          button.btn
+            | Купить
+      //end ticket
+      //begin ticket
+      .ticket
+        .ticket__head.ticket__head_orange
+          i.ico.ico_percent
+          | Самый Дешевый
+        .ticket__row
+          i.ico.ico_arrow
+          .ticket__date
+            | <b>26 сентября</b>, пятница
+          .ticket__flight
+            | Сидячий
+        .ticket__row
+          .ticket__duration
+            | 3 ч 55 мин
+          .ticket__departure
+            span.ticket__label
+              | Отправление
+            span.ticket__time
+              | 19:45
+            span.ticket__location
+              | Москва
+          .ticket__arrival
+            span.ticket__label
+              | Прибытие 26 сентября
+            span.ticket__time
+              | 21:40
+            span.ticket__location
+              | Санкт-Петербург
+        .ticket__info
+          | № 752А, Сапсан
+        .ticket__bottom
+          span.ticket__price
+            | Итого: <b>12 000 руб.</b>
+          button.btn
+            | Купить
+      //end ticket
