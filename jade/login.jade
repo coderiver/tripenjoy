@@ -1,7 +1,7 @@
 extend layout/layout
 
 block title
-  title Conatct Form
+  title Login
 
 block content
   .head
@@ -68,6 +68,9 @@ block content
             | Отправить
         //end contact-form
 
+        button(data-popup="login").btn.js-popup-show
+            | Вызвать попап
+
       .col2
         //begin contacts
         .head.head_small
@@ -89,19 +92,29 @@ block content
             | +7 495 229-27-12
         //end contacts
 
-    button.btn.js-popup-show(data-popup="success", style="margin-top: 50px")
-      | нажми меня
-
 block popup
-  #success.popup.popup_has-icon.popup_message(style="display: block")
-    .popup__in.is-visible
+  #login.popup.popup_has-icon
+    .popup__in
       .popup__container
-        i.ico.ico_envelope
-        strong
-          | Спасибо!
-        p
-          | Ваше сообщение успешно отправленно.
-          | Мы свяжемся с вами в ближайшее время.
-        button.btn.js-popup-hide
-          | Продолжить
-
+        .ico.ico_person2
+        form(action="").login
+          .login__title
+           | Авторизация
+          .input.input_simple
+            span.input__label
+              | E-mail:
+            input(type="text")
+          .input.input_simple
+            span.input__label
+              | Пароль:
+              a(href="#")
+                | Забыли?
+            input(type="password")
+          .wrap
+            button(type="submit").btn
+              | Войти
+            button.btn.btn_gray.js-popup-hide
+              | Отмена
+          .login__center
+            a(href="#")
+              | Регистрация

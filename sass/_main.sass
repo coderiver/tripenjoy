@@ -212,6 +212,45 @@
     min-width: 1px
     padding: 0 25px
 
+.ticket__main
+  position: relative
+
+.ticket__drop-down
+  display: none
+  .hotel__info
+    margin: 0
+    border-top: 1px solid $border
+  .hotel__info-item
+    padding-bottom: 15px
+    &:first-child
+      padding-left: 126px
+    &:last-child
+      padding-right: 13px
+    .ticket__price
+      display: block
+      text-align: right
+      line-height: 1
+      b, strong
+        font-size: 22px
+        line-height: inherit
+      sub
+        display: block
+        text-transform: none
+        color: #90afbc
+        font-size: 14px
+        line-height: inherit
+    .hotel__label
+      margin-bottom: 3px
+
+  .ticket_wide &
+    .hotel__info-item
+      &:last-child
+        padding-right: 60px
+      .ticket__price
+        b, strong
+          font-size: 24px
+
+
 .ticket__download
   position: absolute
   top: 12px
@@ -548,6 +587,31 @@
     .ticket__info
       line-height: 1.33
 
+.ticket_hotel
+  .ticket__bottom
+    border-top: 1px solid $border
+    text-align: left
+    .btn
+      float: right
+      margin-left: 0
+  .ticket__price
+    line-height: 36px
+    em
+      text-transform: uppercase
+      font-size: 12px
+      font-style: normal
+      +roboto-b
+      color: #B8B8B8
+  &.ticket_wide
+    .ticket__bottom
+      border: none
+    .ticket__price
+      line-height: 1
+      em
+        display: block
+        text-align: center
+        margin-bottom: 2px
+
 .ticket-area
   + .head_small
     margin-top: 40px
@@ -794,18 +858,8 @@
         width: 100%
         padding: 0
 
-  &_message
-    font-size: 24px
-    line-height: 1.4
-    strong
-      +roboto-b
-    .popup__container
-      position: relative
-      background: #fff
-      padding: 50px 50px 85px
-      z-index: 1
+  &_has-icon
     .popup__in
-      width: 600px
       &:before
         content: ""
         position: absolute
@@ -817,6 +871,10 @@
         background: #FFF
         border-radius: 50%
         box-shadow: 0 33px 87px rgba(24, 62, 78, 0.33)
+    .popup__container
+      position: relative
+      background: #fff
+      z-index: 1
     .ico
       position: absolute
       top: -29px
@@ -837,6 +895,21 @@
     .ico_attention
       +roboto-l
       font-size: 63px
+    .ico_person2
+      font-size: 38px
+      &:before
+        position: relative
+        top: -4px
+
+  &_message
+    font-size: 24px
+    line-height: 1.4
+    strong
+      +roboto-b
+    .popup__in
+      width: 600px
+    .popup__container
+      padding: 50px 50px 85px
     .btn
       position: absolute
       z-index: 2
@@ -1301,6 +1374,7 @@
 
 .hotel
   +clr
+  position: relative
   padding: 13px
   box-sizing: border-box
 
@@ -1351,6 +1425,27 @@
   .ico_star
     margin-right: 2px
 
+.hotel__rating-value
+  position: absolute
+  top: 25px
+  right: 0
+  padding: 10px
+  background: #FFF
+  border: 1px solid $border
+  border-width: 1px 0 1px 1px
+  font-size: 20px
+  line-height: 1
+  +roboto-b
+  text-transform: uppercase
+  em
+    display: inline-block
+    position: relative
+    top: -2px
+    font-size: 12px
+    color: #B8B8B8
+    font-style: normal
+    margin-left: 5px
+
 .hotel__location
   display: block
   margin-top: 15px
@@ -1374,6 +1469,99 @@
     display: block
     max-width: 100%
     margin: auto
+
+.hotel__services
+  font-size: 12px
+  color: $orange
+  margin-top: 8px
+  .ico
+    margin-left: 8px
+
+.hotel__label
+  @extend .ticket__label
+  margin-bottom: 3px
+
+.hotel__info
+  display: table
+  border-top: 1px solid $border
+  margin-top: 15px
+  box-sizing: border-box
+  width: 100%
+
+.hotel__info-item
+  display: table-cell
+  vertical-align: top
+  padding: 15px 0 0 20px
+  line-height: 1.1
+  font-size: 12px
+  &:first-child
+    padding-left: 0
+    width: 100px
+
+.hotel__price
+  font-size: 20px
+  +roboto-b
+  sub
+    text-transform: uppercase
+    font-size: 12px
+
+.hotel__more
+  display: block
+  position: absolute
+  bottom: 0
+  left: 0
+  min-width: 108px
+  padding: 10px
+  box-sizing: border-box
+  line-height: 1
+  text-align: center
+  background: $blue
+  color: #FFF
+  border-top-right-radius: 15px
+  cursor: pointer
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.hotel_expanded
+  .hotel__container
+    white-space: normal
+    padding: 10px 0
+    font-size: inherit
+    &:before
+      display: none
+  .hotel__container-in
+    display: block
+    position: static
+    padding-right: 50px
+  .hotel__pic
+    height: auto
+    +clr
+  .hotel__pic-small
+    float: left
+    width: 44px
+    height: 44px
+    overflow: hidden
+    margin-top: 7px
+    & + .hotel__pic-small
+      margin-left: 7px
+
+  .ticket_wide &
+    width: percentage(801/1000)
+    border-right: 1px solid $border
+    .hotel__container-in
+      padding-right: 110px
+    .hotel__services
+      display: inline-block
+      vertical-align: middle
+      margin: 0 0 0 15px
+    .hotel__more
+      left: auto
+      right: 0
+      border-top-left-radius: 15px
+      border-top-right-radius: 0
+    .hotel__label
+      margin-bottom: 3px
 
 
 .tour_wide
@@ -1776,3 +1964,36 @@
   +roboto-l
   font-size: 30px
   line-height: 1
+
+
+.login
+  width: 440px
+  padding: 60px 70px 40px
+  box-sizing: border-box
+  font-size: 14px
+  +roboto
+  .input
+    margin-top: 25px
+  .input__label
+    a
+      float: right
+      +roboto
+
+  .btn
+    float: left
+    width: 140px
+    min-width: 140px
+    margin-top: 25px
+    & + .btn
+      float: right
+
+.login__title
+  +roboto-b
+  font-size: 24px
+  line-height: 1
+  text-transform: uppercase
+
+.login__center
+  margin-top: 25px
+  text-align: center
+

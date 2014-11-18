@@ -177,4 +177,18 @@ head.ready(function() {
     };
     $(this).siblings('input').val(value);
   });
+
+
+  //show-hide tickets drop-down
+  $('.hotel__more').on('click', function(event) {
+    event.preventDefault();
+    var ticketDropDown = $(this).parents('.ticket').find('.ticket__drop-down');
+    ticketDropDown.slideToggle();
+    ticketDropDown.toggleClass('is-open');
+    if (ticketDropDown.hasClass('is-open')) {
+      $(this).text($(this).attr('data-text2'));
+    } else {
+      $(this).text($(this).attr('data-text1'));
+    }
+  });
 });

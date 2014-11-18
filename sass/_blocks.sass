@@ -59,6 +59,10 @@
     font-size: 20px
     &:before
       content: '\e80c'
+  &_person2
+    font-size: 20px
+    &:before
+      content: '\e82f'
   &_compass
     font-size: 44px
     &:before
@@ -392,8 +396,10 @@
   +tr
   &:hover
     background: #FF8432
-  &:disabled
+  &:disabled, &.is-inactive
     background: #AC9477
+  &_gray
+    background: #B0B0B0
   &_blue
     background: #E9F9FF
     color: $orange

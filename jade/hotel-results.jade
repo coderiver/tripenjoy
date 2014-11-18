@@ -33,9 +33,14 @@ block content
         .ticket__head
           i.ico.ico_clock
           | Самый удобный
-        .hotel
+
+        .hotel.hotel_expanded
           .hotel__pic
             img(src="img/hotel4.jpg")
+            .hotel__pic-small
+              img(src="img/hotel4.jpg")
+            .hotel__pic-small
+              img(src="img/hotel4.jpg")
           .hotel__container
             .hotel__container-in
               .hotel__name
@@ -46,58 +51,707 @@ block content
                 i.ico.ico_star
                 i.ico.ico_star
                 i.ico.ico_star
+              .hotel__rating-value
+                span 4,6
               .hotel__location
                 | Испания, Коста-дель-Маресме
                 a(href="#")
                   i.ico.ico_location2
                   | Карта
-              .hotel__services(style="font-size:12px")
+              .hotel__services
                 .ico.ico_service-wifi
                 .ico.ico_service-parking
                 .ico.ico_service-animal
                 .ico.ico_service-food
                 .ico.ico_service-pool
                 .ico.ico_service-flight
+            .hotel__info
+              .hotel__info-item
+                span.hotel__label
+                  | За 1 ночь
+                span.hotel__price
+                  | 45 345 <sub>руб.</sub>
+              .hotel__info-item
+                span.hotel__label
+                  | Номер
+                b УЛУЧШЕННЫЙ,
+                  br
+                  | с подогревом паркета
+            .hotel__more(data-text1="Еще номера", data-text2="Скрыть")
+              | Еще номера
+
+        .ticket__drop-down
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 45 345 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 12 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 25 387 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 28 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 23 677 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 30 500
+                sub
+                  | руб.
 
         .ticket__bottom
           span.ticket__price
-            | Итого: <b>30 000 руб.</b>
+            | от: <b>30 000 руб.</b> <em>за 3 ночи</em>
           button.btn
-            | Купить
+            | Забронировать
       //end ticket
       //begin ticket
-      .ticket
+      .ticket.ticket_hotel
         .ticket__head.ticket__head_orange
           i.ico.ico_percent
-          | Самый Дешевый
-        .ticket__row
-          i.ico.ico_arrow
-          .ticket__date
-            | <b>26 сентября</b>, пятница
-          .ticket__flight
-            | Сидячий
-        .ticket__row
-          .ticket__duration
-            | 3 ч 55 мин
-          .ticket__departure
-            span.ticket__label
-              | Отправление
-            span.ticket__time
-              | 19:45
-            span.ticket__location
-              | Москва
-          .ticket__arrival
-            span.ticket__label
-              | Прибытие 26 сентября
-            span.ticket__time
-              | 21:40
-            span.ticket__location
-              | Санкт-Петербург
-        .ticket__info
-          | № 752А, Сапсан
+          | Самый дешевый
+
+        .hotel.hotel_expanded
+          .hotel__pic
+            img(src="img/hotel4.jpg")
+            .hotel__pic-small
+              img(src="img/hotel4.jpg")
+            .hotel__pic-small
+              img(src="img/hotel4.jpg")
+          .hotel__container
+            .hotel__container-in
+              .hotel__name
+                | Best Semiramis
+              .hotel__rating
+                i.ico.ico_star
+                i.ico.ico_star
+                i.ico.ico_star
+              .hotel__rating-value
+                span 2,5
+              .hotel__location
+                | Испания, Коста-дель-Маресме
+                a(href="#")
+                  i.ico.ico_location2
+                  | Карта
+              .hotel__services
+                .ico.ico_service-wifi
+                .ico.ico_service-food
+            .hotel__info
+              .hotel__info-item
+                span.hotel__label
+                  | За 1 ночь
+                span.hotel__price
+                  | 15 345 <sub>руб.</sub>
+              .hotel__info-item
+                span.hotel__label
+                  | Номер
+                b УЛУЧШЕННЫЙ,
+                  br
+                  | с подогревом паркета
+            .hotel__more(data-text1="Еще номера", data-text2="Скрыть")
+              | Еще номера
+
+        .ticket__drop-down
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 45 345 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 12 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 25 387 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 28 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 23 677 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 30 500
+                sub
+                  | руб.
+
         .ticket__bottom
           span.ticket__price
-            | Итого: <b>12 000 руб.</b>
+            | от: <b>30 000 руб.</b> <em>за 3 ночи</em>
           button.btn
-            | Купить
+            | Забронировать
       //end ticket
+
+  .head
+    .l-center
+      h1.title
+        | Отсортировать варианты по:
+
+  .l-center
+    //begin sort
+    .sort.sort_select
+      .select
+        span.select__value
+          | Популярности
+        ul.select__drop
+          - var i = 1;
+          each item in ['город 1', 'город 2', 'город 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | По цене
+        ul.select__drop
+          - var i = 1;
+          each item in ['отель 1', 'отель 2', 'отель 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | По рейтингу
+        ul.select__drop
+          - var i = 1;
+          each item in ['категория 1', 'категория 2', 'категория 3']
+            li(data-option=i++)= item
+      .select
+        span.select__value
+          | Тип отеля
+        ul.select__drop
+          - var i = 1;
+          each item in ['питание 1', 'питание 2', 'питание 3']
+            li(data-option=i++)= item
+    //end sort
+
+    //begin ticket-list
+    .ticket-list
+      //begin ticket
+      .ticket.ticket_wide.ticket_hotel
+        .ticket__main
+          .hotel.hotel_expanded
+            .hotel__pic
+              img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Best Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__rating-value
+                  span 4,6
+                  em  отлично
+                .hotel__services
+                  .ico.ico_service-wifi
+                  .ico.ico_service-parking
+                  .ico.ico_service-animal
+                  .ico.ico_service-food
+                  .ico.ico_service-pool
+                  .ico.ico_service-flight
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+              .hotel__info
+                .hotel__info-item
+                  span.hotel__label
+                    | За 1 ночь
+                  span.hotel__price
+                    | 45 345 <sub>руб.</sub>
+                .hotel__info-item
+                  span.hotel__label
+                    | Номер
+                  b УЛУЧШЕННЫЙ,
+                    br
+                    | с подогревом паркета
+              .hotel__more(data-text1="Еще номера", data-text2="Скрыть")
+                | Еще номера
+          .ticket__bottom
+            .ticket__bottom-in
+              span.ticket__price
+                em
+                  | за 3 ночи
+                b
+                  | 30 000
+                sub
+                  | руб.
+              button.btn
+                | Купить
+
+        .ticket__drop-down
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 45 345 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 12 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 25 387 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 28 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 23 677 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 30 500
+                sub
+                  | руб.
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_hotel
+        .ticket__main
+          .hotel.hotel_expanded
+            .hotel__pic
+              img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Best Semiramis Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__rating-value
+                  span 3,5
+                  em  неплохо
+                .hotel__services
+                  .ico.ico_service-wifi
+                  .ico.ico_service-parking
+                  .ico.ico_service-animal
+                  .ico.ico_service-food
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+              .hotel__info
+                .hotel__info-item
+                  span.hotel__label
+                    | За 1 ночь
+                  span.hotel__price
+                    | 25 345 <sub>руб.</sub>
+                .hotel__info-item
+                  span.hotel__label
+                    | Номер
+                  b УЛУЧШЕННЫЙ,
+                    br
+                    | с подогревом паркета
+              .hotel__more(data-text1="Еще номера", data-text2="Скрыть")
+                | Еще номера
+          .ticket__bottom
+            .ticket__bottom-in
+              span.ticket__price
+                em
+                  | за 3 ночи
+                b
+                  | 35 000
+                sub
+                  | руб.
+              button.btn
+                | Купить
+
+        .ticket__drop-down
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 45 345 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 12 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 25 387 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 28 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 23 677 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 30 500
+                sub
+                  | руб.
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_hotel
+        .ticket__main
+          .hotel.hotel_expanded
+            .hotel__pic
+              img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Best Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__rating-value
+                  span 4,6
+                  em  отлично
+                .hotel__services
+                  .ico.ico_service-wifi
+                  .ico.ico_service-parking
+                  .ico.ico_service-animal
+                  .ico.ico_service-food
+                  .ico.ico_service-pool
+                  .ico.ico_service-flight
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+              .hotel__info
+                .hotel__info-item
+                  span.hotel__label
+                    | За 1 ночь
+                  span.hotel__price
+                    | 45 345 <sub>руб.</sub>
+                .hotel__info-item
+                  span.hotel__label
+                    | Номер
+                  b УЛУЧШЕННЫЙ,
+                    br
+                    | с подогревом паркета
+              .hotel__more(data-text1="Еще номера", data-text2="Скрыть")
+                | Еще номера
+          .ticket__bottom
+            .ticket__bottom-in
+              span.ticket__price
+                em
+                  | за 3 ночи
+                b
+                  | 30 000
+                sub
+                  | руб.
+              button.btn
+                | Купить
+
+        .ticket__drop-down
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 45 345 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 12 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 25 387 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 28 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 23 677 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 30 500
+                sub
+                  | руб.
+      //end ticket
+      //begin ticket
+      .ticket.ticket_wide.ticket_hotel
+        .ticket__main
+          .hotel.hotel_expanded
+            .hotel__pic
+              img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+              .hotel__pic-small
+                img(src="img/hotel4.jpg")
+            .hotel__container
+              .hotel__container-in
+                .hotel__name
+                  | Best Semiramis Semiramis
+                .hotel__rating
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                  i.ico.ico_star
+                .hotel__rating-value
+                  span 3,5
+                  em  неплохо
+                .hotel__services
+                  .ico.ico_service-wifi
+                  .ico.ico_service-parking
+                  .ico.ico_service-animal
+                  .ico.ico_service-food
+                .hotel__location
+                  | Испания, Коста-дель-Маресме
+                  a(href="#")
+                    i.ico.ico_location2
+                    | Карта
+              .hotel__info
+                .hotel__info-item
+                  span.hotel__label
+                    | За 1 ночь
+                  span.hotel__price
+                    | 25 345 <sub>руб.</sub>
+                .hotel__info-item
+                  span.hotel__label
+                    | Номер
+                  b УЛУЧШЕННЫЙ,
+                    br
+                    | с подогревом паркета
+              .hotel__more(data-text1="Еще номера", data-text2="Скрыть")
+                | Еще номера
+          .ticket__bottom
+            .ticket__bottom-in
+              span.ticket__price
+                em
+                  | за 3 ночи
+                b
+                  | 35 000
+                sub
+                  | руб.
+              button.btn
+                | Купить
+
+        .ticket__drop-down
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 45 345 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 12 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 25 387 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 28 000
+                sub
+                  | руб.
+          .hotel__info
+            .hotel__info-item
+              span.hotel__label
+                | За 1 ночь
+              span.hotel__price
+                | 23 677 <sub>руб.</sub>
+            .hotel__info-item
+              span.hotel__label
+                | Номер
+              b УЛУЧШЕННЫЙ,
+                br
+                | с подогревом паркета
+            .hotel__info-item
+              span.ticket__price
+                b
+                  | 30 500
+                sub
+                  | руб.
+      //end ticket
+      .spinner
+    //end ticket-list

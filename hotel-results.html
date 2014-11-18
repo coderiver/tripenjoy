@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Hotel Results</title>
-    <meta name="viewport" content="width=1040px">
+    <meta name="viewport" content="width=1040">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
   <body>
@@ -43,14 +43,18 @@
           <!--begin ticket-->
           <div class="ticket ticket_hotel">
             <div class="ticket__head"><i class="ico ico_clock"></i>Самый удобный</div>
-            <div class="hotel">
-              <div class="hotel__pic"><img src="img/hotel4.jpg"></div>
+            <div class="hotel hotel_expanded">
+              <div class="hotel__pic"><img src="img/hotel4.jpg">
+                <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+              </div>
               <div class="hotel__container">
                 <div class="hotel__container-in">
                   <div class="hotel__name">Best Semiramis</div>
                   <div class="hotel__rating"><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i></div>
+                  <div class="hotel__rating-value"><span>4,6</span></div>
                   <div class="hotel__location">Испания, Коста-дель-Маресме<a href="#"><i class="ico ico_location2"></i>Карта</a></div>
-                  <div style="font-size:12px" class="hotel__services">
+                  <div class="hotel__services">
                     <div class="ico ico_service-wifi"></div>
                     <div class="ico ico_service-parking"></div>
                     <div class="ico ico_service-animal"></div>
@@ -59,32 +63,344 @@
                     <div class="ico ico_service-flight"></div>
                   </div>
                 </div>
+                <div class="hotel__info">
+                  <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                  <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                </div>
+                <div data-text1="Еще номера" data-text2="Скрыть" class="hotel__more">Еще номера</div>
               </div>
             </div>
-            <div class="ticket__bottom"><span class="ticket__price">Итого: <b>30 000 руб.</b></span>
-              <button class="btn">Купить</button>
+            <div class="ticket__drop-down">
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>12 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 387 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>28 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">23 677 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>30 500</b><sub>руб.</sub></span></div>
+              </div>
+            </div>
+            <div class="ticket__bottom"><span class="ticket__price">от: <b>30 000 руб.</b> <em>за 3 ночи</em></span>
+              <button class="btn">Забронировать</button>
             </div>
           </div>
           <!--end ticket-->
           <!--begin ticket-->
-          <div class="ticket">
-            <div class="ticket__head ticket__head_orange"><i class="ico ico_percent"></i>Самый Дешевый</div>
-            <div class="ticket__row"><i class="ico ico_arrow"></i>
-              <div class="ticket__date"><b>26 сентября</b>, пятница</div>
-              <div class="ticket__flight">Сидячий</div>
+          <div class="ticket ticket_hotel">
+            <div class="ticket__head ticket__head_orange"><i class="ico ico_percent"></i>Самый дешевый</div>
+            <div class="hotel hotel_expanded">
+              <div class="hotel__pic"><img src="img/hotel4.jpg">
+                <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+              </div>
+              <div class="hotel__container">
+                <div class="hotel__container-in">
+                  <div class="hotel__name">Best Semiramis</div>
+                  <div class="hotel__rating"><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i></div>
+                  <div class="hotel__rating-value"><span>2,5</span></div>
+                  <div class="hotel__location">Испания, Коста-дель-Маресме<a href="#"><i class="ico ico_location2"></i>Карта</a></div>
+                  <div class="hotel__services">
+                    <div class="ico ico_service-wifi"></div>
+                    <div class="ico ico_service-food"></div>
+                  </div>
+                </div>
+                <div class="hotel__info">
+                  <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">15 345 <sub>руб.</sub></span></div>
+                  <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                </div>
+                <div data-text1="Еще номера" data-text2="Скрыть" class="hotel__more">Еще номера</div>
+              </div>
             </div>
-            <div class="ticket__row">
-              <div class="ticket__duration">3 ч 55 мин</div>
-              <div class="ticket__departure"><span class="ticket__label">Отправление</span><span class="ticket__time">19:45</span><span class="ticket__location">Москва</span></div>
-              <div class="ticket__arrival"><span class="ticket__label">Прибытие 26 сентября</span><span class="ticket__time">21:40</span><span class="ticket__location">Санкт-Петербург</span></div>
+            <div class="ticket__drop-down">
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>12 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 387 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>28 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">23 677 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>30 500</b><sub>руб.</sub></span></div>
+              </div>
             </div>
-            <div class="ticket__info">№ 752А, Сапсан</div>
-            <div class="ticket__bottom"><span class="ticket__price">Итого: <b>12 000 руб.</b></span>
-              <button class="btn">Купить</button>
+            <div class="ticket__bottom"><span class="ticket__price">от: <b>30 000 руб.</b> <em>за 3 ночи</em></span>
+              <button class="btn">Забронировать</button>
             </div>
           </div>
           <!--end ticket-->
         </div>
+      </div>
+      <div class="head">
+        <div class="l-center">
+          <h1 class="title">Отсортировать варианты по:</h1>
+        </div>
+      </div>
+      <div class="l-center">
+        <!--begin sort-->
+        <div class="sort sort_select">
+          <div class="select"><span class="select__value">Популярности</span>
+            <ul class="select__drop">
+              <li data-option='1'>город 1</li>
+              <li data-option='2'>город 2</li>
+              <li data-option='3'>город 3</li>
+            </ul>
+          </div>
+          <div class="select"><span class="select__value">По цене</span>
+            <ul class="select__drop">
+              <li data-option='1'>отель 1</li>
+              <li data-option='2'>отель 2</li>
+              <li data-option='3'>отель 3</li>
+            </ul>
+          </div>
+          <div class="select"><span class="select__value">По рейтингу</span>
+            <ul class="select__drop">
+              <li data-option='1'>категория 1</li>
+              <li data-option='2'>категория 2</li>
+              <li data-option='3'>категория 3</li>
+            </ul>
+          </div>
+          <div class="select"><span class="select__value">Тип отеля</span>
+            <ul class="select__drop">
+              <li data-option='1'>питание 1</li>
+              <li data-option='2'>питание 2</li>
+              <li data-option='3'>питание 3</li>
+            </ul>
+          </div>
+        </div>
+        <!--end sort-->
+        <!--begin ticket-list-->
+        <div class="ticket-list">
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_hotel">
+            <div class="ticket__main">
+              <div class="hotel hotel_expanded">
+                <div class="hotel__pic"><img src="img/hotel4.jpg">
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                </div>
+                <div class="hotel__container">
+                  <div class="hotel__container-in">
+                    <div class="hotel__name">Best Semiramis</div>
+                    <div class="hotel__rating"><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i></div>
+                    <div class="hotel__rating-value"><span>4,6</span><em> отлично</em></div>
+                    <div class="hotel__services">
+                      <div class="ico ico_service-wifi"></div>
+                      <div class="ico ico_service-parking"></div>
+                      <div class="ico ico_service-animal"></div>
+                      <div class="ico ico_service-food"></div>
+                      <div class="ico ico_service-pool"></div>
+                      <div class="ico ico_service-flight"></div>
+                    </div>
+                    <div class="hotel__location">Испания, Коста-дель-Маресме<a href="#"><i class="ico ico_location2"></i>Карта</a></div>
+                  </div>
+                  <div class="hotel__info">
+                    <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                    <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                  </div>
+                  <div data-text1="Еще номера" data-text2="Скрыть" class="hotel__more">Еще номера</div>
+                </div>
+              </div>
+              <div class="ticket__bottom">
+                <div class="ticket__bottom-in"><span class="ticket__price"><em>за 3 ночи</em><b>30 000</b><sub>руб.</sub></span>
+                  <button class="btn">Купить</button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket__drop-down">
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>12 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 387 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>28 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">23 677 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>30 500</b><sub>руб.</sub></span></div>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_hotel">
+            <div class="ticket__main">
+              <div class="hotel hotel_expanded">
+                <div class="hotel__pic"><img src="img/hotel4.jpg">
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                </div>
+                <div class="hotel__container">
+                  <div class="hotel__container-in">
+                    <div class="hotel__name">Best Semiramis Semiramis</div>
+                    <div class="hotel__rating"><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i></div>
+                    <div class="hotel__rating-value"><span>3,5</span><em> неплохо</em></div>
+                    <div class="hotel__services">
+                      <div class="ico ico_service-wifi"></div>
+                      <div class="ico ico_service-parking"></div>
+                      <div class="ico ico_service-animal"></div>
+                      <div class="ico ico_service-food"></div>
+                    </div>
+                    <div class="hotel__location">Испания, Коста-дель-Маресме<a href="#"><i class="ico ico_location2"></i>Карта</a></div>
+                  </div>
+                  <div class="hotel__info">
+                    <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 345 <sub>руб.</sub></span></div>
+                    <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                  </div>
+                  <div data-text1="Еще номера" data-text2="Скрыть" class="hotel__more">Еще номера</div>
+                </div>
+              </div>
+              <div class="ticket__bottom">
+                <div class="ticket__bottom-in"><span class="ticket__price"><em>за 3 ночи</em><b>35 000</b><sub>руб.</sub></span>
+                  <button class="btn">Купить</button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket__drop-down">
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>12 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 387 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>28 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">23 677 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>30 500</b><sub>руб.</sub></span></div>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_hotel">
+            <div class="ticket__main">
+              <div class="hotel hotel_expanded">
+                <div class="hotel__pic"><img src="img/hotel4.jpg">
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                </div>
+                <div class="hotel__container">
+                  <div class="hotel__container-in">
+                    <div class="hotel__name">Best Semiramis</div>
+                    <div class="hotel__rating"><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i></div>
+                    <div class="hotel__rating-value"><span>4,6</span><em> отлично</em></div>
+                    <div class="hotel__services">
+                      <div class="ico ico_service-wifi"></div>
+                      <div class="ico ico_service-parking"></div>
+                      <div class="ico ico_service-animal"></div>
+                      <div class="ico ico_service-food"></div>
+                      <div class="ico ico_service-pool"></div>
+                      <div class="ico ico_service-flight"></div>
+                    </div>
+                    <div class="hotel__location">Испания, Коста-дель-Маресме<a href="#"><i class="ico ico_location2"></i>Карта</a></div>
+                  </div>
+                  <div class="hotel__info">
+                    <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                    <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                  </div>
+                  <div data-text1="Еще номера" data-text2="Скрыть" class="hotel__more">Еще номера</div>
+                </div>
+              </div>
+              <div class="ticket__bottom">
+                <div class="ticket__bottom-in"><span class="ticket__price"><em>за 3 ночи</em><b>30 000</b><sub>руб.</sub></span>
+                  <button class="btn">Купить</button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket__drop-down">
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>12 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 387 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>28 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">23 677 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>30 500</b><sub>руб.</sub></span></div>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <!--begin ticket-->
+          <div class="ticket ticket_wide ticket_hotel">
+            <div class="ticket__main">
+              <div class="hotel hotel_expanded">
+                <div class="hotel__pic"><img src="img/hotel4.jpg">
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                  <div class="hotel__pic-small"><img src="img/hotel4.jpg"></div>
+                </div>
+                <div class="hotel__container">
+                  <div class="hotel__container-in">
+                    <div class="hotel__name">Best Semiramis Semiramis</div>
+                    <div class="hotel__rating"><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i><i class="ico ico_star"></i></div>
+                    <div class="hotel__rating-value"><span>3,5</span><em> неплохо</em></div>
+                    <div class="hotel__services">
+                      <div class="ico ico_service-wifi"></div>
+                      <div class="ico ico_service-parking"></div>
+                      <div class="ico ico_service-animal"></div>
+                      <div class="ico ico_service-food"></div>
+                    </div>
+                    <div class="hotel__location">Испания, Коста-дель-Маресме<a href="#"><i class="ico ico_location2"></i>Карта</a></div>
+                  </div>
+                  <div class="hotel__info">
+                    <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 345 <sub>руб.</sub></span></div>
+                    <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                  </div>
+                  <div data-text1="Еще номера" data-text2="Скрыть" class="hotel__more">Еще номера</div>
+                </div>
+              </div>
+              <div class="ticket__bottom">
+                <div class="ticket__bottom-in"><span class="ticket__price"><em>за 3 ночи</em><b>35 000</b><sub>руб.</sub></span>
+                  <button class="btn">Купить</button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket__drop-down">
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">45 345 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>12 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">25 387 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>28 000</b><sub>руб.</sub></span></div>
+              </div>
+              <div class="hotel__info">
+                <div class="hotel__info-item"><span class="hotel__label">За 1 ночь</span><span class="hotel__price">23 677 <sub>руб.</sub></span></div>
+                <div class="hotel__info-item"><span class="hotel__label">Номер</span><b>УЛУЧШЕННЫЙ,<br>с подогревом паркета</b></div>
+                <div class="hotel__info-item"><span class="ticket__price"><b>30 500</b><sub>руб.</sub></span></div>
+              </div>
+            </div>
+          </div>
+          <!--end ticket-->
+          <div class="spinner"></div>
+        </div>
+        <!--end ticket-list-->
       </div>
       <!--end content-->
       <!--begin footer-->
