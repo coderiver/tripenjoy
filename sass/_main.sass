@@ -696,6 +696,7 @@
     display: inline-block
     vertical-align: middle
     min-width: 172px
+    width: 172px
   &_select
     text-align: left
     &:after
@@ -836,6 +837,8 @@
   background: #FFF
   background: rgba(255,255,255,0.56)
   white-space: nowrap
+  overflow: auto
+  -webkit-overflow-scrolling: touch
   +vertical
 
   &_wide
@@ -845,11 +848,13 @@
       &:nth-child(n)
         background: #FFF
         border: 1px solid $border
-        border-width: 0 0 1px
+        border-width: 1px 0 0
+      &:last-child
     .hotel
       padding: 25px 30px 25px 45px
       width: 100%
-      // border-top: 1px solid $border
+    .popup__header + .ticket
+      border-top: none
     .tour__row
       padding: 50px 40px 50px 45px
       box-sizing: border-box
@@ -947,7 +952,6 @@
   +rh(750)
     padding-top: 15px
     padding-bottom: 15px
-
 
 .popup__close
   display: inline-block

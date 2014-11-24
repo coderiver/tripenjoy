@@ -466,7 +466,12 @@
     top: 100%
     left: -1px
     right: -1px
-    overflow: hidden
+    max-height: 200px
+    -ms-overflow-y: auto
+    overflow-y: auto
+    -ms-overflow-x: hidden
+    overflow-x: hidden
+    -webkit-overflow-scrolling: touch
     background: #FFF
     // border-top: 1px solid $blue-border
     border: 1px solid rgba(8, 21, 39, 0.29)
